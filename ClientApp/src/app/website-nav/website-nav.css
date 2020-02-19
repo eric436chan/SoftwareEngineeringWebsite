@@ -1,0 +1,27 @@
+.header{
+    font-size:3.5em;
+    background-color:black;
+    color:white;
+}
+
+.menu {
+  font-size: larger;
+  border: 1px solid black;
+  text-align: center;
+  width: 20%;
+  margin-top: -9px;
+}
+
+.left{
+    margin-left:-16px;
+}
+
+.searchBar{
+    width: 18%;
+
+}
+
+
+
+
+

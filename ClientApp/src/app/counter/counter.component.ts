@@ -1,3 +1,5 @@
+//this is pre generated from visual studios
+
 import { Component } from '@angular/core';
 
 @Component({
