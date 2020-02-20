@@ -2,14 +2,17 @@
     font-size:3.5em;
     background-color:black;
     color:white;
+    border-bottom: 2px solid gold;
 }
 
 .menu {
   font-size: larger;
-  border: 1px solid black;
+  border-bottom:1px solid black;
+  border-right: 1px solid black;
+  border-top: 1px solid black;
   text-align: center;
   width: 20%;
-  margin-top: -9px;
+  margin-top: -7px;
 }
 
 .left{
@@ -18,8 +21,42 @@
 
 .searchBar{
     width: 18%;
+    margin-top: -8px;
 
 }
+
+.dropdown{
+    position:relative;
+}
+
+.dropdown:hover .dropdown-content{
+    display:block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  z-index: 1;
+  border: 1px solid black;
+  width: 200%;
+  background-color: white;
+}
+
+.dropdown-content a{
+    display:block;
+    text-decoration:none;
+    color: black;
+}
+
+.dropdown-content .men{
+    display:block;
+    width:50%;
+}
+
+  .dropdown-content .women {
+    display: block;
+    width: 50%;
+  }
 
 
 

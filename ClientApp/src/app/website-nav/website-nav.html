@@ -7,8 +7,26 @@
     <span class="nav-item menu left" [routerLink]="['link-active']">
       <a class="nav-link" [routerLink]="['/']">Home</a>
     </span>
-    <span class="nav-item menu" [routerLink]="['link-active']">
+    <span class="nav-item menu dropdown" [routerLink]="['link-active']">
       <a class="nav-link" [routerLink]="['/product']">Product</a>
+      <span class="dropdown-content">
+        <span class="border float-left men">
+          <a class="nav-link" [routerLink]="['/']">Men's</a>
+          <span>
+            <a class="nav-link" [routerLink]="['/']">Tops</a>
+            <a class="nav-link" [routerLink]="['/']">Bottoms</a>
+            <a class="nav-link" [routerLink]="['/']">Socks?</a>
+          </span>
+        </span>
+        <span class="border float-right women">
+          <a class="nav-link" [routerLink]="['/']">Women's</a>
+          <span>
+            <a class="nav-link" [routerLink]="['/']">Tops</a>
+            <a class="nav-link" [routerLink]="['/']">Bottoms</a>
+            <a class="nav-link" [routerLink]="['/']">Socks?</a>
+          </span>
+        </span>
+      </span>
     </span>
     <span class="nav-item menu" [routerLink]="['link-active']">
       <a class="nav-link" [routerLink]="['/faq']">FAQ</a>
