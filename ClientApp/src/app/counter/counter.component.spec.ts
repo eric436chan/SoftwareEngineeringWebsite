@@ -1,3 +1,5 @@
+//this is pre generated from visual studios
+
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { CounterComponent } from './counter.component';
