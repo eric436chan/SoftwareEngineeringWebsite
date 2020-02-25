@@ -16,7 +16,7 @@ export class SearchComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.searchingService.searchingString.subscribe(
+    this.searchingService.searchString.subscribe(
       data => {
         this.searchString = data;
         console.log(this.searchString);
