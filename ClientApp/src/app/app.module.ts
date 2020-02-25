@@ -15,6 +15,12 @@ import { WebsiteNavComponent } from './website-nav/website-nav.component';
 import { FAQComponent } from './faq/faq.component';
 import { ContactComponent } from './contact/contact.component';
 import { ProductComponent } from './product/product.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatButtonModule } from '@angular/material/button';
+import { MatTabsModule } from '@angular/material/tabs';
+
 
 
 @NgModule({
@@ -27,7 +33,7 @@ import { ProductComponent } from './product/product.component';
     WebsiteNavComponent,
     FAQComponent,
     ContactComponent,
-    ProductComponent
+    ProductComponent,
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
@@ -38,7 +44,12 @@ import { ProductComponent } from './product/product.component';
       { path: 'product', component: ProductComponent },
       { path: 'faq', component: FAQComponent },
       { path: 'contact', component: ContactComponent }
-    ])
+    ]),
+    BrowserAnimationsModule,
+    MatToolbarModule,
+    MatMenuModule,
+    MatButtonModule,
+    MatTabsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
