@@ -1,7 +1,7 @@
 //this is pre generated from visual studios
 
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, enableProdMode } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
@@ -19,6 +19,7 @@ import { NavMenuComponent } from './nav-menu/nav-menu.component';
 import { HomeComponent } from './home/home.component';
 import { CounterComponent } from './counter/counter.component';
 import { FetchDataComponent } from './fetch-data/fetch-data.component';
+<<<<<<< HEAD
 import { WebsiteNavComponent } from './website-nav/website-nav.component';
 import { FAQComponent } from './faq/faq.component';
 import { MenComponent } from './men/men.component';
@@ -33,6 +34,17 @@ import { ProductService } from './services/product-service';
 
 
 
+=======
+<<<<<<< Updated upstream
+=======
+import { WebsiteNavComponent } from './website-nav/website-nav.component';
+import { FAQComponent } from './faq/faq.component';
+import { ContactComponent } from './contact/contact.component';
+import { ProductComponent } from './product/product.component';
+import { ProductService } from './service/product.service';
+
+>>>>>>> Stashed changes
+>>>>>>> f5707ef55cb99d6c99a99d06c385a5d694e892a0
 
 @NgModule({
   declarations: [
@@ -56,6 +68,7 @@ import { ProductService } from './services/product-service';
     FormsModule,
     RouterModule.forRoot([
       { path: '', component: HomeComponent, pathMatch: 'full' },
+<<<<<<< HEAD
       { path: 'faq', component: FAQComponent },
       { path: 'order', component: OrderComponent },
       { path: 'mens', component: MenComponent },
@@ -74,6 +87,20 @@ import { ProductService } from './services/product-service';
     MatInputModule
   ],
   providers: [SearchingService, ProductService],
+=======
+<<<<<<< Updated upstream
+      { path: 'counter', component: CounterComponent },
+      { path: 'fetch-data', component: FetchDataComponent },
+    ])
+=======
+      { path: 'product', component: ProductComponent },
+      { path: 'faq', component: FAQComponent },
+      { path: 'contact', component: ContactComponent }
+    ]),
+>>>>>>> Stashed changes
+  ],
+  providers: [ProductService],
+>>>>>>> f5707ef55cb99d6c99a99d06c385a5d694e892a0
   bootstrap: [AppComponent]
 })
 export class AppModule { }
