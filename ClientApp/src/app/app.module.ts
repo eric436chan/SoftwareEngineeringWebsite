@@ -28,6 +28,7 @@ import { WomenProductsComponent } from './women/women-products/women-products.co
 import { OrderComponent } from './order/order.component';
 import { SearchComponent } from './search/search.component';
 import { SearchingService } from './services/searching-service';
+import { ProductService } from './services/product-service';
 
 
 
@@ -72,7 +73,7 @@ import { SearchingService } from './services/searching-service';
     MatFormFieldModule,
     MatInputModule
   ],
-  providers: [SearchingService],
+  providers: [SearchingService, ProductService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
