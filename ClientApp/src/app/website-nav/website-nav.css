@@ -1,62 +1,55 @@
 .header{
-    font-size:3.5em;
     background-color:black;
-    color:white;
     border-bottom: 2px solid gold;
+    height: 10%;
 }
 
-.menu {
-  font-size: larger;
-  border-bottom:1px solid black;
-  border-right: 1px solid black;
-  border-top: 1px solid black;
-  text-align: center;
-  width: 20%;
-  margin-top: -7px;
+.header a {
+    color: white;
+    font-size: 3.5em;
 }
 
-.left{
-    margin-left:-16px;
-}
-
-.searchBar{
-    width: 18%;
-    margin-top: -8px;
-
-}
-
-.dropdown{
-    position:relative;
-}
-
-.dropdown:hover .dropdown-content{
-    display:block;
-}
-
-.dropdown-content {
-  display: none;
-  position: absolute;
-  z-index: 1;
-  border: 1px solid black;
-  width: 200%;
-  background-color: white;
-}
-
-.dropdown-content a{
-    display:block;
-    text-decoration:none;
-    color: black;
-}
-
-.dropdown-content .men{
-    display:block;
+.mens{
+    float:left;
     width:50%;
 }
 
-  .dropdown-content .women {
-    display: block;
-    width: 50%;
-  }
+.womens {
+  float: right;
+  width: 50%;
+}
+
+
+
+button:hover{
+    color:gold;
+    text-decoration:underline;
+    text-decoration-color:gold;
+}
+
+a:hover{
+    color:gold;
+}
+
+.navBar{
+    background-color: gray;
+    border-bottom: 2px solid gold;
+}
+
+nav a{
+    color:white;
+    width: 15%;
+}
+
+nav button{
+    width:15%;
+}
+
+button{
+    color:white;
+}
+
+
 
 
 
