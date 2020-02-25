@@ -9,17 +9,6 @@
     font-size: 3.5em;
 }
 
-.mens{
-    float:left;
-    width:50%;
-}
-
-.womens {
-  float: right;
-  width: 50%;
-}
-
-
 
 button:hover{
     color:gold;
@@ -27,7 +16,7 @@ button:hover{
     text-decoration-color:gold;
 }
 
-a:hover{
+nav a:hover{
     color:gold;
 }
 
@@ -49,6 +38,20 @@ button{
     color:white;
 }
 
+.menuHeader{
+    border-bottom:1px solid black;
+    font-weight: bold;
+}
+
+.menuItem{
+    border-bottom:1px solid black;
+}
+
+img{
+    max-height:100%;
+}
+
+    
 
 
 

@@ -10,7 +10,9 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatButtonModule } from '@angular/material/button';
 import { MatTabsModule } from '@angular/material/tabs';
-
+import { MatIconModule } from '@angular/material/icon';
+import { MatInputModule } from '@angular/material/input';
+import { MatFormFieldModule } from '@angular/material/form-field';
 
 import { AppComponent } from './app.component';
 import { NavMenuComponent } from './nav-menu/nav-menu.component';
@@ -19,12 +21,13 @@ import { CounterComponent } from './counter/counter.component';
 import { FetchDataComponent } from './fetch-data/fetch-data.component';
 import { WebsiteNavComponent } from './website-nav/website-nav.component';
 import { FAQComponent } from './faq/faq.component';
-import { ContactComponent } from './contact/contact.component';
-import { ProductComponent } from './product/product.component';
 import { MenComponent } from './men/men.component';
 import { WomenComponent } from './women/women.component';
 import { MenProductsComponent } from './men/men-products/men-products.component';
 import { WomenProductsComponent } from './women/women-products/women-products.component';
+import { OrderComponent } from './order/order.component';
+import { SearchComponent } from './search/search.component';
+import { SearchingService } from './services/searching-service';
 
 
 
@@ -39,12 +42,12 @@ import { WomenProductsComponent } from './women/women-products/women-products.co
     FetchDataComponent,
     WebsiteNavComponent,
     FAQComponent,
-    ContactComponent,
-    ProductComponent,
     WomenComponent,
     MenComponent,
     MenProductsComponent,
-    WomenProductsComponent
+    WomenProductsComponent,
+    OrderComponent,
+    SearchComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
@@ -52,21 +55,24 @@ import { WomenProductsComponent } from './women/women-products/women-products.co
     FormsModule,
     RouterModule.forRoot([
       { path: '', component: HomeComponent, pathMatch: 'full' },
-      { path: '/product', component: ProductComponent },
-      { path: '/faq', component: FAQComponent },
-      { path: '/contact', component: ContactComponent },
-      { path: '/mens', component: MenComponent },
-      { path: '/womens', component: WomenComponent },
-      { path: '/womens-prod', component: WomenProductsComponent },
-      { path: '/mens-prod', component: MenProductsComponent }
+      { path: 'faq', component: FAQComponent },
+      { path: 'order', component: OrderComponent },
+      { path: 'mens', component: MenComponent },
+      { path: 'womens', component: WomenComponent },
+      { path: 'womens/prod', component: WomenProductsComponent },
+      { path: 'mens/prod', component: MenProductsComponent },
+      { path: 'search', component: SearchComponent }
     ]),
     BrowserAnimationsModule,
     MatToolbarModule,
     MatMenuModule,
     MatButtonModule,
-    MatTabsModule
+    MatTabsModule,
+    MatIconModule,
+    MatFormFieldModule,
+    MatInputModule
   ],
-  providers: [],
+  providers: [SearchingService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
