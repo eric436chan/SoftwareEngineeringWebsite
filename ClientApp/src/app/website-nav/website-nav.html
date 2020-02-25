@@ -13,16 +13,16 @@
   </button>
   <mat-menu #menu="matMenu">
     <span class="mens">
-      <a mat-menu-item>Men's</a>
-      <a mat-menu-item>Tops</a>
-      <a mat-menu-item>Bottoms</a>
-      <a mat-menu-item>Socks</a>
+      <a mat-menu-item [routerLink]="['/mens']">Men's</a>
+      <a mat-menu-item [routerLink]="['/mens-prod']">Tops</a>
+      <a mat-menu-item [routerLink]="['/mens-prod']">Bottoms</a>
+      <a mat-menu-item [routerLink]="['/mens-prod']">Socks</a>
     </span>
     <span class="womens">
-      <a mat-menu-item>Men's</a>
-      <a mat-menu-item>Tops</a>
-      <a mat-menu-item>Bottoms</a>
-      <a mat-menu-item>Socks</a>
+      <a mat-menu-item [routerLink]="['/womens']">Women's</a>
+      <a mat-menu-item [routerLink]="['/womens-prod']">Tops</a>
+      <a mat-menu-item [routerLink]="['/womens-prod']">Bottoms</a>
+      <a mat-menu-item [routerLink]="['/womens-prod']">Socks</a>
     </span>
   </mat-menu>
   <a mat-tab-link [routerLink]="['/faq']">
