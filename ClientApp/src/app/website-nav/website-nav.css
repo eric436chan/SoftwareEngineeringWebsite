@@ -1,0 +1,57 @@
+.header{
+    background-color:black;
+    border-bottom: 2px solid gold;
+    height: 10%;
+}
+
+.header a {
+    color: white;
+    font-size: 3.5em;
+}
+
+.mens{
+    float:left;
+    width:50%;
+}
+
+.womens {
+  float: right;
+  width: 50%;
+}
+
+
+
+button:hover{
+    color:gold;
+    text-decoration:underline;
+    text-decoration-color:gold;
+}
+
+a:hover{
+    color:gold;
+}
+
+.navBar{
+    background-color: gray;
+    border-bottom: 2px solid gold;
+}
+
+nav a{
+    color:white;
+    width: 15%;
+}
+
+nav button{
+    width:15%;
+}
+
+button{
+    color:white;
+}
+
+
+
+
+
+
+

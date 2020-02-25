@@ -1,0 +1,39 @@
+
+<mat-toolbar class="header">
+  <img src="#"/>
+  <a class="nav-link" [routerLink]="['/']">Jack's Apparel</a>
+</mat-toolbar>
+
+<nav mat-tab-nav-bar class="navBar">
+  <a mat-tab-link [routerLink]="['/']">
+    Home
+  </a>
+  <button mat-tab-link mat-button [matMenuTriggerFor]="menu">
+    Products
+  </button>
+  <mat-menu #menu="matMenu">
+    <span class="mens">
+      <a mat-menu-item>Men's</a>
+      <a mat-menu-item>Tops</a>
+      <a mat-menu-item>Bottoms</a>
+      <a mat-menu-item>Socks</a>
+    </span>
+    <span class="womens">
+      <a mat-menu-item>Men's</a>
+      <a mat-menu-item>Tops</a>
+      <a mat-menu-item>Bottoms</a>
+      <a mat-menu-item>Socks</a>
+    </span>
+  </mat-menu>
+  <a mat-tab-link [routerLink]="['/faq']">
+    FAQ
+  </a>
+  <a mat-tab-link [routerLink]="['/contact']">
+    Contact
+  </a>
+  <form class="ml-auto">
+     <input class="form-control" type="search" placeholder="Search" />
+   </form>
+</nav>
+
+
