@@ -13,16 +13,16 @@
   </button>
   <mat-menu #menu="matMenu">
     <span class="mens">
-      <a mat-menu-item [routerLink]="['/mens']" class="menuHeader">Women's Products</a>
-      <a mat-menu-item [routerLink]="['/mens/prod']" class="menuItem">Tops</a>
-      <a mat-menu-item [routerLink]="['/mens/prod']" class="menuItem">Bottoms</a>
-      <a mat-menu-item [routerLink]="['/mens/prod']" class="menuItem">Socks</a>
+      <a mat-menu-item [routerLink]="['/womens']">Women's Products</a>
+      <a mat-menu-item [routerLink]="['/womens/prod']">Tops</a>
+      <a mat-menu-item [routerLink]="['/womens/prod']">Bottoms</a>
+      <a mat-menu-item [routerLink]="['/womens/prod']">Socks</a>
     </span>
     <span class="womens">
-      <a mat-menu-item [routerLink]="['/womens']" class="menuHeader">Men's Products</a>
-      <a mat-menu-item [routerLink]="['/womens/prod']" class="menuItem">Tops</a>
-      <a mat-menu-item [routerLink]="['/womens/prod']" class="menuItem">Bottoms</a>
-      <a mat-menu-item [routerLink]="['/womens/prod']">Socks</a>
+      <a mat-menu-item [routerLink]="['/mens']">Men's Products</a>
+      <button mat-menu-item click="onBrowseMen(tops)">Tops</button>
+      <a mat-menu-item [routerLink]="['/mens/prod']">Bottoms</a>
+      <a mat-menu-item [routerLink]="['/mens/prod']">Socks</a>
     </span>
   </mat-menu>
   <a mat-tab-link [routerLink]="['/faq']">
@@ -33,7 +33,7 @@
   </a>
   <form class="form-inline ml-auto waves-light">
     <input class="form-control" placeholder="Search..." type="text" #searchInput ng-model="searchBar"/>
-    <button mat-icon-button (click)="search(searchInput)" color="secondary" style="width : 2em;">
+    <button mat-icon-button (click)="onSearch(searchInput)" color="secondary" style="width : 2em;">
       <mat-icon svgIcon="search" aria-hidden="false"></mat-icon>
     </button>
   </form>

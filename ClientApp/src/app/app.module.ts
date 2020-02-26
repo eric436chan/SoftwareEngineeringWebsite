@@ -1,7 +1,7 @@
 //this is pre generated from visual studios
 
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, enableProdMode } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
@@ -28,8 +28,8 @@ import { WomenProductsComponent } from './women/women-products/women-products.co
 import { OrderComponent } from './order/order.component';
 import { SearchComponent } from './search/search.component';
 import { SearchingService } from './services/searching-service';
-
-
+import { ProductService } from './services/product-service';
+import { ShoppingCartService } from './services/shoppingCart-service';
 
 
 
@@ -55,6 +55,7 @@ import { SearchingService } from './services/searching-service';
     FormsModule,
     RouterModule.forRoot([
       { path: '', component: HomeComponent, pathMatch: 'full' },
+
       { path: 'faq', component: FAQComponent },
       { path: 'order', component: OrderComponent },
       { path: 'mens', component: MenComponent },
@@ -72,7 +73,7 @@ import { SearchingService } from './services/searching-service';
     MatFormFieldModule,
     MatInputModule
   ],
-  providers: [SearchingService],
+  providers: [SearchingService, ProductService, ShoppingCartService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
