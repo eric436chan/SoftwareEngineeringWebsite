@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ProductService } from '../service/product.service';
+import { ProductService } from '../services/product-service';
 import { Product } from '../model/product.model';
 import { map } from 'rxjs/operators';
 
@@ -16,7 +16,7 @@ export class ProductComponent {
  
   ngOnInit() {
 
-    this.productService.getProducts().subscribe(
+    this.productService.getAllProducts().subscribe(
       products => {
         this.products = products;
       })

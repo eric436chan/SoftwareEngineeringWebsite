@@ -1,11 +1,21 @@
-﻿<!DOCTYPE html>
+<body class="container">
+  <p class="mt-3">
+    Want to check what you ordered? Put in your order key and check it out for yourself!
+  </p>
+  <mat-form-field>
+    <mat-label>Order Key</mat-label>
+    <input matInput placeholder="Key..." type="text" name="orderKey" #orderInput />
+  </mat-form-field>
+  <button mat-raised-button (click)="onOrder(orderInput)">Submit</button>
 
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
-<head>
-    <meta charset="utf-8" />
-    <title></title>
-</head>
-<body>
-
+  <div *ngIf="order != null; else elseBlock">
+    <p>
+      Your order is here!
+    </p>
+  </div>
+  <ng-template #elseBlock>
+    <p *ngIf="orderChecked">
+      Sorry! There is no order with that order key!
+    </p>
+  </ng-template>
 </body>
-</html>
