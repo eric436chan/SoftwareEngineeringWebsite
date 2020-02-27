@@ -14,6 +14,8 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatDialogModule } from '@angular/material/dialog';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatRadioModule } from '@angular/material/radio';
 
 import { AppComponent } from './app.component';
 import { NavMenuComponent } from './nav-menu/nav-menu.component';
@@ -75,7 +77,9 @@ import { ShoppingCartDialog } from './dialogs/shoppingCartDialog/shopping-cart-d
     MatIconModule,
     MatFormFieldModule,
     MatInputModule,
-    MatDialogModule
+    MatDialogModule,
+    MatSidenavModule,
+    MatRadioModule
   ],
 
   entryComponents: [ShoppingCartDialog],

@@ -28,30 +28,10 @@ export class OrderComponent implements OnInit {
         this.shoppingCart = shoppingCart;
         console.log(this.shoppingCart);
       })
-
-    this.addProductToShoppingCart();
   }
 
   onOrder(orderKey: HTMLInputElement) {
     this.orderChecked = true;
     console.log(orderKey.value);
   }
-
-  addProductToShoppingCart() {
-    this.testProductOrder = {
-      name: 'test',
-      description: 'test',
-      color: 'red',
-      gender: 'male',
-      img: '',
-      price: 10,
-      size: 'small',
-      tag: 'test'
-    }
-
-    this.shoppingCart.push(this.testProductOrder);
-    this.shoppingCartService.updateShoppingCart(this.shoppingCart);
-  }
-
-  
 }

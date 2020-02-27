@@ -1,11 +1,33 @@
-﻿<!DOCTYPE html>
-
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
-<head>
-    <meta charset="utf-8" />
-    <title></title>
-</head>
 <body>
 
+  <div class="filterBody">
+    <div>
+      Filtering options.
+    </div>
+
+    <mat-radio-group [(ngModel)]="currentFilteringOption" class="filteringBar">
+
+      <mat-radio-button value="yes" (click)="changeProductList('yes')">
+        yes
+      </mat-radio-button>
+      <mat-radio-button value="no" (click)="changeProductList('no')">
+        no
+      </mat-radio-button>
+
+    </mat-radio-group>
+
+    {{currentFilteringOption}}
+
+  </div>
+
+
+
+  <div class="productBody">
+    This is the product content.
+
+    <div *ngFor="let product of actualProductList">
+      {{product.name}}
+    </div>
+  </div>
+
 </body>
-</html>
