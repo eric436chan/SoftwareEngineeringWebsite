@@ -16,6 +16,8 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatRadioModule } from '@angular/material/radio';
+import { MatCardModule } from '@angular/material/card';
+import { MatGridListModule } from '@angular/material/grid-list';
 
 import { AppComponent } from './app.component';
 import { NavMenuComponent } from './nav-menu/nav-menu.component';
@@ -34,6 +36,7 @@ import { SearchingService } from './services/searching-service';
 import { ProductService } from './services/product-service';
 import { ShoppingCartService } from './services/shoppingCart-service';
 import { ShoppingCartDialog } from './dialogs/shoppingCartDialog/shopping-cart-dialog.component';
+import { ProductDialog } from './dialogs/productDialog/product-dialog.component';
 
 
 
@@ -52,7 +55,8 @@ import { ShoppingCartDialog } from './dialogs/shoppingCartDialog/shopping-cart-d
     WomenProductsComponent,
     OrderComponent,
     SearchComponent,
-    ShoppingCartDialog
+    ShoppingCartDialog,
+    ProductDialog
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
@@ -79,10 +83,12 @@ import { ShoppingCartDialog } from './dialogs/shoppingCartDialog/shopping-cart-d
     MatInputModule,
     MatDialogModule,
     MatSidenavModule,
-    MatRadioModule
+    MatRadioModule,
+    MatCardModule,
+    MatGridListModule
   ],
 
-  entryComponents: [ShoppingCartDialog],
+  entryComponents: [ShoppingCartDialog, ProductDialog],
   providers: [SearchingService, ProductService, ShoppingCartService],
   bootstrap: [AppComponent]
 })

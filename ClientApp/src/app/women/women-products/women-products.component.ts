@@ -3,6 +3,8 @@ import { ProductService } from '../../services/product-service';
 import { ShoppingCartService } from '../../services/shoppingCart-service';
 import { ProductOrder } from '../../model/product.order.model';
 import { Product } from '../../model/product.model';
+import { MatDialog } from '@angular/material/dialog';
+import { ProductDialog } from '../../dialogs/productDialog/product-dialog.component';
 
 @Component({
   selector: 'women-prod',
@@ -17,7 +19,7 @@ export class WomenProductsComponent implements OnInit{
   actualProductList: Array<Product>;
   currentFilteringOption: string;
 
-  constructor(private productService: ProductService, private shoppingCartService: ShoppingCartService) {
+  constructor(private productService: ProductService, private shoppingCartService: ShoppingCartService, private dialog: MatDialog) {
 
   }
 
@@ -63,6 +65,12 @@ export class WomenProductsComponent implements OnInit{
     }
 
 
+  }
+
+  onClickProduct(index: number) {
+    const productDialog = this.dialog.open(ProductDialog, {
+      data: this.actualProductList[index]
+    });
   }
 
 

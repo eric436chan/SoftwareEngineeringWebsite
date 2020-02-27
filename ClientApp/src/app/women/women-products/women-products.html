@@ -25,9 +25,18 @@
   <div class="productBody">
     This is the product content.
 
-    <div *ngFor="let product of actualProductList">
-      {{product.name}}
-    </div>
+    <mat-grid-list cols="3" rowHeight="100px">
+      <mat-grid-tile *ngFor="let product of actualProductList; index as i">
+        <mat-card (click)="onClickProduct(i)">
+          <mat-card-title>
+            {{product.name}}
+          </mat-card-title>
+          <img mat-card-image src="#"/>
+        </mat-card>
+      </mat-grid-tile>
+
+    </mat-grid-list>
+
   </div>
 
 </body>
