@@ -5,6 +5,8 @@ import { Router } from '@angular/router';
 import { SearchingService } from '../services/searching-service';
 import { ShoppingCartService } from '../services/shoppingCart-service';
 import { ProductOrder } from '../model/product.order.model';
+import { MatDialog } from '@angular/material/dialog';
+import { ShoppingCartDialog } from '../dialogs/shoppingCartDialog/shopping-cart-dialog.component';
 
 @Component({
   selector: 'website-nav',
@@ -19,7 +21,8 @@ export class WebsiteNavComponent{
 
 
   constructor(private iconRegistry: MatIconRegistry, private sanitizer: DomSanitizer, private router: Router,
-    private searchingService: SearchingService, private shoppingCartService: ShoppingCartService) {
+    private searchingService: SearchingService, private shoppingCartService: ShoppingCartService,
+    private dialog: MatDialog) {
     iconRegistry.addSvgIcon('search', sanitizer.bypassSecurityTrustResourceUrl('assets/img/search-24px.svg'));
     iconRegistry.addSvgIcon('shopping-cart', sanitizer.bypassSecurityTrustResourceUrl('assets/img/shopping_cart-24px.svg'));
 
@@ -39,5 +42,17 @@ export class WebsiteNavComponent{
   onBrowseMen(tag: string) {
     this.searchingService.browsingString.emit(tag)
     this.router.navigate(['./mens/prod']);
+  }
+
+  openShoppingCartDialog() {
+
+    const shoppingCartDialog = this.dialog.open(ShoppingCartDialog);
+
+    shoppingCartDialog.afterClosed().subscribe(data =>
+    {
+      console.log('dialog was closed');
+    })
+    
+
   }
 }

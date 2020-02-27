@@ -1,3 +1,20 @@
-﻿body
-{
+.left{
+    width:10%;
+    min-height:100%;
+    float:left;
+    margin-right:2em;
+    background-color:black;
+}
+
+.right {
+  width: 10%;
+  min-height: 100%;
+  margin-left:2em;
+  float: right;
+  background-color: black;
+}
+
+.center{
+    margin-left:2em;
+    margin-right:2em;
 }

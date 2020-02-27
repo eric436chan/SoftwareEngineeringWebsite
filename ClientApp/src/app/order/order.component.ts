@@ -10,20 +10,47 @@ import { Order } from '../model/order.model';
   styleUrls: ['./order.css']
 })
 
-export class OrderComponent {
+export class OrderComponent implements OnInit {
 
-  shoppingCart: Array<ProductOrder> = [];
+  shoppingCart: Array<ProductOrder>;
+  testProductOrder: ProductOrder;
   order: Order;
   orderChecked: boolean = false
 
 
-  constructor(private orderService: OrderService) {
+  constructor(private orderService: OrderService, private shoppingCartService: ShoppingCartService) {
    
+  }
+
+  ngOnInit() {
+    this.shoppingCartService.currentShoppingCart.subscribe(
+      shoppingCart => {
+        this.shoppingCart = shoppingCart;
+        console.log(this.shoppingCart);
+      })
+
+    this.addProductToShoppingCart();
   }
 
   onOrder(orderKey: HTMLInputElement) {
     this.orderChecked = true;
     console.log(orderKey.value);
+  }
+
+  addProductToShoppingCart() {
+    this.testProductOrder = {
+      name: 'test',
+      description: 'test',
+      color: 'red',
+      gender: 'male',
+      img: '',
+      price: 10,
+      size: 'small',
+      tag: 'test'
+    }
+
+    this.shoppingCart.push(this.testProductOrder);
+    this.shoppingCartService.updateShoppingCart(this.shoppingCart);
   }
 
   

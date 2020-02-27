@@ -2,7 +2,7 @@
 
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, enableProdMode } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule} from '@angular/forms';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -13,6 +13,7 @@ import { MatTabsModule } from '@angular/material/tabs';
 import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatDialogModule } from '@angular/material/dialog';
 
 import { AppComponent } from './app.component';
 import { NavMenuComponent } from './nav-menu/nav-menu.component';
@@ -30,6 +31,7 @@ import { SearchComponent } from './search/search.component';
 import { SearchingService } from './services/searching-service';
 import { ProductService } from './services/product-service';
 import { ShoppingCartService } from './services/shoppingCart-service';
+import { ShoppingCartDialog } from './dialogs/shoppingCartDialog/shopping-cart-dialog.component';
 
 
 
@@ -47,7 +49,8 @@ import { ShoppingCartService } from './services/shoppingCart-service';
     MenProductsComponent,
     WomenProductsComponent,
     OrderComponent,
-    SearchComponent
+    SearchComponent,
+    ShoppingCartDialog
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
@@ -71,8 +74,11 @@ import { ShoppingCartService } from './services/shoppingCart-service';
     MatTabsModule,
     MatIconModule,
     MatFormFieldModule,
-    MatInputModule
+    MatInputModule,
+    MatDialogModule
   ],
+
+  entryComponents: [ShoppingCartDialog],
   providers: [SearchingService, ProductService, ShoppingCartService],
   bootstrap: [AppComponent]
 })
