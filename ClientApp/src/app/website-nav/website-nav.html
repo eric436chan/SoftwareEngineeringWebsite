@@ -20,7 +20,7 @@
     </span>
     <span class="womens">
       <a mat-menu-item [routerLink]="['/mens']">Men's Products</a>
-      <button mat-menu-item click="onBrowseMen(tops)">Tops</button>
+      <button mat-menu-item (click)="onBrowseMen('tops')">Tops</button>
       <a mat-menu-item [routerLink]="['/mens/prod']">Bottoms</a>
       <a mat-menu-item [routerLink]="['/mens/prod']">Socks</a>
     </span>

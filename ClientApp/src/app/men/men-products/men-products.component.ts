@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { SearchingService } from '../../services/searching-service';
+import { BrowsingService } from '../../services/browsing-service';
 
 @Component({
   selector: 'men-prod',
@@ -9,18 +9,18 @@ import { SearchingService } from '../../services/searching-service';
 
 export class MenProductsComponent implements OnInit {
 
-  browsingString: string
+  tagString: string
 
-  constructor(private searchService: SearchingService) {
+  constructor(private browsingService: BrowsingService) {
 
   }
 
   ngOnInit() {
-    this.searchService.browsingString.subscribe(
+    this.browsingService.currentTag.subscribe(
       data => {
-        this.browsingString = data;
-        console.log(data);
+        this.tagString = data;
+        console.log(this.tagString);
       })
   }
-
+  
 }

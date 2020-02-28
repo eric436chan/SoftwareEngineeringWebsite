@@ -63,8 +63,6 @@ export class WomenProductsComponent implements OnInit{
       this.actualProductList = tempProductList;
 
     }
-
-
   }
 
   onClickProduct(index: number) {
