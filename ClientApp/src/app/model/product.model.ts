@@ -1,6 +1,6 @@
 export interface Product {
   name: string,
-  description: string,
+  description: Array<string>,
   img: string,
   price: number,
   gender: string,

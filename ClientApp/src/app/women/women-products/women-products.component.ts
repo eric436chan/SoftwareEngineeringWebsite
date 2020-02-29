@@ -48,30 +48,6 @@ export class WomenProductsComponent implements OnInit{
 
   changeProductList(filter: string) {
 
-    if (filter == "yes") {
-      let tempProductList: Array<Product> = [];
-
-      for (let product of this.fullProductList) {
-        if (product.name == "test") {
-          tempProductList.push(product);
-        }
-      }
-
-      this.actualProductList = tempProductList;
-
-    } else if (filter == "no") {
-
-      let tempProductList: Array<Product> = [];
-
-      for (let product of this.fullProductList) {
-        if (product.name == "test2") {
-          tempProductList.push(product);
-        }
-      }
-
-      this.actualProductList = tempProductList;
-
-    }
   }
 
   onClickProduct(index: number) {
