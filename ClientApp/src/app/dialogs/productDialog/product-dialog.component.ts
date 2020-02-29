@@ -11,9 +11,9 @@ import { Product } from '../../model/product.model';
 
 export class ProductDialog {
 
+
   constructor(private dialogRef: MatDialogRef<ProductDialog>,
     @Inject(MAT_DIALOG_DATA) private data: Product) {
-
   }
 
 }

@@ -85,7 +85,7 @@ import { ProductDialog } from './dialogs/productDialog/product-dialog.component'
     MatSidenavModule,
     MatRadioModule,
     MatCardModule,
-    MatGridListModule
+    MatGridListModule,
   ],
 
   entryComponents: [ShoppingCartDialog, ProductDialog],

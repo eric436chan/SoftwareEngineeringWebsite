@@ -21,8 +21,8 @@
     <span class="womens">
       <a mat-menu-item [routerLink]="['/mens']">Men's Products</a>
       <button mat-menu-item (click)="onBrowseMen('tops')">Tops</button>
-      <a mat-menu-item [routerLink]="['/mens/prod']">Bottoms</a>
-      <a mat-menu-item [routerLink]="['/mens/prod']">Socks</a>
+      <button mat-menu-item (click)="onBrowseMen('bottoms')">Bottoms</button>
+      <button mat-menu-item (click)="onBrowseMen('socks')">Socks</button>
     </span>
   </mat-menu>
   <a mat-tab-link [routerLink]="['/faq']">

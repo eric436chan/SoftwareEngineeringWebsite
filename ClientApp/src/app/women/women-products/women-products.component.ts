@@ -5,6 +5,7 @@ import { ProductOrder } from '../../model/product.order.model';
 import { Product } from '../../model/product.model';
 import { MatDialog } from '@angular/material/dialog';
 import { ProductDialog } from '../../dialogs/productDialog/product-dialog.component';
+import { BrowsingService } from '../../services/browsing-service';
 
 @Component({
   selector: 'women-prod',
@@ -18,12 +19,15 @@ export class WomenProductsComponent implements OnInit{
   fullProductList: Array<Product>;
   actualProductList: Array<Product>;
   currentFilteringOption: string;
+  tagString: string;
 
-  constructor(private productService: ProductService, private shoppingCartService: ShoppingCartService, private dialog: MatDialog) {
+  constructor(private productService: ProductService, private shoppingCartService: ShoppingCartService, private browsingService: BrowsingService,
+    private dialog: MatDialog) {
 
   }
 
   ngOnInit() {
+
     this.shoppingCartService.currentShoppingCart.subscribe(
       shoppingCart => {
         this.shoppingCart = shoppingCart;
@@ -34,6 +38,11 @@ export class WomenProductsComponent implements OnInit{
       data => {
         this.fullProductList = data;
         this.actualProductList = data;
+      });
+
+    this.browsingService.currentTag.subscribe(
+      data => {
+        this.tagString = data;
       });
   }
 

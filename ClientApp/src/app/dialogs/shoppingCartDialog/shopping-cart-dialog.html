@@ -1,1 +1,14 @@
-this is a simple dialog
+<body>
+  <div>
+    <p>This is your current shopping cart</p>
+    <p *ngIf="data.length == 0; else elseBlock">
+      Your shopping cart is currently empty!<br />
+      Perhaps you should add some items in here.
+    </p>
+    <ng-template #elseBlock>
+      Your shopping cart currently has {{data.length}} items!
+    </ng-template>
+  </div>
+
+
+</body>

@@ -15,7 +15,7 @@ import { BrowsingService } from '../services/browsing-service';
   styleUrls: ['./website-nav.css']
 })
 
-export class WebsiteNavComponent{
+export class WebsiteNavComponent implements OnInit{
 
 
   shoppingCart: Array<ProductOrder> = [];
@@ -27,6 +27,15 @@ export class WebsiteNavComponent{
     iconRegistry.addSvgIcon('search', sanitizer.bypassSecurityTrustResourceUrl('assets/img/search-24px.svg'));
     iconRegistry.addSvgIcon('shopping-cart', sanitizer.bypassSecurityTrustResourceUrl('assets/img/shopping_cart-24px.svg'));
 
+  }
+
+  ngOnInit() {
+    
+    this.shoppingCartService.currentShoppingCart.subscribe(
+      shoppingCart => {
+        this.shoppingCart = shoppingCart;
+        console.log(this.shoppingCart);
+      });
   }
 
 
@@ -45,15 +54,18 @@ export class WebsiteNavComponent{
     this.router.navigate(['./mens/prod']);
   }
 
+  onBrowseWomen(tag: string) {
+    this.browsingService.updateTag(tag);
+    console.log("moving to women's products");
+    this.router.navigate(['./womens/prod']);
+  }
+
+
+
   openShoppingCartDialog() {
 
-    const shoppingCartDialog = this.dialog.open(ShoppingCartDialog);
-
-    shoppingCartDialog.afterClosed().subscribe(data =>
-    {
-      console.log('dialog was closed');
-    })
-    
-
+    const shoppingCartDialog = this.dialog.open(ShoppingCartDialog, {
+      data: this.shoppingCart
+    });
   }
 }
