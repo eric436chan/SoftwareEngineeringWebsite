@@ -10,21 +10,28 @@ import { Order } from '../model/order.model';
   styleUrls: ['./order.css']
 })
 
-export class OrderComponent {
+export class OrderComponent implements OnInit {
 
-  shoppingCart: Array<ProductOrder> = [];
+  shoppingCart: Array<ProductOrder>;
+  testProductOrder: ProductOrder;
   order: Order;
   orderChecked: boolean = false
 
 
-  constructor(private orderService: OrderService) {
+  constructor(private orderService: OrderService, private shoppingCartService: ShoppingCartService) {
    
+  }
+
+  ngOnInit() {
+    this.shoppingCartService.currentShoppingCart.subscribe(
+      shoppingCart => {
+        this.shoppingCart = shoppingCart;
+        console.log(this.shoppingCart);
+      })
   }
 
   onOrder(orderKey: HTMLInputElement) {
     this.orderChecked = true;
     console.log(orderKey.value);
   }
-
-  
 }

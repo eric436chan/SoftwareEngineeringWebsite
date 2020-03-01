@@ -30,13 +30,11 @@ nav a{
     width: 15%;
 }
 
-nav button{
-    width:15%;
+nav button {
+  width: 15%;
+  color: white;
 }
 
-button{
-    color:white;
-}
 
 .menuHeader{
     border-bottom:1px solid black;
@@ -49,10 +47,6 @@ button{
 
 img{
     max-height:100%;
-}
-
-.womens button{
-    background-color: gray;
 }
     
 

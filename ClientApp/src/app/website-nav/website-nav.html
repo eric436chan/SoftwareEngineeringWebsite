@@ -20,9 +20,9 @@
     </span>
     <span class="womens">
       <a mat-menu-item [routerLink]="['/mens']">Men's Products</a>
-      <button mat-menu-item click="onBrowseMen(tops)">Tops</button>
-      <a mat-menu-item [routerLink]="['/mens/prod']">Bottoms</a>
-      <a mat-menu-item [routerLink]="['/mens/prod']">Socks</a>
+      <button mat-menu-item (click)="onBrowseMen('tops')">Tops</button>
+      <button mat-menu-item (click)="onBrowseMen('bottoms')">Bottoms</button>
+      <button mat-menu-item (click)="onBrowseMen('socks')">Socks</button>
     </span>
   </mat-menu>
   <a mat-tab-link [routerLink]="['/faq']">
@@ -37,7 +37,7 @@
       <mat-icon svgIcon="search" aria-hidden="false"></mat-icon>
     </button>
   </form>
-  <button mat-icon-button color="secondary" style="width : 3em; margin-top:auto; margin-bottom:auto;">
+  <button mat-icon-button color="secondary" style="width : 3em; margin-top:auto; margin-bottom:auto;" (click)="openShoppingCartDialog()">
     <mat-icon svgIcon="shopping-cart" aria-hidden="false"></mat-icon>
   </button>
 </nav>

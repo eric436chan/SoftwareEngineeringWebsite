@@ -1,4 +1,11 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { ProductService } from '../../services/product-service';
+import { ShoppingCartService } from '../../services/shoppingCart-service';
+import { ProductOrder } from '../../model/product.order.model';
+import { Product } from '../../model/product.model';
+import { MatDialog } from '@angular/material/dialog';
+import { ProductDialog } from '../../dialogs/productDialog/product-dialog.component';
+import { BrowsingService } from '../../services/browsing-service';
 
 @Component({
   selector: 'women-prod',
@@ -6,6 +13,48 @@ import { Component } from '@angular/core';
   styleUrls: ['./women-products.css']
 })
 
-export class WomenProductsComponent {
+export class WomenProductsComponent implements OnInit{
+
+  shoppingCart: Array<ProductOrder>;
+  fullProductList: Array<Product>;
+  actualProductList: Array<Product>;
+  currentFilteringOption: string;
+  tagString: string;
+
+  constructor(private productService: ProductService, private shoppingCartService: ShoppingCartService, private browsingService: BrowsingService,
+    private dialog: MatDialog) {
+
+  }
+
+  ngOnInit() {
+
+    this.shoppingCartService.currentShoppingCart.subscribe(
+      shoppingCart => {
+        this.shoppingCart = shoppingCart;
+        console.log(this.shoppingCart);
+      });
+
+    this.productService.getAllProducts().subscribe(
+      data => {
+        this.fullProductList = data;
+        this.actualProductList = data;
+      });
+
+    this.browsingService.currentTag.subscribe(
+      data => {
+        this.tagString = data;
+      });
+  }
+
+  changeProductList(filter: string) {
+
+  }
+
+  onClickProduct(index: number) {
+    const productDialog = this.dialog.open(ProductDialog, {
+      data: this.actualProductList[index]
+    });
+  }
+
 
 }

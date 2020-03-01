@@ -5,5 +5,5 @@ export interface Order {
   client: Client,
   orderList: Array<ProductOrder>,
   datePlaced: string,
-  paid: boolean
+  totalPrice: number
 }

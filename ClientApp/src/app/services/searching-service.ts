@@ -6,5 +6,5 @@ import { EventEmitter, Injectable } from "@angular/core";
 export class SearchingService{
 
   searchString = new EventEmitter<string>();
-  browsingString = new EventEmitter<string>();
+  tagString = new EventEmitter<string>();
 }

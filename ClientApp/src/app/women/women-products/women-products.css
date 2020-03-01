@@ -1,3 +1,29 @@
-﻿body
-{
+.filterBody{
+    float:left;
+    width:15%;
+    margin-right:1em;
+    margin-top:1em;
+    min-height:100%;
+    border:1px solid black;
+}
+
+.productBody {
+  float: right;
+  width: 75%;
+  margin-right: 1em;
+  margin-top: 1em;
+  min-height: 100%;
+  border: 1px solid black;
+}
+
+.filteringBar{
+    display:flex;
+    flex-direction:column;
+    margin:5px;
+}
+
+.productCard{
+    display:inline-block;
+    border:1px solid black;
+    width:30%;
 }

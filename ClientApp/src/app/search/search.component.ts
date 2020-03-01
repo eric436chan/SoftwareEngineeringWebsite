@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { SearchingService } from '../services/searching-service';
+import { ShoppingCartService } from '../services/shoppingCart-service';
+import { ProductOrder } from '../model/product.order.model';
 
 @Component({
   selector: 'search',
@@ -10,18 +12,22 @@ import { SearchingService } from '../services/searching-service';
 export class SearchComponent implements OnInit {
 
   searchString: string;
+  shoppingCart: Array<ProductOrder>;
 
-  constructor(private searchingService: SearchingService) {
-
+  constructor(private searchingService: SearchingService, private shoppingCartService: ShoppingCartService) {
+    searchingService.searchString.subscribe(data => {
+      this.searchString = data;
+      console.log(this.searchString);
+    })
   }
 
   ngOnInit() {
-    this.searchingService.searchString.subscribe(
-      data => {
-        this.searchString = data;
-        console.log(this.searchString);
-      }
-    )
+    
+    this.shoppingCartService.currentShoppingCart.subscribe(
+      shoppingCart => {
+        this.shoppingCart = shoppingCart;
+        console.log(this.shoppingCart);
+      })
   }
   
 }

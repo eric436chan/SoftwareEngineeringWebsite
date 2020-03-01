@@ -8,15 +8,18 @@ import { ProductOrder } from '../model/product.order.model';
   selector: 'app-home',
   templateUrl: './home.component.html',
 })
-export class HomeComponent{
+export class HomeComponent implements OnInit {
 
-  private shoppingCart: Array<ProductOrder> = []
+  shoppingCart: Array<ProductOrder>;
 
   constructor(private shoppingCartService: ShoppingCartService) {
-    this.shoppingCartService.getShoppingCart().subscribe(
-      data => {
-        this.shoppingCart = data;
-        console.log(data);
+  }
+
+  ngOnInit() {
+    this.shoppingCartService.currentShoppingCart.subscribe(
+      shoppingCart => {
+        this.shoppingCart = shoppingCart;
+        console.log(this.shoppingCart);
       })
   }
 }
