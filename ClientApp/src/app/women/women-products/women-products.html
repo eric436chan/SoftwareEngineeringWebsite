@@ -23,20 +23,19 @@
 
 
   <div class="productBody">
-    This is the product content.
 
-    <mat-grid-list cols="3" rowHeight="500px">
-      <mat-grid-tile *ngFor="let product of actualProductList; index as i">
-        <mat-card (click)="onClickProduct(i)">
-          <mat-card-title>
-            {{product.name}}
-          </mat-card-title>
-          <img mat-card-image src="#"/>
-        </mat-card>
-      </mat-grid-tile>
+    <mat-card *ngFor="let product of actualProductList; index as i" (click)="onClickProduct(i)" class="productCard">
 
-    </mat-grid-list>
+      <mat-card-header>
+        <mat-card-title>
+          {{product.name}}
+        </mat-card-title>
+      </mat-card-header>
 
+      <img mat-card-img src="{{product.img}}"/>
+      <mat-card-footer>
+        Price: {{product.price}}
+      </mat-card-footer>
+    </mat-card>
   </div>
-
 </body>

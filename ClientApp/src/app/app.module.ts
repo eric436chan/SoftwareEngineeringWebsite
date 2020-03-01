@@ -18,6 +18,9 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatRadioModule } from '@angular/material/radio';
 import { MatCardModule } from '@angular/material/card';
 import { MatGridListModule } from '@angular/material/grid-list';
+import { MatTooltipModule } from '@angular/material/tooltip';
+import { MatSelectModule } from '@angular/material/select';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 import { AppComponent } from './app.component';
 import { NavMenuComponent } from './nav-menu/nav-menu.component';
@@ -86,6 +89,9 @@ import { ProductDialog } from './dialogs/productDialog/product-dialog.component'
     MatRadioModule,
     MatCardModule,
     MatGridListModule,
+    MatTooltipModule,
+    MatSelectModule,
+    MatSnackBarModule
   ],
 
   entryComponents: [ShoppingCartDialog, ProductDialog],

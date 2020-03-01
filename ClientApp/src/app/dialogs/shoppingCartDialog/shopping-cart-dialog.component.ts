@@ -13,7 +13,10 @@ export class ShoppingCartDialog {
 
   constructor(private shoppingCartDialog: MatDialogRef<ShoppingCartDialog>,
     @Inject(MAT_DIALOG_DATA) public data: Array<ProductOrder>) {
-    console.log(data);
+  }
+
+  onCheckout() {
+
   }
 
 }
