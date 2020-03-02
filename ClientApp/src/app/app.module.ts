@@ -40,6 +40,7 @@ import { ProductService } from './services/product-service';
 import { ShoppingCartService } from './services/shoppingCart-service';
 import { ShoppingCartDialog } from './dialogs/shoppingCartDialog/shopping-cart-dialog.component';
 import { ProductDialog } from './dialogs/productDialog/product-dialog.component';
+import { CheckoutComponent } from './checkout/checkout.component';
 
 
 
@@ -58,6 +59,7 @@ import { ProductDialog } from './dialogs/productDialog/product-dialog.component'
     WomenProductsComponent,
     OrderComponent,
     SearchComponent,
+    CheckoutComponent,
     ShoppingCartDialog,
     ProductDialog
   ],
@@ -74,7 +76,8 @@ import { ProductDialog } from './dialogs/productDialog/product-dialog.component'
       { path: 'womens', component: WomenComponent },
       { path: 'womens/prod', component: WomenProductsComponent },
       { path: 'mens/prod', component: MenProductsComponent },
-      { path: 'search', component: SearchComponent }
+      { path: 'search', component: SearchComponent },
+      { path: 'checkout', component: CheckoutComponent }
     ]),
     BrowserAnimationsModule,
     MatToolbarModule,
