@@ -1,25 +1,28 @@
-//this is pre generated from visual studios
-
 import { Component, OnInit } from '@angular/core';
 import { ShoppingCartService } from '../services/shoppingCart-service';
 import { ProductOrder } from '../model/product.order.model';
 
 @Component({
-  selector: 'app-home',
-  templateUrl: './home.component.html',
+  selector: 'checkout',
+  templateUrl: './checkout.html',
+  styleUrls: ['./checkout.css']
 })
-export class HomeComponent implements OnInit {
 
-  shoppingCart: Array<ProductOrder>;
+export class CheckoutComponent implements OnInit{
+
+  private shoppingCart: Array<ProductOrder>
+  private selected: number = 0;
 
   constructor(private shoppingCartService: ShoppingCartService) {
+
   }
 
   ngOnInit() {
     this.shoppingCartService.currentShoppingCart.subscribe(
-      shoppingCart => {
-        this.shoppingCart = shoppingCart;
-        console.log(this.shoppingCart);
+      data => {
+        this.shoppingCart = data;
       })
   }
+
+
 }

@@ -1,0 +1,41 @@
+<body>
+
+  <div class="filterBody">
+    <div>
+      Filtering options.
+    </div>
+
+    <mat-radio-group [(ngModel)]="currentFilteringOption" class="filteringBar">
+
+      <mat-radio-button value="yes" (click)="changeProductList('yes')">
+        yes
+      </mat-radio-button>
+      <mat-radio-button value="no" (click)="changeProductList('no')">
+        no
+      </mat-radio-button>
+
+    </mat-radio-group>
+
+    {{currentFilteringOption}}
+
+  </div>
+
+
+
+  <div class="productBody">
+
+    <mat-card *ngFor="let product of actualProductList; index as i" (click)="onClickProduct(i)" class="productCard">
+
+      <mat-card-header>
+        <mat-card-title>
+          {{product.name}}
+        </mat-card-title>
+      </mat-card-header>
+
+      <img mat-card-img src="{{product.img}}"/>
+      <mat-card-footer>
+        Price: {{product.price}}
+      </mat-card-footer>
+    </mat-card>
+  </div>
+</body>
