@@ -1,0 +1,13 @@
+body {
+    max-width:500px;
+}
+
+.left-side{
+    float:left;
+    width:50%;
+}
+
+.right-side{
+    float:right;
+    width:50%;
+}

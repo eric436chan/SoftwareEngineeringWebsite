@@ -1,0 +1,29 @@
+<body>
+
+  <div class="left">AD1</div>
+  <div class="right">AD2</div>
+  <div class="center">
+    <p>
+      Want to check what you ordered? Put in your order key and check it out for yourself!
+    </p>
+    <mat-form-field>
+      <mat-label>Order Key</mat-label>
+      <input matInput placeholder="Key..." type="text" name="orderKey" #orderInput/>
+    </mat-form-field>
+    <br />
+
+    <button mat-raised-button (click)="onOrder(orderInput)">Submit</button>
+
+    <div *ngIf="order != null; else elseBlock">
+      <p class="mt-2">
+        Your order is here!
+      </p>
+    </div>
+    <ng-template #elseBlock >
+
+      <p *ngIf="orderChecked" class="mt-2">
+        Sorry! There is no order with that order key!
+      </p>
+    </ng-template>
+  </div>
+</body>
