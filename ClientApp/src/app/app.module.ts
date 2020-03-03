@@ -29,6 +29,17 @@ import { CounterComponent } from './counter/counter.component';
 import { FetchDataComponent } from './fetch-data/fetch-data.component';
 import { WebsiteNavComponent } from './website-nav/website-nav.component';
 import { FAQComponent } from './faq/faq.component';
+<<<<<<< HEAD
+import { ContactComponent } from './contact/contact.component';
+import { ProductComponent } from './product/product.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatButtonModule } from '@angular/material/button';
+import { MatTabsModule } from '@angular/material/tabs';
+import { MatCardModule } from '@angular/material/card';
+import { MatTableModule } from '@angular/material/table';
+=======
 import { MenComponent } from './men/men.component';
 import { WomenComponent } from './women/women.component';
 import { MenProductsComponent } from './men/men-products/men-products.component';
@@ -41,6 +52,7 @@ import { ShoppingCartService } from './services/shoppingCart-service';
 import { ShoppingCartDialog } from './dialogs/shoppingCartDialog/shopping-cart-dialog.component';
 import { ProductDialog } from './dialogs/productDialog/product-dialog.component';
 import { CheckoutComponent } from './checkout/checkout.component';
+>>>>>>> 4ce7465962047be57a365de09f53469f6e7027bf
 
 
 
@@ -84,6 +96,10 @@ import { CheckoutComponent } from './checkout/checkout.component';
     MatMenuModule,
     MatButtonModule,
     MatTabsModule,
+<<<<<<< HEAD
+    MatCardModule,
+    MatTableModule
+=======
     MatIconModule,
     MatFormFieldModule,
     MatInputModule,
@@ -95,6 +111,7 @@ import { CheckoutComponent } from './checkout/checkout.component';
     MatTooltipModule,
     MatSelectModule,
     MatSnackBarModule
+>>>>>>> 4ce7465962047be57a365de09f53469f6e7027bf
   ],
 
   entryComponents: [ShoppingCartDialog, ProductDialog],
