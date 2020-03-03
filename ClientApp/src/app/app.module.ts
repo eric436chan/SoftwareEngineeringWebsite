@@ -21,6 +21,11 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MatButtonModule } from '@angular/material/button';
 import { MatTabsModule } from '@angular/material/tabs';
 
+import { AppRoutingModule } from './app-routing.module';
+import { MensComponent } from './mens/mens.component';
+import { WomensComponent } from './womens/womens.component';
+
+
 
 
 @NgModule({
@@ -34,6 +39,9 @@ import { MatTabsModule } from '@angular/material/tabs';
     FAQComponent,
     ContactComponent,
     ProductComponent,
+    MensComponent,
+    WomensComponent,
+    
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
@@ -49,7 +57,9 @@ import { MatTabsModule } from '@angular/material/tabs';
     MatToolbarModule,
     MatMenuModule,
     MatButtonModule,
-    MatTabsModule
+    MatTabsModule,
+    AppRoutingModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]
