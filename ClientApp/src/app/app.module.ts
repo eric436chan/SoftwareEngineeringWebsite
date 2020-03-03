@@ -29,6 +29,13 @@ import { CounterComponent } from './counter/counter.component';
 import { FetchDataComponent } from './fetch-data/fetch-data.component';
 import { WebsiteNavComponent } from './website-nav/website-nav.component';
 import { FAQComponent } from './faq/faq.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatButtonModule } from '@angular/material/button';
+import { MatTabsModule } from '@angular/material/tabs';
+import { MatCardModule } from '@angular/material/card';
+import { MatTableModule } from '@angular/material/table';
 import { MenComponent } from './men/men.component';
 import { WomenComponent } from './women/women.component';
 import { MenProductsComponent } from './men/men-products/men-products.component';
@@ -41,11 +48,6 @@ import { ShoppingCartService } from './services/shoppingCart-service';
 import { ShoppingCartDialog } from './dialogs/shoppingCartDialog/shopping-cart-dialog.component';
 import { ProductDialog } from './dialogs/productDialog/product-dialog.component';
 import { CheckoutComponent } from './checkout/checkout.component';
-import { MensComponent } from './mens/mens.component';
-import { WomensComponent } from './womens/womens.component';
-
-
-
 
 @NgModule({
   declarations: [
@@ -56,9 +58,6 @@ import { WomensComponent } from './womens/womens.component';
     FetchDataComponent,
     WebsiteNavComponent,
     FAQComponent,
-    MensComponent,
-    WomensComponent,
-    
     WomenComponent,
     MenComponent,
     MenProductsComponent,
@@ -76,7 +75,6 @@ import { WomensComponent } from './womens/womens.component';
     FormsModule,
     RouterModule.forRoot([
       { path: '', component: HomeComponent, pathMatch: 'full' },
-
       { path: 'faq', component: FAQComponent },
       { path: 'order', component: OrderComponent },
       { path: 'mens', component: MenComponent },
@@ -91,6 +89,8 @@ import { WomensComponent } from './womens/womens.component';
     MatMenuModule,
     MatButtonModule,
     MatTabsModule,
+    MatCardModule,
+    MatTableModule,
     MatIconModule,
     MatFormFieldModule,
     MatInputModule,
