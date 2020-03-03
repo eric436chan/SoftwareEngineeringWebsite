@@ -15,10 +15,7 @@ export class SearchComponent implements OnInit {
   shoppingCart: Array<ProductOrder>;
 
   constructor(private searchingService: SearchingService, private shoppingCartService: ShoppingCartService) {
-    searchingService.searchString.subscribe(data => {
-      this.searchString = data;
-      console.log(this.searchString);
-    })
+
   }
 
   ngOnInit() {
@@ -27,6 +24,12 @@ export class SearchComponent implements OnInit {
       shoppingCart => {
         this.shoppingCart = shoppingCart;
         console.log(this.shoppingCart);
+      })
+
+    this.searchingService.currentSearchString.subscribe(
+      data => {
+        this.searchString = data;
+        console.log(this.searchString);
       })
   }
   

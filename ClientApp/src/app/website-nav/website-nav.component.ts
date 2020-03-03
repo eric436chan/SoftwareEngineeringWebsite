@@ -44,9 +44,9 @@ export class WebsiteNavComponent implements OnInit{
   onSearch(searchInput: HTMLInputElement) {
 
     if (searchInput.value != "") {
+      this.searchingService.updateSearchString(searchInput.value);
       this.router.navigate(['./search']);
 
-      this.searchingService.searchString.emit(searchInput.value);
     }
   }
 

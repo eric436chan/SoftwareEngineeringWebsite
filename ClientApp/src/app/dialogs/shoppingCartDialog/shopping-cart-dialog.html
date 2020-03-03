@@ -6,8 +6,18 @@
       Perhaps you should add some items in here.
     </p>
     <ng-template #elseBlock>
-      Your shopping cart currently has {{data.length}} items!
+      Your shopping cart currently has {{data.length}} item(s)!
+
+      <div *ngFor="let prod of data">
+        {{prod.name}}
+      </div>
+
     </ng-template>
+
+
+    <button mat-raised-button (click)="onCheckout()">Checkout</button>
+
+
   </div>
 
 

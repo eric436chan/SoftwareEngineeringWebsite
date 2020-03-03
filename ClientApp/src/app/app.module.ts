@@ -18,6 +18,9 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatRadioModule } from '@angular/material/radio';
 import { MatCardModule } from '@angular/material/card';
 import { MatGridListModule } from '@angular/material/grid-list';
+import { MatTooltipModule } from '@angular/material/tooltip';
+import { MatSelectModule } from '@angular/material/select';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 import { AppComponent } from './app.component';
 import { NavMenuComponent } from './nav-menu/nav-menu.component';
@@ -37,6 +40,7 @@ import { ProductService } from './services/product-service';
 import { ShoppingCartService } from './services/shoppingCart-service';
 import { ShoppingCartDialog } from './dialogs/shoppingCartDialog/shopping-cart-dialog.component';
 import { ProductDialog } from './dialogs/productDialog/product-dialog.component';
+import { CheckoutComponent } from './checkout/checkout.component';
 
 
 
@@ -55,6 +59,7 @@ import { ProductDialog } from './dialogs/productDialog/product-dialog.component'
     WomenProductsComponent,
     OrderComponent,
     SearchComponent,
+    CheckoutComponent,
     ShoppingCartDialog,
     ProductDialog
   ],
@@ -71,7 +76,8 @@ import { ProductDialog } from './dialogs/productDialog/product-dialog.component'
       { path: 'womens', component: WomenComponent },
       { path: 'womens/prod', component: WomenProductsComponent },
       { path: 'mens/prod', component: MenProductsComponent },
-      { path: 'search', component: SearchComponent }
+      { path: 'search', component: SearchComponent },
+      { path: 'checkout', component: CheckoutComponent }
     ]),
     BrowserAnimationsModule,
     MatToolbarModule,
@@ -86,6 +92,9 @@ import { ProductDialog } from './dialogs/productDialog/product-dialog.component'
     MatRadioModule,
     MatCardModule,
     MatGridListModule,
+    MatTooltipModule,
+    MatSelectModule,
+    MatSnackBarModule
   ],
 
   entryComponents: [ShoppingCartDialog, ProductDialog],

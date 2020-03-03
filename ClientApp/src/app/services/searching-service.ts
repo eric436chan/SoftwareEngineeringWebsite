@@ -1,10 +1,17 @@
 import { EventEmitter, Injectable } from "@angular/core";
+import { BehaviorSubject } from "rxjs";
 
 @Injectable({
   providedIn: 'root'
 })
 export class SearchingService{
 
-  searchString = new EventEmitter<string>();
-  tagString = new EventEmitter<string>();
+
+  private searchString: BehaviorSubject<string> = new BehaviorSubject("");
+  currentSearchString = this.searchString.asObservable();
+
+  updateSearchString(searchString: string) {
+    this.searchString.next(searchString);
+  }
+ 
 }

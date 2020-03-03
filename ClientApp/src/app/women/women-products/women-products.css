@@ -24,6 +24,7 @@
 
 .productCard{
     display:inline-block;
+    margin:1em;
     border:1px solid black;
     width:30%;
 }
