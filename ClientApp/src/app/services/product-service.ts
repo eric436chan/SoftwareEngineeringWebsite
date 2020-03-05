@@ -4,6 +4,7 @@ import { Product } from '../model/product.model';
 import { map } from 'rxjs/operators';
 
 
+
 @Injectable({
   providedIn: 'root'
 })
@@ -56,4 +57,6 @@ export class ProductService {
         return prodArray;
       }))
   }
+
+ 
 }

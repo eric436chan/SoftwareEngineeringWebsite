@@ -1,17 +1,54 @@
 
 <body class="container">
   <mat-tab-group [selectedIndex]="selected">
-    <mat-tab label="Shopping Cart">
-      These are the contents of your current shopping cart.
+    <mat-tab label="Shopping Cart" disabled="true">
+      <p>
+        These are the contents of your current shopping cart. <br />
+        Click next to proceed with checkout
+      </p>
+      <div *ngFor="let prod of shoppingCart">
+        {{prod.name}}
+      </div>
+      <button mat-raised-button (click)="onClickNext()">Next</button>
     </mat-tab>
     <mat-tab label="User Information" disabled="true">
-      This is for your user information
+      <mat-form-field>
+        <mat-label>
+          First Name:
+        </mat-label>
+        <input matInput type="text" name="firstName" required />
+        <mat-error>This field is required</mat-error>
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>
+          Last Name:
+        </mat-label>
+        <input matInput type="text" name="lastName" required />
+        <mat-error>This field is required</mat-error>
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>
+          Email:
+        </mat-label>
+        <input matInput type="email" name="email" required />
+        <mat-error>This field is required</mat-error>
+      </mat-form-field>
+      <button mat-raised-button (click)="onClickBack()">Back</button>
+      <button mat-raised-button (click)="onClickNext()">Next</button>
     </mat-tab>
     <mat-tab label="Billing/Shipping Information" disabled="true">
-      This is for your shipping information
+      <p>
+        This is for your shipping information
+      </p>
+      <button mat-raised-button (click)="onClickBack()">Back</button>
+      <button mat-raised-button (click)="onClickNext()">Next</button>
     </mat-tab>
     <mat-tab label="Confirmation" disabled="true">
-      This is for confirmation
+      <p>
+        This page is the final confirmation page. Once you click confirm, your order will be finalized!
+        If you want to make any changes, please click back.
+      </p>
+      <button mat-raised-button (click)="onClickBack()">Back</button>
     </mat-tab>
   </mat-tab-group>
 </body>

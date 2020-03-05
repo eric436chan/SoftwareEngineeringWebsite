@@ -1,6 +1,7 @@
 import { Injectable } from "@angular/core";
 import { HttpClient, HttpParams } from "@angular/common/http";
 import { map } from 'rxjs/operators';
+import { Order } from "../model/order.model";
 
 
 @Injectable({
@@ -25,6 +26,13 @@ export class OrderService {
       }
       return orderArray;
     }))
+  }
+
+  addOrder(order: Order) {
+    return this.http.post('https://japswe-921d5.firebaseio.com/orders.json', order).subscribe(
+      data => {
+        console.log(data);
+      })
   }
 
 }
