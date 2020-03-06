@@ -18,6 +18,13 @@ export class WomenProductsComponent implements OnInit{
   shoppingCart: Array<ProductOrder>;
   fullProductList: Array<Product>;
   actualProductList: Array<Product>;
+
+  colorArray: Array<string>;
+  sizeArray: Array<string>;
+
+  waistArray: Array<string>;
+  lengthArray: Array<string>;
+
   currentFilteringOption: string;
   tagString: string;
 
@@ -44,16 +51,112 @@ export class WomenProductsComponent implements OnInit{
       data => {
         this.tagString = data;
       });
+
+    this.populateSizeArrays(this.actualProductList);
+    this.populateColorArrays(this.actualProductList);
   }
 
-  changeProductList(filter: string) {
+  changeProductListByColor(filter: string) {
+    let tempArray: Array<Product> = [];
 
+    for (let product of this.actualProductList) {
+      if (product.colors.includes(filter)) {
+        tempArray.push(product);
+      }
+    }
+
+    this.actualProductList = Object.assign([], tempArray);
   }
+
+
+  changeProductListBySize(filter: string) {
+    let tempArray: Array<Product> = [];
+
+    for (let product of this.actualProductList) {
+      if (product.size.includes(filter)) {
+        tempArray.push(product);
+      }
+    }
+
+    this.actualProductList = Object.assign([], tempArray);
+  }
+
+  changeProductListByLength(filter: string) {
+    let tempArray: Array<Product> = [];
+
+    for (let product of this.actualProductList) {
+      for (let sizes of product.size) {
+        if (sizes.split('x')[0] == filter) {
+          tempArray.push(product);
+          break;
+        }
+      }
+    }
+
+    this.actualProductList = Object.assign([], tempArray);
+  }
+
+
+  changeProductListByWaist(filter: string) {
+    let tempArray: Array<Product> = [];
+
+    for (let product of this.actualProductList) {
+      for (let sizes of product.size) {
+        if (sizes.split('x')[1] == filter) {
+          tempArray.push(product);
+          break;
+        }
+      }
+    }
+
+    this.actualProductList = Object.assign([], tempArray);
+  }
+
 
   onClickProduct(index: number) {
     const productDialog = this.dialog.open(ProductDialog, {
       data: this.actualProductList[index]
     });
+  }
+
+  populateSizeArrays(productArray: Array<Product>) {
+
+    if (this.tagString != "bottoms") {
+      for (let product of productArray) {
+        for (let size of product.size) {
+          if (!this.sizeArray.includes(size)) {
+            this.sizeArray.push(size);
+          }
+        }
+      }
+    } else {
+      for (let product of productArray) {
+        for (let size of product.size) {
+          let check = size.split('x');
+
+          if (!this.waistArray.includes(check[0])) {
+            this.waistArray.push(check[0]);
+          }
+
+          if (!this.lengthArray.includes(check[1])) {
+            this.lengthArray.push(check[1]);
+          }
+          
+        }
+      }
+    }
+
+  }
+
+  populateColorArrays(productArray: Array<Product>) {
+
+    for (let product of productArray) {
+      for (let color of product.colors) {
+        if (!this.colorArray.includes(color)) {
+          this.colorArray.push(color);
+        }
+      }
+    }
   }
 
 

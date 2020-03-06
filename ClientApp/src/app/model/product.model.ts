@@ -6,6 +6,6 @@ export interface Product {
   gender: string,
   colors: Array<string>,
   tag: string,
-  size: Array<string>,
+  size: Array<string>
 
 }
