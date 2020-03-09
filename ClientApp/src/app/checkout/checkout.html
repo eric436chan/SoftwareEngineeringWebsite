@@ -1,6 +1,8 @@
 
 <body class="container">
   <mat-tab-group [selectedIndex]="selected">
+
+    <!-- This is for the shopping cart tab -->
     <mat-tab label="Shopping Cart" disabled="true">
       <p>
         These are the contents of your current shopping cart. <br />
@@ -11,7 +13,14 @@
       </div>
       <button mat-raised-button (click)="onClickNext()">Next</button>
     </mat-tab>
+
+    <!-- This is for the user information tab -->
     <mat-tab label="User Information" disabled="true">
+
+      <p>
+        Please fill out all fields.
+      </p>
+
       <mat-form-field>
         <mat-label>
           First Name:
@@ -19,36 +28,106 @@
         <input matInput type="text" [(ngModel)]="firstName" required />
         <mat-error>This field is required!</mat-error>
       </mat-form-field>
-      <mat-form-field>
+
+      <mat-form-field class="ml-4">
         <mat-label>
           Last Name:
         </mat-label>
         <input matInput type="text" [(ngModel)]="lastName" required />
         <mat-error>This field is required!</mat-error>
       </mat-form-field>
+      <br />
       <mat-form-field>
         <mat-label>
           Email:
         </mat-label>
-        <input matInput type="email" pattern="/^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/" [(ngModel)]="email" required />
+        <input matInput type="email" pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" [(ngModel)]="email" required />
         <mat-error>Email is required!</mat-error>
       </mat-form-field>
+      <br />
+      <mat-form-field>
+        <mat-label>
+          Credit Card Number:
+        </mat-label>
+        <input matInput type="number" [(ngModel)]="creditCardNum" required />
+        <mat-error>This field is required!</mat-error>
+      </mat-form-field>
+      <br />
+      <mat-form-field>
+        <mat-label>
+          Security Code:
+        </mat-label>
+        <input matInput type="number" maxlength="3" min="3" [(ngModel)]="creditCardSecurity" required />
+        <mat-error>This field is required!</mat-error>
+      </mat-form-field>
+
+      <mat-form-field class="ml-4">
+        <mat-label>
+          Expiration:
+        </mat-label>
+        <input matInput type="text" maxlength="5" min="5" [(ngModel)]="creditCardExp" required />
+        <mat-hint>MM/YY</mat-hint>
+        <mat-error>This field is required!</mat-error>
+      </mat-form-field>
+      <br />
+
       <button mat-raised-button (click)="onClickBack()">Back</button>
       <button mat-raised-button (click)="onClickNextUser()">Next</button>
     </mat-tab>
+
+    <!-- This is for the shipping tab -->
+
     <mat-tab label="Billing/Shipping Information" disabled="true">
-      <p>
-        This is for your shipping information
-      </p>
+
+      <mat-form-field>
+        <mat-label>
+          Street:
+        </mat-label>
+        <input matInput type="text" [(ngModel)]="street" required />
+        <mat-error>This field is required!</mat-error>
+      </mat-form-field>
+
+      <br />
+
+      <mat-form-field>
+        <mat-label>
+          City:
+        </mat-label>
+        <input matInput type="text" [(ngModel)]="city" required />
+        <mat-error>This field is required!</mat-error>
+      </mat-form-field>
+
+      <mat-form-field class="ml-4">
+        <mat-label>
+          State:
+        </mat-label>
+        <input matInput type="text" [(ngModel)]="state" required />
+        <mat-error>This field is required!</mat-error>
+      </mat-form-field>
+
+      <mat-form-field class="ml-4">
+        <mat-label>
+          Zipcode:
+        </mat-label>
+        <input matInput type="text" maxlength="5" [(ngModel)]="zipCode" required />
+        <mat-error>This field is required!</mat-error>
+      </mat-form-field>
+
+      <br />
+
       <button mat-raised-button (click)="onClickBack()">Back</button>
-      <button mat-raised-button (click)="onClickNext()">Next</button>
+      <button mat-raised-button (click)="onClickNextShipping()">Next</button>
     </mat-tab>
+
+    <!-- This is for the confirmation tab -->
+
     <mat-tab label="Confirmation" disabled="true">
       <p>
         This page is the final confirmation page. Once you click confirm, your order will be finalized!
         If you want to make any changes, please click back.
       </p>
       <button mat-raised-button (click)="onClickBack()">Back</button>
+      <button mat-raised-button (click)="onClickConfirm()">Confirm</button>
     </mat-tab>
   </mat-tab-group>
 </body>
