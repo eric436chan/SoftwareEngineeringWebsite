@@ -16,25 +16,25 @@
         <mat-label>
           First Name:
         </mat-label>
-        <input matInput type="text" name="firstName" required />
-        <mat-error>This field is required</mat-error>
+        <input matInput type="text" [(ngModel)]="firstName" required />
+        <mat-error>This field is required!</mat-error>
       </mat-form-field>
       <mat-form-field>
         <mat-label>
           Last Name:
         </mat-label>
-        <input matInput type="text" name="lastName" required />
-        <mat-error>This field is required</mat-error>
+        <input matInput type="text" [(ngModel)]="lastName" required />
+        <mat-error>This field is required!</mat-error>
       </mat-form-field>
       <mat-form-field>
         <mat-label>
           Email:
         </mat-label>
-        <input matInput type="email" name="email" required />
-        <mat-error>This field is required</mat-error>
+        <input matInput type="email" pattern="/^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/" [(ngModel)]="email" required />
+        <mat-error>Email is required!</mat-error>
       </mat-form-field>
       <button mat-raised-button (click)="onClickBack()">Back</button>
-      <button mat-raised-button (click)="onClickNext()">Next</button>
+      <button mat-raised-button (click)="onClickNextUser()">Next</button>
     </mat-tab>
     <mat-tab label="Billing/Shipping Information" disabled="true">
       <p>

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ShoppingCartService } from '../services/shoppingCart-service';
 import { ProductOrder } from '../model/product.order.model';
 import { OrderService } from '../services/order-service';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'checkout',
@@ -9,7 +10,7 @@ import { OrderService } from '../services/order-service';
   styleUrls: ['./checkout.css']
 })
 
-export class CheckoutComponent implements OnInit{
+export class CheckoutComponent implements OnInit {
 
   private shoppingCart: Array<ProductOrder>
   private selected: number = 0;
@@ -24,9 +25,9 @@ export class CheckoutComponent implements OnInit{
   private creditCardSecurity: number;
   private creditCardExp: string;
 
- 
 
-  constructor(private shoppingCartService: ShoppingCartService, private orderService: OrderService) {
+
+  constructor(private shoppingCartService: ShoppingCartService, private orderService: OrderService, private snackBar: MatSnackBar) {
 
   }
 
@@ -35,6 +36,18 @@ export class CheckoutComponent implements OnInit{
       data => {
         this.shoppingCart = data;
       })
+  }
+
+
+  onClickNextUser() {
+    if (this.firstName == undefined || this.lastName == undefined || this.email == undefined) {
+      this.snackBar.open("Please fill out all forms!", null, {
+        duration: 2000
+      });
+      return;
+    }
+    console.log("Form filled. Information received:\n" + this.firstName + "\n" + this.lastName + "\n" + this.email);
+    this.selected++;
   }
 
   onClickNext() {
