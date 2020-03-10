@@ -19,13 +19,16 @@ export class WomenProductsComponent implements OnInit{
   fullProductList: Array<Product>;
   actualProductList: Array<Product>;
 
-  colorArray: Array<string>;
-  sizeArray: Array<string>;
+  colorArray: Array<string> = [];
+  sizeArray: Array<string> = [];
 
-  waistArray: Array<string>;
-  lengthArray: Array<string>;
+  waistArray: Array<string> = [];
+  lengthArray: Array<string> = [];
 
-  currentFilteringOption: string;
+  currentSizeFilter: string;
+  currentColorFilter: string;
+  currentWaistFilter: string;
+  currentLengthFilter: string;
   tagString: string;
 
   constructor(private productService: ProductService, private shoppingCartService: ShoppingCartService, private browsingService: BrowsingService,
@@ -41,19 +44,21 @@ export class WomenProductsComponent implements OnInit{
         console.log(this.shoppingCart);
       });
 
+    this.browsingService.currentTag.subscribe(
+      data => {
+        this.tagString = data;
+        console.log(this.tagString);
+      })
+
     this.productService.getAllProducts().subscribe(
       data => {
         this.fullProductList = data;
         this.actualProductList = data;
+        this.populateSizeArrays(this.actualProductList);
+        console.log(this.sizeArray);
+        this.populateColorArrays(this.actualProductList);
+        console.log(this.colorArray);
       });
-
-    this.browsingService.currentTag.subscribe(
-      data => {
-        this.tagString = data;
-      });
-
-    this.populateSizeArrays(this.actualProductList);
-    this.populateColorArrays(this.actualProductList);
   }
 
   changeProductListByColor(filter: string) {
@@ -70,15 +75,17 @@ export class WomenProductsComponent implements OnInit{
 
 
   changeProductListBySize(filter: string) {
-    let tempArray: Array<Product> = [];
 
-    for (let product of this.actualProductList) {
-      if (product.size.includes(filter)) {
-        tempArray.push(product);
-      }
-    }
+    console.log(filter);
+    //let tempArray: Array<Product> = [];
 
-    this.actualProductList = Object.assign([], tempArray);
+    //for (let product of this.actualProductList) {
+    //  if (product.size.includes(filter)) {
+    //    tempArray.push(product);
+    //  }
+    //}
+
+    //this.actualProductList = Object.assign([], tempArray);
   }
 
   changeProductListByLength(filter: string) {

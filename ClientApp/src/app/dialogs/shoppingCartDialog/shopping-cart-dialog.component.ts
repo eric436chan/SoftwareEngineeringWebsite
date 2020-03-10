@@ -31,7 +31,7 @@ export class ShoppingCartDialog {
   onRemove(index: number) {
 
     console.log("Item being removed from shopping cart...");
-    this.data = this.data.splice(index, 1);
+    this.data.splice(index, 1);
     console.log("Item has been removed from shopping cart.");
     this.shoppingCartService.updateShoppingCart(this.data);
 
