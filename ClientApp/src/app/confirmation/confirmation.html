@@ -1,0 +1,28 @@
+<body class="container">
+
+  <h2>Thank you for shopping at Jack's Apparel!</h2>
+  <p>
+    Dear {{currentOrder.client.firstName}} {{currentOrder.client.lastName}},
+    <br /><br />
+    Thank you for shopping with us. Below will your order id as well as your order.
+    <br />
+    If you ever want to check where your order is, feel free to check on our <a [routerLink]="['/order']">order</a> page.
+    <br />
+    We hope to see you here again soon!
+  </p>
+  <div>
+    <mat-card *ngFor="let prod of currentOrder.orderList">
+      <mat-card-header>
+        <mat-card-title>
+          {{prod.name}}
+        </mat-card-title>
+      </mat-card-header>
+
+      <img mat-card-img src="{{prod.img}}" />
+      <mat-card-footer>
+        Price: {{prod.price}}
+      </mat-card-footer>
+    </mat-card>
+  </div>
+
+</body>

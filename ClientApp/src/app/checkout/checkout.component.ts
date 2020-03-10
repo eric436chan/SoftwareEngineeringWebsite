@@ -115,9 +115,10 @@ export class CheckoutComponent implements OnInit {
     }
 
     this.orderService.addOrder(order);
-    this.router.navigate(['./']);
-    this.snackBar.open("Thank you for your purchase! You will receive a confirmation email soon!");
     this.shoppingCartService.updateShoppingCart([]);
+    this.orderService.updateOrder(order);
+    this.router.navigate(['./confirmation']);
+   
   }
 
   generateRandomId() {

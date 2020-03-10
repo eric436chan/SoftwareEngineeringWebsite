@@ -42,6 +42,7 @@ import { ShoppingCartService } from './services/shoppingCart-service';
 import { ShoppingCartDialog } from './dialogs/shoppingCartDialog/shopping-cart-dialog.component';
 import { ProductDialog } from './dialogs/productDialog/product-dialog.component';
 import { CheckoutComponent } from './checkout/checkout.component';
+import { ConfirmationComponent } from './confirmation/confirmation.component';
 
 @NgModule({
   declarations: [
@@ -60,7 +61,8 @@ import { CheckoutComponent } from './checkout/checkout.component';
     SearchComponent,
     CheckoutComponent,
     ShoppingCartDialog,
-    ProductDialog
+    ProductDialog,
+    ConfirmationComponent
 
   ],
   imports: [
@@ -76,7 +78,8 @@ import { CheckoutComponent } from './checkout/checkout.component';
       { path: 'womens/prod', component: WomenProductsComponent },
       { path: 'mens/prod', component: MenProductsComponent },
       { path: 'search', component: SearchComponent },
-      { path: 'checkout', component: CheckoutComponent }
+      { path: 'checkout', component: CheckoutComponent },
+      {path: 'confirmation', component: ConfirmationComponent}
     ]),
     BrowserAnimationsModule,
     MatToolbarModule,

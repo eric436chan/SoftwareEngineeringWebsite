@@ -2,12 +2,17 @@ import { Injectable } from "@angular/core";
 import { HttpClient, HttpParams } from "@angular/common/http";
 import { map } from 'rxjs/operators';
 import { Order } from "../model/order.model";
+import { BehaviorSubject } from "rxjs";
 
 
 @Injectable({
   providedIn: 'root'
 })
 export class OrderService {
+
+  private order: BehaviorSubject<Order> = new BehaviorSubject(null);
+  currentOrder = this.order.asObservable();
+
 
   constructor(private http: HttpClient) {
 
@@ -33,6 +38,10 @@ export class OrderService {
       data => {
         console.log(data);
       })
+  }
+
+  updateOrder(order: Order) {
+    this.order.next(order);
   }
 
 }
