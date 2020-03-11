@@ -18,9 +18,8 @@ export class OrderService {
 
   }
 
-  getOrder(orderKey: string) {
+  getOrder() {
     return this.http.get('https://japswe-921d5.firebaseio.com/orders.json', {
-      params: new HttpParams().set('orderBy', '"$key"').set('equalTo', orderKey)
     }
     ).pipe(map(responseData => {
       const orderArray = [];

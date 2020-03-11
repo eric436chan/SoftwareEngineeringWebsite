@@ -11,6 +11,11 @@
     We hope to see you here again soon!
   </p>
   <div>
+
+    <p>
+      This is your order id: {{currentOrder.orderId}}.
+    </p>
+
     <mat-card *ngFor="let prod of currentOrder.orderList">
       <mat-card-header>
         <mat-card-title>
