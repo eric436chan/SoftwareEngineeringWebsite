@@ -8,15 +8,25 @@
     <ng-template #elseBlock>
       Your shopping cart currently has {{data.length}} item(s)!
 
-      <div *ngFor="let prod of data; i as index">
-        {{prod.name}}
-        <button mat-raised-button (click)="onRemove(i)">Remove</button>
+      <div *ngFor="let prod of data; i as index" class="prodDialog">
+        <div class="prodDisplay border" >
+
+          {{prod.name}}<br />
+          <img src="{{prod.img}}" /><br />
+          {{prod.price}}
+        </div>
+        <div class="removeBtn border">
+          <button mat-raised-button (click)="onRemove(i)" >Remove</button>
+        </div>
+        
       </div>
 
     </ng-template>
 
-
-    <button mat-raised-button (click)="onCheckout()">Checkout</button>
+    <div class="checkoutBtn">
+      <button mat-raised-button (click)="onCheckout()" >Checkout</button>
+    </div>
+    
 
 
   </div>

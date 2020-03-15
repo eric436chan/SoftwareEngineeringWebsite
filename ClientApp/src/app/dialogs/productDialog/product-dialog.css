@@ -11,3 +11,11 @@ body {
     float:right;
     width:50%;
 }
+
+.onCartBtn{
+    margin-left:auto;
+}
+
+.contentBody{
+    display:flex;
+}
