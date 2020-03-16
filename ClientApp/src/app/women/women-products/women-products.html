@@ -50,18 +50,20 @@
 
   <div class="productBody">
 
-    <mat-card *ngFor="let product of actualProductList; index as i" (click)="onClickProduct(i)" class="productCard">
+    <div class="productContainer">
+      <mat-card *ngFor="let product of actualProductList; index as i" (click)="onClickProduct(i)" class="productCard">
 
-      <mat-card-header>
-        <mat-card-title>
-          {{product.name}}
-        </mat-card-title>
-      </mat-card-header>
+        <mat-card-header>
+          <mat-card-title>
+            {{product.name}}
+          </mat-card-title>
+        </mat-card-header>
 
-      <img mat-card-img src="{{product.img}}"/>
-      <mat-card-footer>
-        Price: {{product.price}}
-      </mat-card-footer>
-    </mat-card>
+        <img mat-card-img src="{{product.img}}" />
+        <mat-card-footer>
+          Price: ${{product.price}}
+        </mat-card-footer>
+      </mat-card>
+    </div>
   </div>
 </body>
