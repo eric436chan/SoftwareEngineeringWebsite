@@ -1,9 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { ProductService } from '../../services/product-service';
 import { ShoppingCartService } from '../../services/shoppingCart-service';
 import { ProductOrder } from '../../model/product.order.model';
 import { Product } from '../../model/product.model';
 import { MatDialog } from '@angular/material/dialog';
+import { PageEvent, MatPaginator } from '@angular/material/paginator';
 import { ProductDialog } from '../../dialogs/productDialog/product-dialog.component';
 import { BrowsingService } from '../../services/browsing-service';
 
@@ -31,6 +32,8 @@ export class WomenProductsComponent implements OnInit{
   currentLengthFilter: string;
   tagString: string;
 
+  addingProductList: Array<Product> = require('../women-products/products.json')
+
   constructor(private productService: ProductService, private shoppingCartService: ShoppingCartService, private browsingService: BrowsingService,
     private dialog: MatDialog) {
 
@@ -52,72 +55,110 @@ export class WomenProductsComponent implements OnInit{
 
     this.productService.getAllProducts().subscribe(
       data => {
-        this.fullProductList = data;
-        this.actualProductList = data;
+
+        let tempArray: Array<Product> = [];
+        for (let prod of data) {
+          if (prod.tag == this.tagString) {
+            tempArray.push(prod);
+          }
+        }
+
+        this.fullProductList = tempArray;
+        this.actualProductList = tempArray;
         this.populateSizeArrays(this.actualProductList);
         console.log(this.sizeArray);
         this.populateColorArrays(this.actualProductList);
         console.log(this.colorArray);
+        
+
       });
-  }
+    
 
-  changeProductListByColor(filter: string) {
-    let tempArray: Array<Product> = [];
-
-    for (let product of this.actualProductList) {
-      if (product.colors.includes(filter)) {
-        tempArray.push(product);
-      }
-    }
-
-    this.actualProductList = Object.assign([], tempArray);
-  }
-
-
-  changeProductListBySize(filter: string) {
-
-    console.log(filter);
-    //let tempArray: Array<Product> = [];
-
-    //for (let product of this.actualProductList) {
-    //  if (product.size.includes(filter)) {
-    //    tempArray.push(product);
-    //  }
+    //for (let prod of this.addingProductList) {
+    //  this.productService.addProduct(prod);
     //}
-
-    //this.actualProductList = Object.assign([], tempArray);
   }
 
-  changeProductListByLength(filter: string) {
-    let tempArray: Array<Product> = [];
+  filterProduct(color: string, size: string) {
 
-    for (let product of this.actualProductList) {
-      for (let sizes of product.size) {
-        if (sizes.split('x')[0] == filter) {
-          tempArray.push(product);
-          break;
-        }
+    console.log("Filtering products...")
+
+      if (size != undefined && color != undefined) {
+        this.actualProductList = this.fullProductList.filter(function (Product) {
+          return Product.size.includes(size);
+        })
+        this.actualProductList = this.fullProductList.filter(function (Product) {
+          return Product.colors.includes(color);
+        })
+
+        console.log("Found products with size " + size + " and color " + color)
+        return;
       }
-    }
 
-    this.actualProductList = Object.assign([], tempArray);
-  }
-
-
-  changeProductListByWaist(filter: string) {
-    let tempArray: Array<Product> = [];
-
-    for (let product of this.actualProductList) {
-      for (let sizes of product.size) {
-        if (sizes.split('x')[1] == filter) {
-          tempArray.push(product);
-          break;
-        }
+      if (size != undefined) {
+        this.actualProductList = this.fullProductList.filter(function (Product) {
+          return Product.size.includes(size);
+        })
+        console.log("Found products with size " + size)
+        return;
       }
-    }
 
-    this.actualProductList = Object.assign([], tempArray);
+      if (color != undefined) {
+        this.actualProductList = this.fullProductList.filter(function (Product) {
+          return Product.colors.includes(color);
+        })
+        console.log("Found products with size " + color)
+        return;
+      }
   }
+
+  
+
+  //changeProductListByColor(filter: string) {
+
+  //  console.log("Filtering products for color: " + filter);
+  //  this.actualProductList = this.fullProductList.filter(function (Product) {
+  //    return Product.colors.includes(filter);
+  //  })
+  //}
+
+  //changeProductListBySize(filter: string) {
+
+  //  console.log("Filtering products for size: " + filter);
+  //  this.actualProductList = this.fullProductList.filter(function (Product) {
+  //    return Product.size.includes(filter);
+  //  })
+  //}
+
+  //changeProductListByLength(filter: string) {
+
+  //  let tempArray: Array <Product> = [];
+  //  for (let product of this.fullProductList) {
+  //    for (let size of product.size) {
+  //      if (size.split('x')[0] == filter) {
+  //        tempArray.push(product);
+  //        break;
+  //      }
+  //    }
+  //  }
+  //  this.actualProductList = Object.assign([], tempArray);
+  //}
+
+
+  //changeProductListByWaist(filter: string) {
+  //  let tempArray: Array<Product> = [];
+
+  //  for (let product of this.actualProductList) {
+  //    for (let sizes of product.size) {
+  //      if (sizes.split('x')[1] == filter) {
+  //        tempArray.push(product);
+  //        break;
+  //      }
+  //    }
+  //  }
+
+  //  this.actualProductList = Object.assign([], tempArray);
+  //}
 
 
   onClickProduct(index: number) {

@@ -1,0 +1,217 @@
+[
+  {
+    "name": "Cotton Ti-Dyed Split-Neck Top",
+    "description": [ "Soft tie-dyed stripes bring a boho look to this top, a relaxed silhouette with all-cotton comfort.", "100% Cotton" ],
+    "colors": [ "Pink" ],
+    "size": [ "X-Small", "Small", "Medium", "Large", "X-Large" ],
+    "tag": "Top",
+    "price": 30.00,
+    "img": "https://jack-apparel-software-engineering-website.s3.amazonaws.com/women's+product+images/Cotton+Ti-Dyed+Split-Neck+Top.jpg",
+    "gender": "Female"
+  },
+
+  {
+    "name": "Be Free Tie-Dyed Long-Sleeve T-Shirt",
+    "description": [ "Get your hands on the Be Free T-shirt, a tie-dyed pick designed with roomy oversized sleeves.", "100% Cotton" ],
+    "colors": [ "Blue" ],
+    "size": [ "X-Small", "Small", "Medium", "Large", "X-Large" ],
+    "tag": "Top",
+    "price": 30.00,
+    "img": "https://jack-apparel-software-engineering-website.s3.amazonaws.com/women's+product+images/Be+Free+Tie-Dyed+Long-Sleeve+T-Shirt.jpg",
+    "gender": "Female"
+  },
+
+  {
+    "name": "Morgan Henley Top",
+    "description": [ "This brings a button trim up on one side of the top's neckline for on-trend asymmetry. Raw edges keep it laid back.", "50% Cotton, 50% Polyester" ],
+    "colors": [ "Brown", "White" ],
+    "size": [ "X-Small", "Small", "Medium", "Large", "X-Large" ],
+    "tag": "Top",
+    "price": 38.00,
+    "img": "https://jack-apparel-software-engineering-website.s3.amazonaws.com/women's+product+images/Morgan+Henley+Top.jpg",
+    "gender": "Female"
+  },
+
+  {
+    "name": "Ruched-Side Necklace Tank Top",
+    "description": [ "A fierce tank top, with a removable metallic necklace and flattering side ruching.", "50% Cotton, 50% Polyester" ],
+    "colors": [ "Yellow", "Black" ],
+    "size": [ "X-Small", "Small", "Medium", "Large", "X-Large" ],
+    "tag": "Top",
+    "price": 40.00,
+    "img": "https://jack-apparel-software-engineering-website.s3.amazonaws.com/women's+product+images/Ruched-Side+Necklace+Tank+Top.jpg",
+    "gender": "Female"
+  },
+  {
+    "name": "Printed Sheer-Sleeve Top",
+    "description": [ "A classic blouse with a twist, this collarless, sheer-sleeve top makes this top essential to your everyday wardrobe.", "50% Cotton, 50% Polyester" ],
+    "colors": [ "Black" ],
+    "size": [ "X-Small", "Small", "Medium", "Large", "X-Large" ],
+    "tag": "Top",
+    "price": 40.00,
+    "img": "https://jack-apparel-software-engineering-website.s3.amazonaws.com/women's+product+images/Printed+Sheer-Sleeve+Top.jpg",
+    "gender": "Female"
+  },
+  {
+    "name": "Ladybug Long-Sleeve Top",
+    "description": [ "Romance vibes are a go in this top, with corset inspiration and a textured fabric to bring major drama.", "50% Cotton, 50% Polyester" ],
+    "colors": [ "Red", "Black", "White" ],
+    "size": [ "X-Small", "Small", "Medium", "Large", "X-Large" ],
+    "tag": "Top",
+    "price": 45.00,
+    "img": "https://jack-apparel-software-engineering-website.s3.amazonaws.com/women's+product+images/Ladybug+Long-Sleeve+Top.jpg",
+    "gender": "Female"
+  },
+  {
+    "name": "One-Pocket Tank",
+    "description": [ "This ombre, sleeveless tank top with a refined, scoop neck detailing has ease and casual flair.", "100% Cotton" ],
+    "colors": [ "Blue" ],
+    "size": [ "X-Small", "Small", "Medium", "Large", "X-Large" ],
+    "tag": "Top",
+    "price": 12.99,
+    "img": "https://jack-apparel-software-engineering-website.s3.amazonaws.com/women's+product+images/One-Pocket+Tank.jpg",
+    "gender": "Female"
+  },
+  {
+    "name": "Organic Funnel-Neck Top",
+    "description": [ "Softly shaped top designed with a chic funnel neckline.", "50% Cotton, 50% Spandex" ],
+    "colors": [ "Blue", "Black" ],
+    "size": [ "X-Small", "Small", "Medium", "Large", "X-Large" ],
+    "tag": "Top",
+    "price": 50.00,
+    "img": "https://jack-apparel-software-engineering-website.s3.amazonaws.com/women's+product+images/Organic+Funnel-Neck+Top.jpg",
+    "gender": "Female"
+  },
+
+  {
+    "name": "721 High-Rise Skinny Jeans",
+    "description": [ "721 skinny jeans are designed to enhance your shape, featuring a trendy high-rise fit and figure-flattering stretch denim.", "50% Cotton, 50% Elastane" ],
+    "colors": [ "Black Denim", "Light Blue Denim", "Mid-Wash Denim", "Dark Blue Denim", "White Denim" ],
+    "size": [ "00", "0", "1", "3", "5", "7", "9", "11", "13", "15", "17" ],
+    "tag": "Jeans",
+    "price": 50.00,
+    "img": "https://jack-apparel-software-engineering-website.s3.amazonaws.com/women's+product+images/721+High-Rise+Skinny+Jeans.jpg",
+    "gender": "Female"
+  },
+
+  {
+    "name": "Just Float On Flare Jeans",
+    "description": [ "Let your boots and platform sandals peek out from under the super flares of these hip-hugging, high-waist jeans.", "25% Cotton, 25% Elastane, 25% Viscose, 25% Polyester" ],
+    "colors": [ "Black Denim", "Light Blue Denim", "Mid-Wash Denim", "Dark Blue Denim", "White Denim" ],
+    "size": [ "00", "0", "1", "3", "5", "7", "9", "11", "13", "15", "17" ],
+    "tag": "Jeans",
+    "price": 68.00,
+    "img": "https://jack-apparel-software-engineering-website.s3.amazonaws.com/women's+product+images/Just+Float+On+Flare+Jeans.jpg",
+    "gender": "Female"
+  },
+
+
+  {
+    "name": "Boyfriend Tapered-Leg Jeans",
+    "description": [ "A borrowed-from-the-boys fit turns up the effortless appeal of these relaxed, tapered-leg boyfriend jeans featuring artful destructed details.", "25% Cotton, 25% Elastane, 25% Viscose, 25% Polyester" ],
+    "colors": [ "Black Denim", "Light Blue Denim", "Mid-Wash Denim", "Dark Blue Denim", "White Denim" ],
+    "size": [ "00", "0", "1", "3", "5", "7", "9", "11", "13", "15", "17" ],
+    "tag": "Jeans",
+    "price": 59.00,
+    "img": "https://jack-apparel-software-engineering-website.s3.amazonaws.com/women's+product+images/Boyfriend+Tapered-Leg+Jeans.jpg",
+    "gender": "Female"
+  },
+
+  {
+    "name": "Double-Hem Cropped Straight-Leg Jeans",
+    "description": [ "A double stacked hem and faded wash bring new life to your denim style in these cropped jeans.", "50% Cotton, 50% Elastane" ],
+    "colors": [ "Mid-Wash Denim" ],
+    "size": [ "00", "0", "1", "3", "5", "7", "9", "11", "13", "15", "17" ],
+    "tag": "Jeans",
+    "price": 50.00,
+    "img": "https://jack-apparel-software-engineering-website.s3.amazonaws.com/women's+product+images/Double-Hem+Cropped+Straight-Leg+Jeans.jpg",
+    "gender": "Female"
+  },
+
+  {
+    "name": "Camouflage-Print Ankle Skinny Jeans",
+    "description": [ "Lay low or rise high in these camo-print skinny jeans.", "50% Cotton, 50% Spandex" ],
+    "colors": [ "Olive" ],
+    "size": [ "00", "0", "1", "3", "5", "7", "9", "11", "13", "15", "17" ],
+    "tag": "Jeans",
+    "price": 35.00,
+    "img": "https://jack-apparel-software-engineering-website.s3.amazonaws.com/women's+product+images/Camouflage-Print+Ankle+Skinny+Jeans.jpg",
+    "gender": "Female"
+  },
+
+  {
+    "name": "Leopard-Print High-Rise Skinny Jeans",
+    "description": [ "High rise skinny jeans looking extra chic in this seasons tonal leopard print.", "50% Cotton, 50% Spandex" ],
+    "colors": [ "Grey" ],
+    "size": [ "00", "0", "1", "3", "5", "7", "9", "11", "13", "15", "17" ],
+    "tag": "Jeans",
+    "price": 35.00,
+    "img": "https://jack-apparel-software-engineering-website.s3.amazonaws.com/women's+product+images/Leopard-Print+High-Rise+Skinny+Jeans_.jpg",
+    "gender": "Female"
+  },
+  {
+    "name": "Skinny Ankle Jeans",
+    "description": [ "Ease into any day with the casual wear-with-all skinny denim ankle jeans with ripped detailing.", "50% Cotton, 50% Elastane" ],
+    "colors": [ "Light Blue Denim", "White Denim" ],
+    "size": [ "00", "0", "1", "3", "5", "7", "9", "11", "13", "15", "17" ],
+    "tag": "Jeans",
+    "price": 49.00,
+    "img": "https://jack-apparel-software-engineering-website.s3.amazonaws.com/women's+product+images/Skinny+Ankle+Jeans.jpg",
+    "gender": "Female"
+  },
+  {
+    "name": "Mile High Cropped Button-Fly Jeans",
+    "description": [ "Mile High Jeans hit all the right marks, showcasing a button-fly design, cropped wide legs and minimally faded black wash.", "50% Cotton, 50% Elastane" ],
+    "colors": [ "Mid-Wash Denim" ],
+    "size": [ "00", "0", "1", "3", "5", "7", "9", "11", "13", "15", "17" ],
+    "tag": "Jeans",
+    "price": 49.00,
+    "img": "https://jack-apparel-software-engineering-website.s3.amazonaws.com/women's+product+images/Mile+High+Cropped+Button-Fly+Jeans.jpg",
+    "gender": "Female"
+  },
+
+  {
+
+    "name": "Ribcage Straight Ankle Jeans",
+    "description": [ "Remix your denim wardrobe right now. Cute cropped pair, defined by a super high rise that's obviously super flattering.", "50% Cotton, 50% Elastane" ],
+    "colors": [ "Black Denim" ],
+    "size": [ "00", "0", "1", "3", "5", "7", "9", "11", "13", "15", "17" ],
+    "tag": "Jeans",
+    "price": 49.00,
+    "img": "https://jack-apparel-software-engineering-website.s3.amazonaws.com/women's+product+images/Ribcage+Straight+Ankle+Jeans.jpg",
+    "gender": "Female"
+  },
+  {
+
+    "name": "High-Rise Skinny Cargo Jeans",
+    "description": [ "Cargo pockets + bold color? Sold! These jeans brings back the utilitarian trend in the best way with these fun-to-style skinnies.", "50% Cotton, 50% Spandex" ],
+    "colors": [ "Olive", "Sand" ],
+    "size": [ "00", "0", "1", "3", "5", "7", "9", "11", "13", "15", "17" ],
+    "tag": "Jeans",
+    "price": 49.00,
+    "img": "https://jack-apparel-software-engineering-website.s3.amazonaws.com/women's+product+images/High-Rise+Skinny+Cargo+Jeans.jpg",
+    "gender": "Female"
+  },
+  {
+
+    "name": "Regina Slouchy Jeans",
+    "description": [ "Ditch the slim-fit pants go for Regina slouchy high-waisted jeans that feels very relaxing and comfortable. It is easy to slip into and comes with two side pockets.", "100% Cotton" ],
+    "colors": [ "Blue Denim" ],
+    "size": [ "00", "0", "1", "3", "5", "7", "9", "11", "13", "15", "17" ],
+    "tag": "Jeans",
+    "price": 59.99,
+    "img": "https://jack-apparel-software-engineering-website.s3.amazonaws.com/women's+product+images/Regina+Slouchy+Jeans.jpg",
+    "gender": "Female"
+  },
+  {
+
+    "name": "Maty Sailor Flare-Leg Jeans",
+    "description": [ "Ditch the slim-fit pants go for Regina slouchy high-waisted jeans that feels very relaxing and comfortable. It is easy to slip into and comes with two side pockets.", "100% Cotton" ],
+    "colors": [ "Dark Blue Denim", "White Denim" ],
+    "size": [ "00", "0", "1", "3", "5", "7", "9", "11", "13", "15", "17" ],
+    "tag": "Jeans",
+    "price": 59.99,
+    "img": "https://jack-apparel-software-engineering-website.s3.amazonaws.com/women's+product+images/Maty+Sailor+Flare-Leg+Jeans.jpg",
+    "gender": "Female"
+  }
+]

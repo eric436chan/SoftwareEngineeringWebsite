@@ -59,7 +59,9 @@ export class WebsiteNavComponent implements OnInit{
   onBrowseWomen(tag: string) {
     this.browsingService.updateTag(tag);
     console.log("moving to women's products");
-    this.router.navigate(['./womens/prod']);
+    this.router.navigateByUrl('/', { skipLocationChange: true }).then(() => {
+      this.router.navigate(['./womens/prod']);
+    }); 
   }
 
 
