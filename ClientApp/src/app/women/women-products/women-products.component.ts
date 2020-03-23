@@ -27,11 +27,9 @@ export class WomenProductsComponent implements OnInit{
   waistArray: Array<string> = [];
   lengthArray: Array<string> = [];
 
-  currentSizeFilter: string;
-  currentColorFilter: string;
-  currentWaistFilter: string;
-  currentLengthFilter: string;
-  currentSortOption: string;
+  currentSizeFilter: string = "None";
+  currentColorFilter: string = "None";
+  currentSortOption: string = "None";
   tagString: string;
 
   addingProductList: Array<Product> = require('../women-products/products.json')
@@ -122,25 +120,7 @@ export class WomenProductsComponent implements OnInit{
       return;
     }
 
-    if ((size != undefined || size != "None") && (color == undefined || color == "None")) {
-      this.actualProductList = this.fullProductList.filter(function (Product) {
-        return Product.size.includes(size);
-      })
-      console.log("Found products with size " + size)
-
-      return;
-    }
-
-    if ((color != undefined || color != "None") && (size == undefined || size == "None")) {
-      this.actualProductList = this.fullProductList.filter(function (Product) {
-        return Product.colors.includes(color);
-      })
-      console.log("Found products with color " + color)
-
-      return;
-    }
-
-    if ((size != undefined) && (color != undefined)) {
+    if (size != "None" && color != "None") {
       this.actualProductList = this.fullProductList.filter(function (Product) {
         return Product.size.includes(size);
       })
@@ -152,9 +132,26 @@ export class WomenProductsComponent implements OnInit{
 
       return;
     }
+
+    if (size != "None") {
+      this.actualProductList = this.fullProductList.filter(function (Product) {
+        return Product.size.includes(size);
+      })
+      console.log("Found products with size " + size)
+
+      return;
+    }
+
+    if (color != "None") {
+      this.actualProductList = this.fullProductList.filter(function (Product) {
+        return Product.colors.includes(color);
+      })
+      console.log("Found products with color " + color)
+
+      return;
+    }
   }
 
-  
 
   //changeProductListByColor(filter: string) {
 
@@ -235,10 +232,11 @@ export class WomenProductsComponent implements OnInit{
   onSort() {
 
     console.log("Sorting products...");
+
     if (this.currentSortOption == "None") {
 
       console.log("Resetting all sort filters...")
-      this.actualProductList == this.fullProductList;
+      this.actualProductList = this.fullProductList;
       return;
     }
 

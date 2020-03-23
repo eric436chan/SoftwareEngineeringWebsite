@@ -6,10 +6,10 @@
     <div>
       Filtering options.
     </div>
-    <div *ngIf="tagString != 'bottoms'; else elseBlock">
+    <div>
       <mat-form-field>
         <mat-label>Size</mat-label>
-        <mat-select [(ngModel)]="currentSizeFilter">
+        <mat-select [(value)]="currentSizeFilter">
           <mat-option value="None" (click)="filterProduct(currentColorFilter, currentSizeFilter)">
             None
           </mat-option>
@@ -46,7 +46,7 @@
     <div>
       <mat-form-field>
         <mat-label>Color</mat-label>
-        <mat-select [(ngModel)]="currentColorFilter">
+        <mat-select [(value)]="currentColorFilter">
           <mat-option value ="None" (click)="filterProduct(currentColorFilter, currentSizeFilter)">
             None
           </mat-option>
@@ -67,7 +67,7 @@
       <div>
         <mat-form-field>
           <mat-label>Sort By:</mat-label>
-          <mat-select [(ngModel)]="currentSortOption">
+          <mat-select [(value)]="currentSortOption">
             <mat-option (click)="onSort()" value="None">
               None
             </mat-option>

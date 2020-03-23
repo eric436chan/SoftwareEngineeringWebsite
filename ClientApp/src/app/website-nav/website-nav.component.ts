@@ -22,7 +22,6 @@ export class WebsiteNavComponent implements OnInit{
 
   shoppingCart: Array<ProductOrder> = [];
 
-
   constructor(private iconRegistry: MatIconRegistry, private sanitizer: DomSanitizer, private router: Router,
     private searchingService: SearchingService, private shoppingCartService: ShoppingCartService, private browsingService: BrowsingService,
     private dialog: MatDialog, private productService: ProductService) {
@@ -63,8 +62,6 @@ export class WebsiteNavComponent implements OnInit{
       this.router.navigate(['./womens/prod']);
     }); 
   }
-
-
 
   openShoppingCartDialog() {
 
