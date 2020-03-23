@@ -7,6 +7,7 @@ import { MatDialog } from '@angular/material/dialog';
 import { PageEvent, MatPaginator } from '@angular/material/paginator';
 import { ProductDialog } from '../../dialogs/productDialog/product-dialog.component';
 import { BrowsingService } from '../../services/browsing-service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'women-prod',
@@ -35,24 +36,27 @@ export class WomenProductsComponent implements OnInit{
   addingProductList: Array<Product> = require('../women-products/products.json')
 
   constructor(private productService: ProductService, private shoppingCartService: ShoppingCartService, private browsingService: BrowsingService,
-    private dialog: MatDialog) {
+    private dialog: MatDialog, private router: Router) {
 
   }
 
   ngOnInit() {
 
+    //get current shopping cart
     this.shoppingCartService.currentShoppingCart.subscribe(
       shoppingCart => {
         this.shoppingCart = shoppingCart;
         console.log(this.shoppingCart);
       });
 
+    //get current browsing tag
     this.browsingService.currentTag.subscribe(
       data => {
         this.tagString = data;
         console.log(this.tagString);
       })
 
+    //get products based on the tag
     this.productService.getAllProducts().subscribe(
       data => {
 
@@ -63,26 +67,57 @@ export class WomenProductsComponent implements OnInit{
           }
         }
 
+
         this.fullProductList = tempArray;
         this.actualProductList = tempArray;
+        //get size array
         this.populateSizeArrays(this.actualProductList);
+        if (this.tagString == "Shorts" || this.tagString == "Jeans") {
+          this.sizeArray.sort();
+          let tempNumberArray: Array<number> = [];
+          let tempSizeArray: Array<string> = [];
+
+          for (let size of this.sizeArray) {
+            if (size == "0" || size == "00") {
+              tempSizeArray.push(size);
+            } else {
+              tempNumberArray.push(Number(size))
+            }
+          }
+
+          tempNumberArray.sort((n1,n2) => n1-n2);
+          for (let size of tempNumberArray) {
+            tempSizeArray.push(size.toString());
+          }
+
+          this.sizeArray = tempSizeArray;
+        }
+       
         console.log(this.sizeArray);
+        //get color array
         this.populateColorArrays(this.actualProductList);
+        this.colorArray.sort();
         console.log(this.colorArray);
         
 
       });
     
 
+    //adding products to database
     //for (let prod of this.addingProductList) {
     //  this.productService.addProduct(prod);
     //}
   }
 
+  //filter product based on conditions
   filterProduct(color: string, size: string) {
 
     console.log("Filtering products...")
 
+    if (color == "None" && size == "None") {
+      this.actualProductList = this.fullProductList;
+    }
+    
       if (size != undefined && color != undefined) {
         this.actualProductList = this.fullProductList.filter(function (Product) {
           return Product.size.includes(size);
@@ -92,6 +127,7 @@ export class WomenProductsComponent implements OnInit{
         })
 
         console.log("Found products with size " + size + " and color " + color)
+        
         return;
       }
 
@@ -100,6 +136,7 @@ export class WomenProductsComponent implements OnInit{
           return Product.size.includes(size);
         })
         console.log("Found products with size " + size)
+      
         return;
       }
 
@@ -108,6 +145,7 @@ export class WomenProductsComponent implements OnInit{
           return Product.colors.includes(color);
         })
         console.log("Found products with size " + color)
+       
         return;
       }
   }
@@ -161,6 +199,7 @@ export class WomenProductsComponent implements OnInit{
   //}
 
 
+  //clicking product to open pop up
   onClickProduct(index: number) {
     const productDialog = this.dialog.open(ProductDialog, {
       data: this.actualProductList[index]
@@ -169,7 +208,6 @@ export class WomenProductsComponent implements OnInit{
 
   populateSizeArrays(productArray: Array<Product>) {
 
-    if (this.tagString != "bottoms") {
       for (let product of productArray) {
         for (let size of product.size) {
           if (!this.sizeArray.includes(size)) {
@@ -177,23 +215,6 @@ export class WomenProductsComponent implements OnInit{
           }
         }
       }
-    } else {
-      for (let product of productArray) {
-        for (let size of product.size) {
-          let check = size.split('x');
-
-          if (!this.waistArray.includes(check[0])) {
-            this.waistArray.push(check[0]);
-          }
-
-          if (!this.lengthArray.includes(check[1])) {
-            this.lengthArray.push(check[1]);
-          }
-          
-        }
-      }
-    }
-
   }
 
   populateColorArrays(productArray: Array<Product>) {
@@ -205,6 +226,12 @@ export class WomenProductsComponent implements OnInit{
         }
       }
     }
+  }
+
+  onReset() {
+    this.router.navigateByUrl('/', { skipLocationChange: true }).then(() => {
+      this.router.navigate(['./womens/prod']);
+    }); 
   }
 
 
