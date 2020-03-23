@@ -10,6 +10,9 @@
       <mat-form-field>
         <mat-label>Size</mat-label>
         <mat-select [(ngModel)]="currentSizeFilter">
+          <mat-option value="None" (click)="filterProduct(currentColorFilter, currentSizeFilter)">
+            None
+          </mat-option>
           <mat-option *ngFor="let size of sizeArray" value="{{size}}" (click)="filterProduct(currentColorFilter, currentSizeFilter)">
             {{size}}
           </mat-option>
@@ -44,23 +47,46 @@
       <mat-form-field>
         <mat-label>Color</mat-label>
         <mat-select [(ngModel)]="currentColorFilter">
+          <mat-option value ="None" (click)="filterProduct(currentColorFilter, currentSizeFilter)">
+            None
+          </mat-option>
           <mat-option *ngFor="let color of colorArray" value="{{color}}" (click)="filterProduct(currentColorFilter, currentSizeFilter)">
             {{color}}
           </mat-option>
         </mat-select>
       </mat-form-field>
     </div>
-
-    <button (click)="onReset()">Reset</button>
-
   </div>
 
 
   <!-- This is the container for the products -->
   <div class="productBody">
 
-    <div>
-      
+    <div class="sorting">
+      Sorting Options:
+      <div>
+        <mat-form-field>
+          <mat-label>Sort By:</mat-label>
+          <mat-select [(ngModel)]="currentSortOption">
+            <mat-option (click)="onSort()" value="None">
+              None
+            </mat-option>
+            <mat-option (click)="onSort()" value="High to Low">
+              High to Low
+            </mat-option>
+            <mat-option (click)="onSort()" value="Low to High">
+              Low to High
+            </mat-option>
+            <mat-option (click)="onSort()" value="A to Z">
+              A to Z
+            </mat-option>
+            <mat-option (click)="onSort()" value="Z to A">
+              Z to A
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+
     </div>
 
     <div class="productContainer">

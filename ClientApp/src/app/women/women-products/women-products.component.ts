@@ -31,6 +31,7 @@ export class WomenProductsComponent implements OnInit{
   currentColorFilter: string;
   currentWaistFilter: string;
   currentLengthFilter: string;
+  currentSortOption: string;
   tagString: string;
 
   addingProductList: Array<Product> = require('../women-products/products.json')
@@ -112,42 +113,45 @@ export class WomenProductsComponent implements OnInit{
   //filter product based on conditions
   filterProduct(color: string, size: string) {
 
+    
     console.log("Filtering products...")
 
-    if (color == "None" && size == "None") {
+    if (size == "None" && color == "None") {
+      console.log("Resetting all filters...");
       this.actualProductList = this.fullProductList;
+      return;
     }
-    
-      if (size != undefined && color != undefined) {
-        this.actualProductList = this.fullProductList.filter(function (Product) {
-          return Product.size.includes(size);
-        })
-        this.actualProductList = this.fullProductList.filter(function (Product) {
-          return Product.colors.includes(color);
-        })
 
-        console.log("Found products with size " + size + " and color " + color)
-        
-        return;
-      }
+    if ((size != undefined || size != "None") && (color == undefined || color == "None")) {
+      this.actualProductList = this.fullProductList.filter(function (Product) {
+        return Product.size.includes(size);
+      })
+      console.log("Found products with size " + size)
 
-      if (size != undefined) {
-        this.actualProductList = this.fullProductList.filter(function (Product) {
-          return Product.size.includes(size);
-        })
-        console.log("Found products with size " + size)
-      
-        return;
-      }
+      return;
+    }
 
-      if (color != undefined) {
-        this.actualProductList = this.fullProductList.filter(function (Product) {
-          return Product.colors.includes(color);
-        })
-        console.log("Found products with size " + color)
-       
-        return;
-      }
+    if ((color != undefined || color != "None") && (size == undefined || size == "None")) {
+      this.actualProductList = this.fullProductList.filter(function (Product) {
+        return Product.colors.includes(color);
+      })
+      console.log("Found products with color " + color)
+
+      return;
+    }
+
+    if ((size != undefined) && (color != undefined)) {
+      this.actualProductList = this.fullProductList.filter(function (Product) {
+        return Product.size.includes(size);
+      })
+      this.actualProductList = this.fullProductList.filter(function (Product) {
+        return Product.colors.includes(color);
+      })
+
+      console.log("Found products with size " + size + " and color " + color)
+
+      return;
+    }
   }
 
   
@@ -228,11 +232,45 @@ export class WomenProductsComponent implements OnInit{
     }
   }
 
-  onReset() {
-    this.router.navigateByUrl('/', { skipLocationChange: true }).then(() => {
-      this.router.navigate(['./womens/prod']);
-    }); 
-  }
+  onSort() {
 
+    console.log("Sorting products...");
+    if (this.currentSortOption == "None") {
+
+      console.log("Resetting all sort filters...")
+      this.actualProductList == this.fullProductList;
+      return;
+    }
+
+    if (this.currentSortOption == "High to Low") {
+
+      console.log("Sorting products by price: ", this.currentSortOption)
+      this.actualProductList.sort((p1, p2) => (p2.price - p1.price))
+      return;
+    }
+
+    if (this.currentSortOption == "Low to High") {
+
+      console.log("Sorting products by price: ", this.currentSortOption)
+      this.actualProductList.sort((p1, p2) => (p1.price - p2.price))
+      return;
+    }
+
+    if (this.currentSortOption == "A to Z") {
+
+      console.log("Sorting products by alphabetical: ", this.currentSortOption)
+      this.actualProductList.sort((p1, p2) => 0 - (p1.name > p2.name ? -1 : 1));
+      return;
+    }
+
+    if (this.currentSortOption == "Z to A") {
+
+      console.log("Sorting products by alphabetical: ", this.currentSortOption)
+      this.actualProductList.sort((p1, p2) => 0 - (p1.name > p2.name ? 1 : -1));
+      return;
+    }
+
+    
+  }
 
 }
