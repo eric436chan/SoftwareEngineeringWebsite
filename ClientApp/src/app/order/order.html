@@ -16,12 +16,12 @@
 
     <div *ngIf="order != null; else elseBlock">
       <p class="mt-2">
-        Your order is here!
+        Here is your order!
       </p>
     </div>
     <ng-template #elseBlock >
 
-      <p *ngIf="orderChecked" class="mt-2">
+      <p *ngIf="(order == null) && (orderChecked == true)" class="mt-2">
         Sorry! There is no order with that order key!
       </p>
     </ng-template>

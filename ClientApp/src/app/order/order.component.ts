@@ -14,9 +14,10 @@ export class OrderComponent implements OnInit {
 
   shoppingCart: Array<ProductOrder>;
   testProductOrder: ProductOrder;
+  orderList: Array<Order> = [];
   order: Order;
+  orderReceived: boolean = false;
   orderChecked: boolean = false
-
 
   constructor(private orderService: OrderService, private shoppingCartService: ShoppingCartService) {
    
@@ -31,7 +32,20 @@ export class OrderComponent implements OnInit {
   }
 
   onOrder(orderKey: HTMLInputElement) {
-    this.orderChecked = true;
-    console.log(orderKey.value);
+    this.order = null;
+    this.orderService.getOrder().subscribe(
+      data => {
+        for (let order of data) {
+          if (order.orderId == orderKey.value) {
+            this.order = order;
+            this.orderReceived = true;
+            console.log("Order received.");
+          }
+        }
+      });
+
+    if (this.order == undefined) {
+      this.orderChecked = true
+    }
   }
 }

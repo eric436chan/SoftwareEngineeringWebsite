@@ -22,7 +22,6 @@ export class WebsiteNavComponent implements OnInit{
 
   shoppingCart: Array<ProductOrder> = [];
 
-
   constructor(private iconRegistry: MatIconRegistry, private sanitizer: DomSanitizer, private router: Router,
     private searchingService: SearchingService, private shoppingCartService: ShoppingCartService, private browsingService: BrowsingService,
     private dialog: MatDialog, private productService: ProductService) {
@@ -59,10 +58,10 @@ export class WebsiteNavComponent implements OnInit{
   onBrowseWomen(tag: string) {
     this.browsingService.updateTag(tag);
     console.log("moving to women's products");
-    this.router.navigate(['./womens/prod']);
+    this.router.navigateByUrl('/', { skipLocationChange: true }).then(() => {
+      this.router.navigate(['./womens/prod']);
+    }); 
   }
-
-
 
   openShoppingCartDialog() {
 

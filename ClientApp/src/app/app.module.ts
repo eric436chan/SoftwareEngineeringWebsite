@@ -21,6 +21,7 @@ import { MatGridListModule } from '@angular/material/grid-list';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatSelectModule } from '@angular/material/select';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { MatPaginatorModule } from '@angular/material/paginator';
 
 import { AppComponent } from './app.component';
 import { NavMenuComponent } from './nav-menu/nav-menu.component';
@@ -29,12 +30,6 @@ import { CounterComponent } from './counter/counter.component';
 import { FetchDataComponent } from './fetch-data/fetch-data.component';
 import { WebsiteNavComponent } from './website-nav/website-nav.component';
 import { FAQComponent } from './faq/faq.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatToolbarModule } from '@angular/material/toolbar';
-import { MatMenuModule } from '@angular/material/menu';
-import { MatButtonModule } from '@angular/material/button';
-import { MatTabsModule } from '@angular/material/tabs';
-import { MatCardModule } from '@angular/material/card';
 import { MatTableModule } from '@angular/material/table';
 import { MenComponent } from './men/men.component';
 import { WomenComponent } from './women/women.component';
@@ -48,6 +43,7 @@ import { ShoppingCartService } from './services/shoppingCart-service';
 import { ShoppingCartDialog } from './dialogs/shoppingCartDialog/shopping-cart-dialog.component';
 import { ProductDialog } from './dialogs/productDialog/product-dialog.component';
 import { CheckoutComponent } from './checkout/checkout.component';
+import { ConfirmationComponent } from './confirmation/confirmation.component';
 
 @NgModule({
   declarations: [
@@ -66,7 +62,8 @@ import { CheckoutComponent } from './checkout/checkout.component';
     SearchComponent,
     CheckoutComponent,
     ShoppingCartDialog,
-    ProductDialog
+    ProductDialog,
+    ConfirmationComponent
 
   ],
   imports: [
@@ -82,7 +79,8 @@ import { CheckoutComponent } from './checkout/checkout.component';
       { path: 'womens/prod', component: WomenProductsComponent },
       { path: 'mens/prod', component: MenProductsComponent },
       { path: 'search', component: SearchComponent },
-      { path: 'checkout', component: CheckoutComponent }
+      { path: 'checkout', component: CheckoutComponent },
+      {path: 'confirmation', component: ConfirmationComponent}
     ]),
     BrowserAnimationsModule,
     MatToolbarModule,
@@ -101,7 +99,8 @@ import { CheckoutComponent } from './checkout/checkout.component';
     MatGridListModule,
     MatTooltipModule,
     MatSelectModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    MatPaginatorModule
 
   ],
 

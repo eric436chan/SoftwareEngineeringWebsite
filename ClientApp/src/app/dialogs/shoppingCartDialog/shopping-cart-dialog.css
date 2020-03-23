@@ -1,3 +1,22 @@
-﻿body
-{
+.prodDisplay{
+    float:left;
+    width: 75%;
 }
+
+.removeBtn {
+  float: right;
+}
+
+.prodDialog{
+    display:flex;
+}
+
+.checkoutBtn {
+ margin-left:auto; 
+}
+
+.footer{
+    clear:both;
+}
+
+

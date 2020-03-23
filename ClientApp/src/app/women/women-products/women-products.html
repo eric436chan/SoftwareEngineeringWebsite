@@ -1,41 +1,108 @@
 <body>
 
+  <!-- This is the container for the filtering options -->
+
   <div class="filterBody">
     <div>
       Filtering options.
     </div>
+    <div>
+      <mat-form-field>
+        <mat-label>Size</mat-label>
+        <mat-select [(value)]="currentSizeFilter">
+          <mat-option value="None" (click)="filterProduct(currentColorFilter, currentSizeFilter)">
+            None
+          </mat-option>
+          <mat-option *ngFor="let size of sizeArray" value="{{size}}" (click)="filterProduct(currentColorFilter, currentSizeFilter)">
+            {{size}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+    <!--<ng-template #elseBlock>
+      <mat-form-field>
+        <mat-label>Waist</mat-label>
+        <mat-select [(ngModel)]="currentWaistFilter">
 
-    <mat-radio-group [(ngModel)]="currentFilteringOption" class="filteringBar">
+          <mat-option>
 
-      <mat-radio-button value="yes" (click)="changeProductList('yes')">
-        yes
-      </mat-radio-button>
-      <mat-radio-button value="no" (click)="changeProductList('no')">
-        no
-      </mat-radio-button>
-
-    </mat-radio-group>
-
-    {{currentFilteringOption}}
-
+          </mat-option>
+          <mat-option *ngFor="let size of sizeArray" value="{{size}}">
+            {{size}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+      <br />
+      <mat-form-field>
+        <mat-label>Length</mat-label>
+        <mat-select [(ngModel)]="currentLengthFilter">
+          <mat-option *ngFor="let size of sizeArray" value="{{size}}">
+            {{size}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </ng-template>-->
+    <br />
+    <div>
+      <mat-form-field>
+        <mat-label>Color</mat-label>
+        <mat-select [(value)]="currentColorFilter">
+          <mat-option value ="None" (click)="filterProduct(currentColorFilter, currentSizeFilter)">
+            None
+          </mat-option>
+          <mat-option *ngFor="let color of colorArray" value="{{color}}" (click)="filterProduct(currentColorFilter, currentSizeFilter)">
+            {{color}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
   </div>
 
 
-
+  <!-- This is the container for the products -->
   <div class="productBody">
 
-    <mat-card *ngFor="let product of actualProductList; index as i" (click)="onClickProduct(i)" class="productCard">
+    <div class="sorting">
+      Sorting Options:
+      <div>
+        <mat-form-field>
+          <mat-label>Sort By:</mat-label>
+          <mat-select [(value)]="currentSortOption">
+            <mat-option (click)="onSort()" value="None">
+              None
+            </mat-option>
+            <mat-option (click)="onSort()" value="High to Low">
+              High to Low
+            </mat-option>
+            <mat-option (click)="onSort()" value="Low to High">
+              Low to High
+            </mat-option>
+            <mat-option (click)="onSort()" value="A to Z">
+              A to Z
+            </mat-option>
+            <mat-option (click)="onSort()" value="Z to A">
+              Z to A
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
 
-      <mat-card-header>
-        <mat-card-title>
-          {{product.name}}
-        </mat-card-title>
-      </mat-card-header>
+    </div>
 
-      <img mat-card-img src="{{product.img}}"/>
-      <mat-card-footer>
-        Price: {{product.price}}
-      </mat-card-footer>
-    </mat-card>
+    <div class="productContainer">
+      <mat-card *ngFor="let product of actualProductList; index as i" (click)="onClickProduct(i)" class="productCard">
+
+        <mat-card-header>
+          <mat-card-title>
+            {{product.name}}
+          </mat-card-title>
+        </mat-card-header>
+
+        <img mat-card-img src="{{product.img}}" />
+        <mat-card-footer>
+          Price: ${{product.price}}
+        </mat-card-footer>
+      </mat-card>
+    </div>
   </div>
 </body>
