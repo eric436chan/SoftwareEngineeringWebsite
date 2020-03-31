@@ -1,227 +1,456 @@
 [
   {
-    "name": "Plaid Shorts",
-    "description": [ "Mad for plaid, these patterned shorts from Danielle Bernstein add the perfect pop to any outfit.", "50% Polyester, 50% Spandex" ],
+    "name": "Dahlia Embroidered Top",
+    "description": [ "Effortless with a dash of sexy, this sweet cotton top is never short on style.", "100% Cotton" ],
     "colors": [ "White" ],
-    "size": [ "1", "3", "5", "7", "9" ],
-    "tag": "Shorts",
-    "price": 50.00,
-    "img": "https://jack-apparel-software-engineering-website.s3.amazonaws.com/women's+product+images/Plaid+Shorts.jpg",
-    "gender": "Female"
-  },
-
-
-  {
-    "name": "Pull-On Shorts",
-    "description": [ "These pull-on shorts are a sunshine-ready look that pairs perfectly with all of your go-to tops and tanks.", "50% Polyester, 50% Spandex" ],
-    "colors": [ "Black", "Beige", "Navy", "White", "Blue", "Red" ],
-    "size": [ "00", "0", "1", "3", "5", "7", "9", "11", "13", "15", "17" ],
-    "tag": "Shorts",
-    "price": 34.00,
-    "img": "https://jack-apparel-software-engineering-website.s3.amazonaws.com/women's+product+images/Pull-On+Shorts.jpg",
-    "gender": "Female"
-  },
-
-  {
-    "name": "Pinstriped Shorts",
-    "description": [ "Polished in pinstripes, these patterned shorts add the perfect pop to any outfit.", "50% Polyester, 50% Spandex" ],
-    "colors": [ "Ginger" ],
-    "size": [ "00", "0", "1", "3", "5", "7", "9", "11", "13", "15" ],
-    "tag": "Shorts",
-    "price": 45.00,
-    "img": "https://jack-apparel-software-engineering-website.s3.amazonaws.com/women's+product+images/Pinstriped+Shorts.jpg",
-    "gender": "Female"
-  },
-
-
-  {
-    "name": "Pull-On Drawstring Shorts",
-    "description": [ "These shorts give a warm-weather style effortlessly while still being comfortable.", "50% Cotton, 50% Spandex" ],
-    "colors": [ "Grey", "Black", "White", "Brown", "Navy" ],
-    "size": [ "00", "0", "1", "3", "5", "7", "9", "11", "13", "15", "17" ],
-    "tag": "Shorts",
-    "price": 17.99,
-    "img": "https://jack-apparel-software-engineering-website.s3.amazonaws.com/women's+product+images/Pull-On+Drawstring+Shorts.jpg",
-    "gender": "Female"
-  },
-
-  {
-    "name": "Romeo Rolled Cutoff Denim Shorts",
-    "description": [ "Romeo cutoff shorts mix it up with a button fly and cuffed hem on a ripped silhouette.", "100% Cotton" ],
-    "colors": [ "Vintage", "Black", "White" ],
-    "size": [ "0", "1", "3", "5", "7", "9", "11", "13", "15", "17" ],
-    "tag": "Shorts",
-    "price": 45.00,
-    "img": "https://jack-apparel-software-engineering-website.s3.amazonaws.com/women's+product+images/Romeo+Rolled+Cutoff+Denim+Shorts.jpg",
-    "gender": "Female"
-  },
-
-  {
-    "name": "Poplin Tie Shorts",
-    "description": [ "A classic part of any casual collection, these poplin shorts give you lasting comfort and the versatility to create endless ensembles.", "100% Cotton" ],
-    "colors": [ "White", "Black" ],
-    "size": [ "0", "1", "3", "5" ],
-    "tag": "Shorts",
-    "price": 29.00,
-    "img": "https://jack-apparel-software-engineering-website.s3.amazonaws.com/women's+product+images/Poplin+Tie+Shorts.jpg",
-    "gender": "Female"
-  },
-
-  {
-    "name": "Mid-Length Shorts",
-    "description": [ "These jean shorts are a warm-weather essential. This classic rendition is the wear-anywhere pair your closet has been missing!", "25% Cotton, 25% Viscose, 25% Polyester, 25% Elastane" ],
-    "colors": [ "Black" ],
-    "size": [ "00", "0", "1", "3", "5", "7", "9", "11", "13", "15", "17" ],
-    "tag": "Shorts",
-    "price": 29.99,
-    "img": "https://jack-apparel-software-engineering-website.s3.amazonaws.com/women's+product+images/Mid-Length+Shorts.jpg",
-    "gender": "Female"
-  },
-
-  {
-    "name": "501 Denim Shorts",
-    "description": [ "High waisted for a flattering, fresh feel, 501 jean shorts feature subtle frayed hems. This classic rendition is the wear-anywhere pair your closet has been missing!", "50% Cotton, 50% Elastane" ],
-    "colors": [ "White" ],
-    "size": [ "1", "3", "5", "7", "9" ],
-    "tag": "Shorts",
-    "price": 49.99,
-    "img": "https://jack-apparel-software-engineering-website.s3.amazonaws.com/women's+product+images/501+Denim+Shorts.jpg",
-    "gender": "Female"
-  },
-
-  {
-    "name": "Juniors' Ripped Denim Bermuda Shorts",
-    "description": [ "When you're planning a warm-weather getaway, pack these classic denim Bermuda shorts, styled with front rips and whiskering and rendered in a light wash.", "25% Cotton, 25% Rayon, 25% Polyester, 25% Spandex" ],
-    "colors": [ "Dark Blue" ],
-    "size": [ "0", "1", "3", "5" ],
-    "tag": "Shorts",
-    "price": 29.99,
-    "img": "https://jack-apparel-software-engineering-website.s3.amazonaws.com/women's+product+images/Juniors'+Ripped+Denim+Bermuda+Shorts.jpg",
-    "gender": "Female"
-  },
-
-  {
-    "name": "Lace Ruffled Dress",
-    "description": [ "Luxe lace falls in ruffled-trim tiers down the body of this utterly sweet dress.", "50% Cotton, 50% Rayon" ],
-    "colors": [ "Blue" ],
-    "size": [ "Small", "Medium", "Large" ],
-    "tag": "Dress",
-    "price": 99.00,
-    "img": "https://jack-apparel-software-engineering-website.s3.amazonaws.com/women's+product+images/Lace+Ruffled+Dress.jpg",
-    "gender": "Female"
-  },
-
-  {
-    "name": "Sleeveless Lace Dress",
-    "description": [ "Perfect for your next soiree, this sleeveless dress is covered in delicate lace.", "50% Polyester, 50% Spandex" ],
-    "colors": [ "Blue" ],
-    "size": [ "Small", "Medium", "Large" ],
-    "tag": "Dress",
-    "price": 60.00,
-    "img": "https://jack-apparel-software-engineering-website.s3.amazonaws.com/women's+product+images/Sleeveless+Lace+Dress.jpg",
-    "gender": "Female"
-  },
-
-  {
-    "name": "Ruched Ruffled Dress",
-    "description": [ "Rock the room with a shocking shade of ruffles and ruching in a flirty fit & flare dress.", "50% Nylon, 50% Polyester" ],
-    "colors": [ "Fuschia" ],
-    "size": [ "Small", "Medium", "Large" ],
-    "tag": "Dress",
-    "price": 99.00,
-    "img": "https://jack-apparel-software-engineering-website.s3.amazonaws.com/women's+product+images/Ruched+Ruffled+Dress.jpg",
-    "gender": "Female"
-  },
-  {
-    "name": "Handkerchief-Hem Dress",
-    "description": [ "Looking to create a feminine, chic wardrobe? This flowy dress is the perfect addition to your vacation clothing must-haves. Pair it with dainty accessories and heels to complete the look.", "50% Rayon, 50% Cotton" ],
-    "colors": [ "Yellow", "Black", "Olive", "Pink" ],
     "size": [ "X-Small", "Small", "Medium", "Large", "X-Large" ],
-    "tag": "Dress",
-    "price": 52.00,
-    "img": "https://jack-apparel-software-engineering-website.s3.amazonaws.com/women's+product+images/Handkerchief-Hem+Dress.jpg",
-    "gender": "Female"
-  },
-
-  {
-    "name": "Cricket Sweater",
-    "description": [ "The signature cricket sweater is updated for the season with contrast striped trim for a bold look.", "100% Cotton" ],
-    "colors": [ "Black" ],
-    "size": [ "X-Small", "Small", "Medium", "Large", "X-Large" ],
-    "tag": "Sweater",
-    "price": 45.00,
-    "img": "https://jack-apparel-software-engineering-website.s3.amazonaws.com/women's+product+images/Cricket+Sweater.jpg",
-    "gender": "Female"
-  },
-  {
-    "name": "Dolman-Sleeve Rib-Knit Sweater",
-    "description": [ "Dressing with a twist: this rib-knit sweater features a knotted detail at the waist and 3/4-length dolman sleeves.", "50% Cotton, 50% Rayon" ],
-    "colors": [ "Red", "Black" ],
-    "size": [ "Small", "Medium", "Large" ],
-    "tag": "Sweater",
-    "price": 50.00,
-    "img": "https://jack-apparel-software-engineering-website.s3.amazonaws.com/women's+product+images/Dolman-Sleeve+Rib-Knit+Sweater.jpg",
-    "gender": "Female"
-  },
-
-  {
-    "name": "Bardot Solid Sweater",
-    "description": [ "Bigger is better, and this sweater shows it with a trendy oversized fit that fits flawlessly over your favorite skinnies and shorts.", "50% Cotton, 50% Polyester" ],
-    "colors": [ "Coral", "Grey", "Blue", "Yellow" ],
-    "size": [ "X-Small", "Small", "Medium", "Large", "X-Large" ],
-    "tag": "Sweater",
+    "tag": "Top",
     "price": 40.00,
-    "img": "https://jack-apparel-software-engineering-website.s3.amazonaws.com/women's+product+images/Bardot+Solid+Sweater.jpg",
+    "img": "https://jack-apparel-software-engineering-website.s3.amazonaws.com/women's+product+images/Dahlia+Embroidered+Top.jpg",
     "gender": "Female"
   },
+
   {
-    "name": "One-Shoulder Peplum Sweater",
-    "description": [ "This single-sleeve sensation is brightened with a row of grommets at the neckline.", "50% Rayon, 50% Nylon" ],
-    "colors": [ "Black" ],
+    "name": "Clip-Dot Ruffled Top",
+    "description": [ "Feminine and sweet, this clip-dot top is the perfect topper to trousers or jeans.", "100% Polyester" ],
+    "colors": [ "Yellow" ],
     "size": [ "Small", "Medium", "Large" ],
-    "tag": "Sweater",
+    "tag": "Top",
+    "price": 40.00,
+    "img": "https://jack-apparel-software-engineering-website.s3.amazonaws.com/women's+product+images/Clip-Dot+Ruffled+Top.jpg",
+    "gender": "Female"
+  },
+
+  {
+    "name": "Something Special T-Shirt",
+    "description": [ "Go with the Something Special Tee for a look that's extra special. You'll love the ribbed body and puffy lace crochet sleeves.", "50% Elastane, 50% Viscose" ],
+    "colors": [ "Black", "White" ],
+    "size": [ "Small", "Medium", "Large" ],
+    "tag": "Top",
     "price": 35.00,
-    "img": "https://jack-apparel-software-engineering-website.s3.amazonaws.com/women's+product+images/One-Shoulder+Peplum+Sweater.jpg",
+    "img": "https://jack-apparel-software-engineering-website.s3.amazonaws.com/women's+product+images/Something+Special+T-Shirt.jpg",
+    "gender": "Female"
+  },
+
+  {
+    "name": "Dani V-Neck Tank Top",
+    "description": [ "A relaxed, swingy fit lends cool-girl attitude to this ribbed tank top, styled with a breezy V-back and deep armholes.", "50% Polyester, 50% Rayon" ],
+    "colors": [ "Grey", "Black", "White" ],
+    "size": [ "X-Small", "Small", "Medium", "Large", "X-Large" ],
+    "tag": "Top",
+    "price": 20.00,
+    "img": "https://jack-apparel-software-engineering-website.s3.amazonaws.com/women's+product+images/Dani+V-Neck+Tank+Top.jpg",
+    "gender": "Female"
+  },
+
+  {
+    "name": "Cotton Twisted T-Shirt",
+    "description": [ "Designed with a chic denim-look wash and a twisted front hem.", "100% Cotton" ],
+    "colors": [ "Blue" ],
+    "size": [ "X-Small", "Small", "Medium", "Large", "X-Large" ],
+    "tag": "Top",
+    "price": 30.00,
+    "img": "https://jack-apparel-software-engineering-website.s3.amazonaws.com/women's+product+images/Cotton+Twisted+T-Shirt.jpg",
+    "gender": "Female"
+  },
+
+  {
+    "name": "Printed Peasant Top",
+    "description": [ "Tassel ties fall from the scoop neckline of this printed-to-perfection peasant top, complete with charming 3/4-sleeves.", "50% Cotton, 50% Polyester" ],
+    "colors": [ "Blue" ],
+    "size": [ "X-Small", "Small", "Medium", "Large", "X-Large" ],
+    "tag": "Top",
+    "price": 24.99,
+    "img": "https://jack-apparel-software-engineering-website.s3.amazonaws.com/women's+product+images/Printed+Peasant+Top.jpg",
+    "gender": "Female"
+  },
+
+  {
+    "name": "Ruffled V-Neck Blouse",
+    "description": [ "Gorgeous ruffles trim the neckline and cuffs on this sleek blouse, designed with a classic V-neck and long sleeves.", "50% Cotton, 50% Polyester" ],
+    "colors": [ "Pink", "Black" ],
+    "size": [ "X-Small", "Small", "Medium", "Large", "X-Large" ],
+    "tag": "Top",
+    "price": 30.00,
+    "img": "https://jack-apparel-software-engineering-website.s3.amazonaws.com/women's+product+images/Ruffled+V-Neck+Blouse.jpg",
+    "gender": "Female"
+  },
+
+  {
+    "name": "Chiffon-Trim High-Low Top",
+    "description": [ "Designed with a longer length that's perfect for layering over leggings and skinny jeans, this breezy high-low top gets an added boost of style from its elegant chiffon-trimmed hem and unexpected split at the back.", "50% Rayon, 50% Spandex" ],
+    "colors": [ "Green", "Black" ],
+    "size": [ "X-Small", "Small", "Medium", "Large", "X-Large" ],
+    "tag": "Top",
+    "price": 35.00,
+    "img": "https://jack-apparel-software-engineering-website.s3.amazonaws.com/women's+product+images/Chiffon-Trim+High-Low+Top%2C.jpg",
+    "gender": "Female"
+  },
+
+  {
+    "name": "Seersucker Top",
+    "description": [ "Button up a fashionable look with Lucky Brand's button-front blouse, rendered in airy seersucker and finished with a round collar.", "100% Cotton" ],
+    "colors": [ "Yellow", "Blue" ],
+    "size": [ "X-Small", "Small", "Medium", "Large", "X-Large" ],
+    "tag": "Top",
+    "price": 35.00,
+    "img": "https://jack-apparel-software-engineering-website.s3.amazonaws.com/women's+product+images/Seersucker+Top.jpg",
     "gender": "Female"
   },
   {
-    "name": "Contrasting Knit Sweater",
-    "description": [ "This contrasting knit fabric sweater will be your best friend and fashion companion to face the weather. It comes with long batwing sleeves, rounded neck, and cable-knit finish.", "50% Acrylic, 50% Polyester" ],
-    "colors": [ "Green" ],
-    "size": [ "X-Small", "Medium" ],
-    "tag": "Sweater",
-    "price": 40.00,
-    "img": "https://jack-apparel-software-engineering-website.s3.amazonaws.com/women's+product+images/Contrasting+Knit+Sweater.jpg",
-    "gender": "Female"
-  },
-  {
-    "name": "Printed Sweater",
-    "description": [ "Contrast stitching polishes this sweater, a classic silhouette updated with contemporary style.", "50% Acrylic, 50% Polyester" ],
+    "name": "V-Neck Handkerchief-Hem Top",
+    "description": [ "A longer-length handkerchief hem graces the hips on this comfortable stretch top from JM Collection, making it a great basic and closet essential.", "50% Rayon, 50% Spandex" ],
     "colors": [ "Pink" ],
+    "size": [ "Small", "Medium", "Large" ],
+    "tag": "Top",
+    "price": 20.00,
+    "img": "https://jack-apparel-software-engineering-website.s3.amazonaws.com/women's+product+images/V-Neck+Handkerchief-Hem+Top.jpg",
+    "gender": "Female"
+  },
+
+  {
+    "name": "Rory Tie-Dye Henley Top",
+    "description": [ "Anything but basic, this upgraded Henley brings cool and flirty into one stylish piece.", "100% Polyester" ],
+    "colors": [ "Blue", "Pink", "Yellow" ],
     "size": [ "X-Small", "Small", "Medium", "Large", "X-Large" ],
-    "tag": "Sweater",
+    "tag": "Top",
+    "price": 30.00,
+    "img": "https://jack-apparel-software-engineering-website.s3.amazonaws.com/women's+product+images/Rory+Tie-Dye+Henley+Top.jpg",
+    "gender": "Female"
+  },
+
+  {
+    "name": "V-Neck Flutter Sleeve Pleated Shift Dress",
+    "description": [ "The easiest way to make a polished statement. With a schedule like yours, you can't go wrong with this sophisticated handkerchief dress, cut in a figure flattering silhouette this dress will be the one you turn to again and again.", "100% Polyester" ],
+    "colors": [ "Blue" ],
+    "size": [ "X-Small", "Small", "Medium", "Large", "X-Large" ],
+    "tag": "Dress",
     "price": 45.00,
-    "img": "https://jack-apparel-software-engineering-website.s3.amazonaws.com/women's+product+images/Printed+Sweater.jpg",
+    "img": "https://jack-apparel-software-engineering-website.s3.amazonaws.com/women's+product+images/V-Neck+Flutter+Sleeve+Pleated+Shift+Dress.jpg",
+    "gender": "Female"
+  },
+
+  {
+    "name": "White Halter Dress",
+    "description": [ "The little white dress of your dreams. This one is sleek & stunning all at once with its sophisticated top and sparkly skirt.", "100% Polyester" ],
+    "colors": [ "White" ],
+    "size": [ "Small", "Medium", "Large" ],
+    "tag": "Dress",
+    "price": 50.00,
+    "img": "https://jack-apparel-software-engineering-website.s3.amazonaws.com/women's+product+images/White+Halter+Dress.jpg",
     "gender": "Female"
   },
   {
-    "name": "Curvy-Fit Slimming Bootcut Pants, Regular, Short, & Long Lengths",
-    "description": [ "Built for a smaller waist and fuller thighs, these pants are perfect for women who usually have gaping at the waistband. No need to dry clean, either. The wrinkle-resistant fabric lets you wash, wear and go. Try the long- or regular-length inseam with heels for polished, professional feel, or pair the shorter inseam with flats for a more casual look.", "50% Polyester, 50% Spandex" ],
-    "colors": [ "Wine", "Black" ],
+    "name": "Eyelet Smocked Dress",
+    "description": [ "A fashionable solution to warm weather ahead, this eyelet dress features a smocked shape and flirty flounces.", "50% Polyester, 50% Elastane" ],
+    "colors": [ "Black", "White" ],
     "size": [ "X-Small", "Small", "Medium", "Large", "X-Large" ],
-    "tag": "Pants",
+    "tag": "Dress",
     "price": 45.00,
-    "img": "https://jack-apparel-software-engineering-website.s3.amazonaws.com/women's+product+images/Curvy-Fit+Slimming+Bootcut+Pants%2C+Regular%2C+Short%2C+%26+Long+Lengths.jpg",
+    "img": "https://jack-apparel-software-engineering-website.s3.amazonaws.com/women's+product+images/Eyelet+Smocked+Dress.jpg",
     "gender": "Female"
   },
   {
-    "name": "Regular and Short Length Studded Pull-On Tummy Control Pants",
-    "description": [ "Every woman needs black pants to wear to the office or out for dinner.", "50% Nylon, 50% Spandex" ],
-    "colors": [ "Grey", "Black", "White", "Olive" ],
+    "name": "Water-Resistant Hooded Anorak Jacket",
+    "description": [ "Keep dry and carry-on with this water-resistant anorak jacket.", "100% Polyester" ],
+    "colors": [ "Black", "White", "Blue", "Green", "Yellow", "Red" ],
     "size": [ "X-Small", "Small", "Medium", "Large", "X-Large" ],
+    "tag": "Jacket",
+    "price": 50.00,
+    "img": "https://jack-apparel-software-engineering-website.s3.amazonaws.com/women's+product+images/Water-Resistant+Hooded+Anorak+Jacket.jpg",
+    "gender": "Female"
+  },
+  {
+    "name": "Denim Jacket",
+    "description": [ "Add this must-have denim jacket to your wardrobe for a timeless piece of classic American style -- do double denim duty by layering it with dark wash jeans or modernize your look by layering it over a casual dress.", "50% Polyester, 50% Cotton" ],
+    "colors": [ "Light Blue Denim" ],
+    "size": [ "X-Small", "Small", "Medium", "Large", "X-Large" ],
+    "tag": "Jacket",
+    "price": 45.00,
+    "img": "https://jack-apparel-software-engineering-website.s3.amazonaws.com/women's+product+images/Denim+Jacket.jpg",
+    "gender": "Female"
+  },
+  {
+    "name": "Performance Zip Jacket",
+    "description": [ "Stylish seaming adds a sleek fit to this performance jacket. Moisture-wicking technology and flexible stretch fabric helps you say comfortable and dry through any activity.", "100% Polyester" ],
+    "colors": [ "Blue", "Pink", "Purple" ],
+    "size": [ "X-Small", "Small", "Medium", "Large", "X-Large" ],
+    "tag": "Jacket",
+    "price": 25.00,
+    "img": "https://jack-apparel-software-engineering-website.s3.amazonaws.com/women's+product+images/Performance+Zip+Jacket.jpg",
+    "gender": "Female"
+  },
+  {
+    "name": "Button-Trim Cropped Pants",
+    "description": [ "Cool and cropped for modern appeal, these flattering mid-rise capri pants are stylishly finished with classic button details at the cuff.", "50% Cotton, 50% Spandex" ],
+    "colors": [ "Black", "White", "Olive" ],
+    "size": [ "0", "1", "3", "5", "7", "9", "11", "13" ],
     "tag": "Pants",
     "price": 35.00,
+    "img": "https://jack-apparel-software-engineering-website.s3.amazonaws.com/women's+product+images/Button-Trim+Cropped+Pants.jpg",
+    "gender": "Female"
+  },
+  {
+    "name": "Curvy Bootcut Pants, Regular, Short, & Long Lengths",
+    "description": [ "The effortlessly stylish design of these pants makes them an essential for your career wardrobe. The bootcut fit relaxes the leg, so they're perfect with any sort of shoes!", "50% Polyester, 50% Rayon" ],
+    "colors": [ "Navy", "Black", "Brown", "White" ],
+    "size": [ "3", "5", "7", "9", "11", "13", "15", "17" ],
+    "tag": "Pants",
+    "price": 50.00,
+    "img": "https://jack-apparel-software-engineering-website.s3.amazonaws.com/women's+product+images/Curvy+Bootcut+Pants%2C+Regular%2C+Short%2C+%26+Long+Lengths.jpg",
+    "gender": "Female"
+  },
+  {
+    "name": "Trouser Pants",
+    "description": [ "Its crisp straight-leg silhouette makes these trousers a smart addition to your closet.", "50% Polyester, 50% Spandex" ],
+    "colors": [ "White" ],
+    "size": [ "00", "0", "1", "3", "5", "7", "9", "11", "13", "15", "17" ],
+    "tag": "Pants",
+    "price": 50.00,
+    "img": "https://jack-apparel-software-engineering-website.s3.amazonaws.com/women's+product+images/Trouser+Pants.jpg",
+    "gender": "Female"
+  },
+  {
+    "name": "Pull On Cuffed Utility Pants",
+    "description": [ "Stroll about the town with confidence in these pull-on cuffed twill pants.", "50% Cotton, 50% Spandex" ],
+    "colors": [ "White", "Navy", "Olive" ],
+    "size": [ "00", "0", "1", "3", "5", "7", "9", "11", "13", "15", "17" ],
+    "tag": "Pants",
+    "price": 35.00,
+    "img": "https://jack-apparel-software-engineering-website.s3.amazonaws.com/women's+product+images/Pull+On+Cuffed+Utility+Pants.jpg",
+    "gender": "Female"
+  },
+  {
+    "name": "Tummy-Control Bristol Capri Jeans",
+    "description": [ "Help keep your profile sleek and stylish with these capri pants, complete with flattering tummy control.", "50% Cotton, 50% Spandex" ],
+    "colors": [ "Coral", "Pink", "Black", "Olive", "White", "Navy" ],
+    "size": [ "0", "1", "3", "5", "7", "9", "11", "13", "15", "17" ],
+    "tag": "Pants",
+    "price": 50.00,
     "img": "https://jack-apparel-software-engineering-website.s3.amazonaws.com/women's+product+images/Regular+and+Short+Length+Studded+Pull-On+Tummy+Control+Pants.jpg",
+    "gender": "Female"
+  },
+
+  {
+    "name": "Platoon Pants",
+    "description": [ "Part cargo pant, part jogger. These Platoon Pants put a cool and comfy spin on the utilitarian trend.", "100% Cotton" ],
+    "colors": [ "Navy" ],
+    "size": [ "00", "0", "1", "3", "5", "7", "9" ],
+    "tag": "Pants",
+    "price": 60.00,
+    "img": "https://jack-apparel-software-engineering-website.s3.amazonaws.com/women's+product+images/Platoon+Pants.jpg",
+    "gender": "Female"
+  },
+  {
+    "name": "High-Waist Skinny Pants in Curvy",
+    "description": [ "Put together an endless array of chic looks starting with these red-hot skinny pants.", "50% Rayon, 50% Spandex" ],
+    "colors": [ "Maroon", "Navy", "Black" ],
+    "size": [ "00", "0", "1", "3", "5", "7", "9" ],
+    "tag": "Pants",
+    "price": 35.00,
+    "img": "https://jack-apparel-software-engineering-website.s3.amazonaws.com/women's+product+images/High-Waist+Skinny+Pants+in+Curvy.jpg",
+    "gender": "Female"
+  },
+  {
+    "name": "Thermal Pants",
+    "description": [ "From an invigorating class to a relaxing evening at home, these performance yoga pants give you stylish comfort.", "50% Polyester, 50% Spandex" ],
+    "colors": [ "Black", "Grey" ],
+    "size": [ "0", "1", "3", "5", "7", "9", "11" ],
+    "tag": "Pants",
+    "price": 35.00,
+    "img": "https://jack-apparel-software-engineering-website.s3.amazonaws.com/women's+product+images/Thermal+Pants.jpg",
+    "gender": "Female"
+  },
+  {
+    "name": "Jet Set Cotton Denim Jogger Pants",
+    "description": [ "Casually cruise through the weekend in these jet set jogger pants in pure cotton denim with a bungee-inspired drawcord.", "100% Cotton" ],
+    "colors": [ "Blue Denim" ],
+    "size": [ "1", "3", "5", "7" ],
+    "tag": "Pants",
+    "price": 50.00,
+    "img": "https://jack-apparel-software-engineering-website.s3.amazonaws.com/women's+product+images/Jet+Set+Cotton+Denim+Jogger+Pants.jpg",
+    "gender": "Female"
+  },
+
+  {
+    "name": "Modern-Fit Pants",
+    "description": [ "Modern-fit pants can be paired with a coordinating blazer for a professional look that can transition to night.", "100% Cotton" ],
+    "colors": [ "Light Blue" ],
+    "size": [ "00", "0", "1", "3", "5", "7", "9", "11", "13", "15", "17" ],
+    "tag": "Pants",
+    "price": 50.00,
+    "img": "https://jack-apparel-software-engineering-website.s3.amazonaws.com/women's+product+images/Modern-Fit+Pants.jpg",
+    "gender": "Female"
+  },
+  {
+    "name": "Rhinestone Pants",
+    "description": [ "Rows of rhinestones sparkle at the slits of these wide-leg pants that slip on effortlessly for any elegant occasion.", "50% Polyester, 50% Spandex" ],
+    "colors": [ "Black" ],
+    "size": [ "0", "1", "3", "5", "7", "9", "11", "13", "15", "17" ],
+    "tag": "Pants",
+    "price": 58.00,
+    "img": "https://jack-apparel-software-engineering-website.s3.amazonaws.com/women's+product+images/Rhinestone+Pants.jpg",
+    "gender": "Female"
+  },
+  {
+    "name": "Striped Wool Sweater",
+    "description": [ "Earn your style stripes in this cozy sweater from Eileen Fisher, designed to pullover with a classic crewneck.", "100% Merino Wool" ],
+    "colors": [ "Black" ],
+    "size": [ "X-Small", "Small", "Medium", "Large", "X-Large" ],
+    "tag": "Sweater",
+    "price": 75.00,
+    "img": "https://jack-apparel-software-engineering-website.s3.amazonaws.com/women's+product+images/Striped+Wool+Sweater%2C.jpg",
+    "gender": "Female"
+  },
+  {
+    "name": "Chenille Cowl-Neck Sweater",
+    "description": [ "Cozy up to this soft chenille sweater, designed to pullover with a gorgeous cowl neckline.", "100% Polyester" ],
+    "colors": [ "Pink", "Navy", "Black" ],
+    "size": [ "X-Small", "Small", "Medium", "Large", "X-Large" ],
+    "tag": "Sweater",
+    "price": 50.00,
+    "img": "https://jack-apparel-software-engineering-website.s3.amazonaws.com/women's+product+images/Chenille+Cowl-Neck+Sweater.jpg",
+    "gender": "Female"
+  },
+  {
+    "name": "Heart-Print Eyelash Sweater",
+    "description": [ "Decorated with glittering hearts, this eyelash sweater is sure to give you the warm and fuzzies. Pair it with skinny jeans for a cool fashion look.", "100% Nylon" ],
+    "colors": [ "Black" ],
+    "size": [ "X-Small", "Small", "Medium", "Large", "X-Large" ],
+    "tag": "Sweater",
+    "price": 50.00,
+    "img": "https://jack-apparel-software-engineering-website.s3.amazonaws.com/women's+product+images/Heart-Print+Eyelash+Sweater.jpg",
+    "gender": "Female"
+  },
+  {
+    "name": "Gramercy Sweater",
+    "description": [ "For a glam look, pair it with boots and skinny jeans or a mini skirt.", "50% Nylon, 50% Spandex" ],
+    "colors": [ "White" ],
+    "size": [ "Small", "Medium", "Large" ],
+    "tag": "Sweater",
+    "price": 35.00,
+    "img": "https://jack-apparel-software-engineering-website.s3.amazonaws.com/women's+product+images/Gramercy+Sweater.jpg",
+    "gender": "Female"
+  },
+  {
+    "name": "Button-Trim Split-Cuff Sweater",
+    "description": [ "This split-cuff sweater is a go-to with staying power. Its timeless V-neck silhouette gets a boost from vented hems with button trim.", "50% Polyester, 50% Elastane" ],
+    "colors": [ "Grey" ],
+    "size": [ "X-Small", "Small", "Medium", "Large", "X-Large" ],
+    "tag": "Sweater",
+    "price": 40.00,
+    "img": "https://jack-apparel-software-engineering-website.s3.amazonaws.com/women's+product+images/Button-Trim+Split-Cuff+Sweater.jpg",
+    "gender": "Female"
+  },
+  {
+    "name": "Striped Mock-Neck Sweater",
+    "description": [ "Stock up on warm fashion with this mock-neck sweater. Ribbed texture and bishop sleeves add interest to this chic piece.", "50% Cotton, 50% Rayon" ],
+    "colors": [ "Navy with White" ],
+    "size": [ "X-Small", "Small", "Medium", "Large", "X-Large" ],
+    "tag": "Sweater",
+    "price": 40.00,
+    "img": "https://jack-apparel-software-engineering-website.s3.amazonaws.com/women's+product+images/Striped+Mock-Neck+Sweater.jpg",
+    "gender": "Female"
+  },
+  {
+    "name": "Zip Peplum Sweater",
+    "description": [ "Play up your curves in this fun look, a zip sweater with contrast stitching and a peplum hem that shows off your shape.", "50% Cotton, 50% Rayon" ],
+    "colors": [ "Gold" ],
+    "size": [ "Small", "Medium", "Large" ],
+    "tag": "Sweater",
+    "price": 35.00,
+    "img": "https://jack-apparel-software-engineering-website.s3.amazonaws.com/women's+product+images/Zip+Peplum+Sweater.jpg",
+    "gender": "Female"
+  },
+
+  {
+    "name": "Cotton V-Neck Sweater",
+    "description": [ "Sweater weather is always right around the corner. Prep yourself with this timeless cable-knit style.", "100% Cotton" ],
+    "colors": [ "Purple", "Blue", "Red" ],
+    "size": [ "X-Small", "Small", "Medium", "Large", "X-Large" ],
+    "tag": "Sweater",
+    "price": 18.00,
+    "img": "https://jack-apparel-software-engineering-website.s3.amazonaws.com/women's+product+images/Cotton+V-Neck+Sweate.jpg",
+    "gender": "Female"
+  },
+  {
+    "name": "Jacquard Sweater",
+    "description": [ "Feel like a warm hug around your body with this jacquard sweater. It is made from neps knitted fabric and comes with an elastic finish, rounded neck, and cable-knit finish.", "50% Polyester, 50% Acrylic" ],
+    "colors": [ "Light Beige" ],
+    "size": [ "X-Small", "Small" ],
+    "tag": "Sweater",
+    "price": 45.00,
+    "img": "https://jack-apparel-software-engineering-website.s3.amazonaws.com/women's+product+images/Jacquard+Sweater.jpg",
+    "gender": "Female"
+  },
+  {
+    "name": "Lake Geneva Patchwork Chenille Sweater",
+    "description": [ "An adorable patchwork-style chenille sweater from Alfred Dunner is finished with a mock neckline and charming whipstitched details.", "100% Acrylic" ],
+    "colors": [ "Multi" ],
+    "size": [ "X-Large" ],
+    "tag": "Sweater",
+    "price": 30.00,
+    "img": "https://jack-apparel-software-engineering-website.s3.amazonaws.com/women's+product+images/Lake+Geneva+Patchwork+Chenille+Sweater.jpg",
+    "gender": "Female"
+  },
+  {
+    "name": "Flare Corduroy Pants",
+    "description": [ "A super stylish throwback. These frayed-hem corduroy flares bring a cool 70s vibe to your look.", "50% Cotton, 50% Spandex" ],
+    "colors": [ "Gold Brown" ],
+    "size": [ "00", "0", "1", "3", "5", "7", "9", "11", "13", "15", "17" ],
+    "tag": "Pants",
+    "price": 50.00,
+    "img": "https://jack-apparel-software-engineering-website.s3.amazonaws.com/women's+product+images/Flare+Corduroy+Pants.jpg",
+    "gender": "Female"
+  },
+  {
+    "name": "V Breaker Pant",
+    "description": [ "Relaxed pull on jogger pant with circular leg seam, elastic waistband with fat drawcord detail.", "47% Micro Modal, 47% Supima Cotton, 6% Spandex" ],
+    "colors": [ "Black", "Navy" ],
+    "size": [ "0", "1", "3", "5", "7", "9", "11", "13", "15" ],
+    "tag": "Pants",
+    "price": 60.00,
+    "img": "https://jack-apparel-software-engineering-website.s3.amazonaws.com/women's+product+images/V+Breaker+Pant.jpg",
+    "gender": "Female"
+  },
+  {
+    "name": "Side-Slit Cropped Pants",
+    "description": [ "Perfect for the go-getter in you, these cropped pants are perfect with a fitted top and flats.", "50% Cotton, 50% Elastane" ],
+    "colors": [ "Black", "White" ],
+    "size": [ "0", "1", "3", "5", "7", "9", "11", "13", "15", "17" ],
+    "tag": "Pants",
+    "price": 45.00,
+    "img": "https://jack-apparel-software-engineering-website.s3.amazonaws.com/women's+product+images/Side-Slit+Cropped+Pants.jpg",
+    "gender": "Female"
+  },
+  {
+    "name": "Cheetah Printed Palazzo Pants",
+    "description": [ "Amp up your wardrobe with these popular wide-legged palazzo pants in exciting fashion prints. You'll feel comfortable and relaxed, yet well-dressed for any occasion.", "50% Polyester, 50% Spandex" ],
+    "colors": [ "Grey" ],
+    "size": [ "0", "1", "3", "5", "7" ],
+    "tag": "Pants",
+    "price": 28.00,
+    "img": "https://jack-apparel-software-engineering-website.s3.amazonaws.com/women's+product+images/Cheetah+Printed+Palazzo+Pants.jpg",
+    "gender": "Female"
+  },
+  {
+    "name": "Belted Jogger Pants",
+    "description": [ "These jogger-inspired pants feature plenty of handy pockets and a matching waist-defining belt.", "50% Cotton, 50% Spandex" ],
+    "colors": [ "Olive" ],
+    "size": [ "0", "1", "3", "5", "7", "9", "11", "13", "15" ],
+    "tag": "Pants",
+    "price": 45.00,
+    "img": "https://jack-apparel-software-engineering-website.s3.amazonaws.com/women's+product+images/Belted+Jogger+Pants.jpg",
+    "gender": "Female"
+  },
+  {
+    "name": "Slim-Ankle Pants",
+    "description": [ "Update your collection with these sleek trousers, updated with an ankle crop and soft color.", "50% Polyester, 50% Elastane" ],
+    "colors": [ "Mint" ],
+    "size": [ "00", "0", "1", "3", "5", "7", "9", "11", "13", "15", "17" ],
+    "tag": "Pants",
+    "price": 60.00,
+    "img": "https://jack-apparel-software-engineering-website.s3.amazonaws.com/women's+product+images/Slim-Ankle+Pants.jpg",
     "gender": "Female"
   }
 ]

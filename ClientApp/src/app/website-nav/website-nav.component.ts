@@ -44,7 +44,9 @@ export class WebsiteNavComponent implements OnInit{
 
     if (searchInput.value != "") {
       this.searchingService.updateSearchString(searchInput.value);
-      this.router.navigate(['./search']);
+      this.router.navigateByUrl('/', { skipLocationChange: true }).then(() => {
+        this.router.navigate(['./search']);
+      }); 
 
     }
   }
@@ -52,7 +54,9 @@ export class WebsiteNavComponent implements OnInit{
   onBrowseMen(tag: string) {
     this.browsingService.updateTag(tag);
     console.log("moving to men's products");
-    this.router.navigate(['./mens/prod']);
+    this.router.navigateByUrl('/', { skipLocationChange: true }).then(() => {
+      this.router.navigate(['./mens/prod']);
+    }); 
   }
 
   onBrowseWomen(tag: string) {

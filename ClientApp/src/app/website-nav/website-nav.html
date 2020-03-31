@@ -13,7 +13,7 @@
   </button>
   <mat-menu #menu="matMenu">
     <span class="mens">
-      <a mat-menu-item [routerLink]="['/womens']">Women's Products</a>
+      <a mat-menu-item [routerLink]="['/womens']"><b>Women's Products</b></a>
       <a mat-menu-item (click)="onBrowseWomen('Top')">Tops</a>
       <a mat-menu-item (click)="onBrowseWomen('Dress')">Dresses</a>
       <a mat-menu-item (click)="onBrowseWomen('Sweater')">Sweaters</a>
@@ -22,7 +22,7 @@
       <a mat-menu-item (click)="onBrowseWomen('Pants')">Pants</a>
     </span>
     <span class="womens">
-      <a mat-menu-item [routerLink]="['/mens']">Men's Products</a>
+      <a mat-menu-item [routerLink]="['/mens']"><b>Men's Products</b></a>
       <a mat-menu-item (click)="onBrowseMen('tops')">Tops</a>
       <a mat-menu-item (click)="onBrowseMen('bottoms')">Bottoms</a>
       <a mat-menu-item (click)="onBrowseMen('socks')">Socks</a>

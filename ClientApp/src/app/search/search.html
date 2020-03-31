@@ -1,1 +1,32 @@
-{{searchString}}
+<body>
+  <div>
+    You searched for {{searchString}}.
+  </div>
+  <div *ngIf="actualProductList != undefined && actualProductList != []; else elseBlock">
+    <mat-card *ngFor="let product of actualProductList; index as i" (click)="onClickProduct(i)">
+
+      <mat-card-header>
+        <mat-card-title>
+          {{product.name}}
+        </mat-card-title>
+      </mat-card-header>
+
+      <img mat-card-img src="{{product.img}}" />
+      <mat-card-footer>
+        Price: ${{product.price}}
+      </mat-card-footer>
+    </mat-card>
+  </div>
+ <ng-template #elseBlock>
+   Sorry! We can't find anything with {{searchString}}.
+ </ng-template>
+  
+
+
+
+
+
+
+
+
+</body>

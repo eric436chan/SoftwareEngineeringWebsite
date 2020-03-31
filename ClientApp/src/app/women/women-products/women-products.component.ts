@@ -24,9 +24,6 @@ export class WomenProductsComponent implements OnInit{
   colorArray: Array<string> = [];
   sizeArray: Array<string> = [];
 
-  waistArray: Array<string> = [];
-  lengthArray: Array<string> = [];
-
   currentSizeFilter: string = "None";
   currentColorFilter: string = "None";
   currentSortOption: string = "None";
@@ -87,6 +84,11 @@ export class WomenProductsComponent implements OnInit{
           tempNumberArray.sort((n1,n2) => n1-n2);
           for (let size of tempNumberArray) {
             tempSizeArray.push(size.toString());
+          }
+          if (tempSizeArray[0] == "0" && tempSizeArray[1] == "00") {
+            let temp = tempSizeArray[0];
+            tempSizeArray[0] = tempSizeArray[1];
+            tempSizeArray[1] = temp;
           }
 
           this.sizeArray = tempSizeArray;
