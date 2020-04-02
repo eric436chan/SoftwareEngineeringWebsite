@@ -17,7 +17,8 @@ export class SearchComponent implements OnInit {
 
   searchString: string;
   shoppingCart: Array<ProductOrder>;
-  actualProductList: Array<Product>;
+  exactProductList: Array<Product>;
+  relatedProductList: Array<Product>;
   fullProductList: Array<Product>;
 
   constructor(private searchingService: SearchingService, private shoppingCartService: ShoppingCartService,
@@ -95,16 +96,22 @@ export class SearchComponent implements OnInit {
     }
   
     console.log(tempArray);
-    this.actualProductList = tempArray;
-    console.log(this.actualProductList);
+    this.relatedProductList = tempArray;
+    console.log(this.relatedProductList);
     //  //this.actualProductList = this.fullProductList;
 
     
   }
 
-  onClickProduct(index: number) {
+  onClickRelatedProduct(index: number) {
     const productDialog = this.dialog.open(ProductDialog, {
-      data: this.actualProductList[index]
+      data: this.relatedProductList[index]
+    });
+  }
+
+  onClickExactProduct(index: number) {
+    const productDialog = this.dialog.open(ProductDialog, {
+      data: this.exactProductList[index]
     });
   }
   

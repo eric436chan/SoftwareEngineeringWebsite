@@ -58,7 +58,7 @@ export class WomenProductsComponent implements OnInit{
 
         let tempArray: Array<Product> = [];
         for (let prod of data) {
-          if (prod.tag == this.tagString) {
+          if (prod.tag == this.tagString && prod.gender == "Female") {
             tempArray.push(prod);
           }
         }
