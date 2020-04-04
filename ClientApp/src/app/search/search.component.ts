@@ -17,9 +17,9 @@ export class SearchComponent implements OnInit {
 
   searchString: string;
   shoppingCart: Array<ProductOrder>;
-  exactProductList: Array<Product>;
-  relatedProductList: Array<Product>;
-  fullProductList: Array<Product>;
+  exactProductList: Array<Product> = [];
+  relatedProductList: Array<Product> = [];
+  fullProductList: Array<Product> = [];
 
   constructor(private searchingService: SearchingService, private shoppingCartService: ShoppingCartService,
     private productService: ProductService, private dialog: MatDialog) {
@@ -36,9 +36,15 @@ export class SearchComponent implements OnInit {
 
     this.productService.getAllProducts().subscribe(
       data => {
-        this.fullProductList = data;
-        this.searchProducts(this.searchString, data);
+        this.searchExactProducts(this.searchString, data);
+        console.log(this.exactProductList);
+        this.searchRelatedProducts(this.searchString, data);
+        console.log(this.relatedProductList);
+        
       });
+
+    
+   
 
     
    
@@ -52,10 +58,56 @@ export class SearchComponent implements OnInit {
   }
 
   //our search algorithm
-  searchProducts(searchString, prodList) {
 
-    console.log(prodList);
-    let tempArray: Array<Product> = [];
+  searchExactProducts(searchString, prodList) {
+
+    let tempList: Array<Product> = [];
+
+    for (let prod of prodList) {
+      if (searchString.toLowerCase().includes(prod.tag.toLowerCase())) {
+        tempList.push(prod)
+        
+      }
+    }
+
+    console.log(tempList)
+    for (let prod of tempList) {
+
+      if (searchString.toLowerCase().includes(prod.name.toLowerCase()) && !this.exactProductList.includes(prod)) {
+        this.exactProductList.push(prod)
+        
+      }
+
+      console.log(this.exactProductList)
+
+      for (let size of prod.size) {
+        if (searchString.toLowerCase().includes(size.toLowerCase()) && !this.exactProductList.includes(prod)) {
+          this.exactProductList.push(prod)
+          break;
+        }
+      }
+
+      console.log(this.exactProductList)
+
+      for (let color of prod.colors) {
+        if (searchString.toLowerCase().includes(color.toLowerCase()) && !this.exactProductList.includes(prod)){
+          this.exactProductList.push(prod)
+          break;
+        }
+      }
+
+      console.log(this.exactProductList)
+
+    }
+
+
+  }
+
+
+
+  searchRelatedProducts(searchString, prodList) {
+
+    
     let searchList = searchString.split(" ");
 
 
@@ -64,28 +116,31 @@ export class SearchComponent implements OnInit {
 
         if ((product.tag.toLowerCase().includes(keyWord.toLowerCase()) ||
           product.name.toLowerCase().includes(keyWord.toLowerCase())) &&
-          !tempArray.includes(product)) {
-          tempArray.push(product)
+          !this.relatedProductList.includes(product) && !this.exactProductList.includes(product)) {
+          this.relatedProductList.push(product)
           break;
         }
 
         for (let desc of product.description) {
-          if (desc.toLowerCase().includes(keyWord.toLowerCase()) && !tempArray.includes(product)) {
-            tempArray.push(product)
+          if (desc.toLowerCase().includes(keyWord.toLowerCase()) &&
+            !this.relatedProductList.includes(product) && !this.exactProductList.includes(product)) {
+            this.relatedProductList.push(product)
             break;
           }
         }
 
         for (let color of product.colors) {
-          if (color.toLowerCase().includes(keyWord.toLowerCase()) && !tempArray.includes(product)) {
-            tempArray.push(product)
+          if (color.toLowerCase().includes(keyWord.toLowerCase()) &&
+            !this.relatedProductList.includes(product) && this.exactProductList.includes(product)) {
+            this.relatedProductList.push(product)
             break;
           }
         }
 
         for (let size of product.size) {
-          if (size.toLowerCase().includes(keyWord.toLowerCase()) && !tempArray.includes(product)) {
-            tempArray.push(product)
+          if (size.toLowerCase().includes(keyWord.toLowerCase()) &&
+            !this.relatedProductList.includes(product) && this.exactProductList.includes(product)) {
+            this.relatedProductList.push(product)
             break;
           }
         }
@@ -94,10 +149,6 @@ export class SearchComponent implements OnInit {
 
       }
     }
-  
-    console.log(tempArray);
-    this.relatedProductList = tempArray;
-    console.log(this.relatedProductList);
     //  //this.actualProductList = this.fullProductList;
 
     
