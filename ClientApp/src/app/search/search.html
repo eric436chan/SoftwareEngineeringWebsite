@@ -2,10 +2,14 @@
   <div>
     You searched for {{searchString}}.
   </div>
-  <div>
-    exact products
-    <mat-card *ngFor="let product of exactProductList; index as i" (click)="onClickExactProduct(i)">
-    
+  <div *ngIf="exactProductList === []; else elseBlock">
+    Sorry! We could not find any exact product!
+  </div>
+
+
+  <ng-template #elseBlock>
+    <mat-card *ngFor="let product of exactProductList; index as i" (click)="onClickExactProduct(i)" class="prodDisplay">
+
       <mat-card-header>
         <mat-card-title>
           {{product.name}}
@@ -17,13 +21,21 @@
         Price: ${{product.price}}
       </mat-card-footer>
     </mat-card>
+  </ng-template>
 
-  </div>
-  <div>
+  <br />
 
-    Related products
-    <mat-card *ngFor="let product of relatedProductList; index as i" (click)="onClickRelatedProduct(i)">
-  
+
+  Here are some related products!
+
+  <br />
+  <div class="relatedProd">
+
+
+
+
+    <mat-card *ngFor="let product of relatedProductList; index as i" (click)="onClickRelatedProduct(i)" class="prodDisplay">
+
       <mat-card-header>
         <mat-card-title>
           {{product.name}}

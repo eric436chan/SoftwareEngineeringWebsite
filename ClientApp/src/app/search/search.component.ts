@@ -17,9 +17,14 @@ export class SearchComponent implements OnInit {
 
   searchString: string;
   shoppingCart: Array<ProductOrder>;
+
+  colorList: Array<string> = [];
+  sizeList: Array<string> = [];
+  tagList: Array<string> = [];
+
   exactProductList: Array<Product> = [];
   relatedProductList: Array<Product> = [];
-  fullProductList: Array<Product> = [];
+  
 
   constructor(private searchingService: SearchingService, private shoppingCartService: ShoppingCartService,
     private productService: ProductService, private dialog: MatDialog) {
@@ -36,18 +41,33 @@ export class SearchComponent implements OnInit {
 
     this.productService.getAllProducts().subscribe(
       data => {
+
+        for (let prod of data) {
+          for (let color of prod.colors) {
+            if (!this.colorList.includes(color.toLowerCase())) {
+              this.colorList.push(color)
+            }
+          }
+
+          for (let size of prod.size) {
+            if (!this.sizeList.includes(size.toLowerCase())) {
+              this.sizeList.push(size)
+            }
+          }
+
+          if (!this.tagList.includes(prod.tag.toLowerCase())) {
+            this.tagList.push(prod.tag)
+          }
+        }
+      
+
+
         this.searchExactProducts(this.searchString, data);
         console.log(this.exactProductList);
         this.searchRelatedProducts(this.searchString, data);
         console.log(this.relatedProductList);
         
       });
-
-    
-   
-
-    
-   
     this.shoppingCartService.currentShoppingCart.subscribe(
       shoppingCart => {
         this.shoppingCart = shoppingCart;
@@ -61,94 +81,129 @@ export class SearchComponent implements OnInit {
 
   searchExactProducts(searchString, prodList) {
 
-    let tempList: Array<Product> = [];
+    let tag: string;
+    let color: string;
+    let size: string;
 
-    for (let prod of prodList) {
-      if (searchString.toLowerCase().includes(prod.tag.toLowerCase())) {
-        tempList.push(prod)
-        
+    for (let checkSize of this.sizeList) {
+      if (searchString.toLowerCase().includes(checkSize.toLowerCase())) {
+        size = checkSize
+        break;
       }
     }
 
-    console.log(tempList)
-    for (let prod of tempList) {
-
-      if (searchString.toLowerCase().includes(prod.name.toLowerCase()) && !this.exactProductList.includes(prod)) {
-        this.exactProductList.push(prod)
-        
+    for (let checkColor of this.colorList) {
+      if (searchString.toLowerCase().includes(checkColor.toLowerCase())) {
+        color = checkColor
+        break;
       }
-
-      console.log(this.exactProductList)
-
-      for (let size of prod.size) {
-        if (searchString.toLowerCase().includes(size.toLowerCase()) && !this.exactProductList.includes(prod)) {
-          this.exactProductList.push(prod)
-          break;
-        }
-      }
-
-      console.log(this.exactProductList)
-
-      for (let color of prod.colors) {
-        if (searchString.toLowerCase().includes(color.toLowerCase()) && !this.exactProductList.includes(prod)){
-          this.exactProductList.push(prod)
-          break;
-        }
-      }
-
-      console.log(this.exactProductList)
-
     }
 
+    for (let checkTag of this.tagList) {
+      if (searchString.toLowerCase().includes(checkTag.toLowerCase())) {
+        tag = checkTag
+        break;
+      }
+    }
 
+    //if all are defined
+    if (size != undefined && tag != undefined && color != undefined) {
+      for (let prod of prodList) {
+        if (prod.size.includes(size) && prod.tag == tag && prod.colors.includes(color)) {
+          this.exactProductList.push(prod)
+        }
+      }
+      return
+    }
+
+    //if color is undefined
+    if (size != undefined && tag != undefined) {
+      for (let prod of prodList) {
+        if (prod.size.includes(size) && prod.tag == tag) {
+          this.exactProductList.push(prod)
+        }
+      }
+      return
+    }
+
+    //if tag is undefined
+    if (size != undefined && color != undefined) {
+      for (let prod of prodList) {
+        if (prod.size.includes(size) && prod.colors.includes(color)) {
+          this.exactProductList.push(prod)
+        }
+      }
+      return
+    }
+
+    //if size is undefined
+    if (color != undefined && tag != undefined) {
+      for (let prod of prodList) {
+        if (prod.colors.includes(color) && prod.tag == tag) {
+          this.exactProductList.push(prod)
+        }
+      }
+      return
+    }
+
+    //if only size is defined
+    if (size != undefined) {
+      for (let prod of prodList) {
+        if (prod.size.includes(size)) {
+          this.exactProductList.push(prod)
+        }
+      }
+      return
+    }
+
+    //if only color is defined
+    if (color != undefined) {
+      for (let prod of prodList) {
+        if (prod.colors.includes(color)) {
+          this.exactProductList.push(prod)
+        }
+      }
+      return
+    }
+
+    //if only tag is defined
+    if (tag != undefined) {
+      for (let prod of prodList) {
+        if (prod.tag == tag) {
+          this.exactProductList.push(prod)
+        }
+      }
+      return
+    }
   }
 
 
 
   searchRelatedProducts(searchString, prodList) {
 
-    
-    let searchList = searchString.split(" ");
+    let tempList: Array<Product> = [];
 
-
-    for (let product of prodList) {
-      for (let keyWord of searchList) {
-
-        if ((product.tag.toLowerCase().includes(keyWord.toLowerCase()) ||
-          product.name.toLowerCase().includes(keyWord.toLowerCase())) &&
-          !this.relatedProductList.includes(product) && !this.exactProductList.includes(product)) {
-          this.relatedProductList.push(product)
-          break;
-        }
-
-        for (let desc of product.description) {
-          if (desc.toLowerCase().includes(keyWord.toLowerCase()) &&
-            !this.relatedProductList.includes(product) && !this.exactProductList.includes(product)) {
-            this.relatedProductList.push(product)
-            break;
-          }
-        }
-
-        for (let color of product.colors) {
-          if (color.toLowerCase().includes(keyWord.toLowerCase()) &&
-            !this.relatedProductList.includes(product) && this.exactProductList.includes(product)) {
-            this.relatedProductList.push(product)
-            break;
-          }
-        }
-
-        for (let size of product.size) {
-          if (size.toLowerCase().includes(keyWord.toLowerCase()) &&
-            !this.relatedProductList.includes(product) && this.exactProductList.includes(product)) {
-            this.relatedProductList.push(product)
-            break;
-          }
-        }
-
-
+    for (let prod of prodList) {
+      if (searchString.toLowerCase().includes(prod.tag.toLowerCase())) {
+        tempList.push(prod)
 
       }
     }
+
+    console.log(tempList)
+
+    for (let prod of tempList) {
+      if (!this.exactProductList.includes(prod) && !this.relatedProductList.includes(prod)) {
+        this.relatedProductList.push(prod)
+      }
+    }
+
+    console.log(this.relatedProductList)
+
+    
+    
+   
+
     //  //this.actualProductList = this.fullProductList;
 
     
