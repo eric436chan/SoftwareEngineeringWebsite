@@ -155,52 +155,7 @@ export class WomenProductsComponent implements OnInit{
   }
 
 
-  //changeProductListByColor(filter: string) {
-
-  //  console.log("Filtering products for color: " + filter);
-  //  this.actualProductList = this.fullProductList.filter(function (Product) {
-  //    return Product.colors.includes(filter);
-  //  })
-  //}
-
-  //changeProductListBySize(filter: string) {
-
-  //  console.log("Filtering products for size: " + filter);
-  //  this.actualProductList = this.fullProductList.filter(function (Product) {
-  //    return Product.size.includes(filter);
-  //  })
-  //}
-
-  //changeProductListByLength(filter: string) {
-
-  //  let tempArray: Array <Product> = [];
-  //  for (let product of this.fullProductList) {
-  //    for (let size of product.size) {
-  //      if (size.split('x')[0] == filter) {
-  //        tempArray.push(product);
-  //        break;
-  //      }
-  //    }
-  //  }
-  //  this.actualProductList = Object.assign([], tempArray);
-  //}
-
-
-  //changeProductListByWaist(filter: string) {
-  //  let tempArray: Array<Product> = [];
-
-  //  for (let product of this.actualProductList) {
-  //    for (let sizes of product.size) {
-  //      if (sizes.split('x')[1] == filter) {
-  //        tempArray.push(product);
-  //        break;
-  //      }
-  //    }
-  //  }
-
-  //  this.actualProductList = Object.assign([], tempArray);
-  //}
-
+ 
 
   //clicking product to open pop up
   onClickProduct(index: number) {
@@ -238,7 +193,7 @@ export class WomenProductsComponent implements OnInit{
     if (this.currentSortOption == "None") {
 
       console.log("Resetting all sort filters...")
-      this.actualProductList = this.fullProductList;
+      this.actualProductList = this.actualProductList;
       return;
     }
 

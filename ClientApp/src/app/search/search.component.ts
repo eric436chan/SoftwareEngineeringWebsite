@@ -79,7 +79,7 @@ export class SearchComponent implements OnInit {
 
   //our search algorithm
 
-  searchExactProducts(searchString, prodList) {
+  searchExactProducts(searchString: string, prodList: Array<Product>) {
 
     let tag: string;
     let color: string;
@@ -179,7 +179,7 @@ export class SearchComponent implements OnInit {
 
 
 
-  searchRelatedProducts(searchString, prodList) {
+  searchRelatedProducts(searchString: string, prodList: Array<Product>) {
 
     let tempList: Array<Product> = [];
 
