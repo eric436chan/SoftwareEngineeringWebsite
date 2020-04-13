@@ -1,2 +1,18 @@
-﻿body {
+body {
+}
+
+.prodDisplay{
+    width: 30%;
+    margin:1em;
+    display:inline-block;
+}
+
+ng-template{
+    overflow:auto
+}
+
+.relatedProd{
+    display:flex;
+    flex-direction:row;
+    overflow-x:auto
 }

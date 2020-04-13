@@ -22,6 +22,7 @@ import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatSelectModule } from '@angular/material/select';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 
 import { AppComponent } from './app.component';
 import { NavMenuComponent } from './nav-menu/nav-menu.component';
@@ -37,13 +38,14 @@ import { MenProductsComponent } from './men/men-products/men-products.component'
 import { WomenProductsComponent } from './women/women-products/women-products.component';
 import { OrderComponent } from './order/order.component';
 import { SearchComponent } from './search/search.component';
-import { SearchingService } from './services/searching-service';
 import { ProductService } from './services/product-service';
-import { ShoppingCartService } from './services/shoppingCart-service';
 import { ShoppingCartDialog } from './dialogs/shoppingCartDialog/shopping-cart-dialog.component';
 import { ProductDialog } from './dialogs/productDialog/product-dialog.component';
 import { CheckoutComponent } from './checkout/checkout.component';
 import { ConfirmationComponent } from './confirmation/confirmation.component';
+import { OrderService } from './services/order-service';
+
+
 
 @NgModule({
   declarations: [
@@ -100,12 +102,13 @@ import { ConfirmationComponent } from './confirmation/confirmation.component';
     MatTooltipModule,
     MatSelectModule,
     MatSnackBarModule,
-    MatPaginatorModule
+    MatPaginatorModule,
+    MatProgressSpinnerModule,
 
   ],
 
   entryComponents: [ShoppingCartDialog, ProductDialog],
-  providers: [SearchingService, ProductService, ShoppingCartService],
+  providers: [ProductService, OrderService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

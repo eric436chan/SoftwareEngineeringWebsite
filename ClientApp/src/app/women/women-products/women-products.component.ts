@@ -1,13 +1,12 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { ProductService } from '../../services/product-service';
-import { ShoppingCartService } from '../../services/shoppingCart-service';
 import { ProductOrder } from '../../model/product.order.model';
 import { Product } from '../../model/product.model';
 import { MatDialog } from '@angular/material/dialog';
 import { PageEvent, MatPaginator } from '@angular/material/paginator';
 import { ProductDialog } from '../../dialogs/productDialog/product-dialog.component';
-import { BrowsingService } from '../../services/browsing-service';
 import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'women-prod',
@@ -24,9 +23,6 @@ export class WomenProductsComponent implements OnInit{
   colorArray: Array<string> = [];
   sizeArray: Array<string> = [];
 
-  waistArray: Array<string> = [];
-  lengthArray: Array<string> = [];
-
   currentSizeFilter: string = "None";
   currentColorFilter: string = "None";
   currentSortOption: string = "None";
@@ -34,26 +30,24 @@ export class WomenProductsComponent implements OnInit{
 
   addingProductList: Array<Product> = require('../women-products/products.json')
 
-  constructor(private productService: ProductService, private shoppingCartService: ShoppingCartService, private browsingService: BrowsingService,
-    private dialog: MatDialog, private router: Router) {
+  constructor(private productService: ProductService, private dialog: MatDialog, private router: Router) {
 
   }
 
   ngOnInit() {
 
     //get current shopping cart
-    this.shoppingCartService.currentShoppingCart.subscribe(
-      shoppingCart => {
-        this.shoppingCart = shoppingCart;
-        console.log(this.shoppingCart);
-      });
+    this.shoppingCart = JSON.parse(sessionStorage.getItem("currentShoppingCart"));
 
     //get current browsing tag
-    this.browsingService.currentTag.subscribe(
-      data => {
-        this.tagString = data;
-        console.log(this.tagString);
-      })
+    this.tagString = sessionStorage.getItem("currentWomanTag");
+    if (this.tagString == undefined || this.tagString == null) {
+      this.router.navigate(['./']);
+    }
+    console.log(this.tagString);
+
+
+
 
     //get products based on the tag
     this.productService.getAllProducts().subscribe(
@@ -61,7 +55,7 @@ export class WomenProductsComponent implements OnInit{
 
         let tempArray: Array<Product> = [];
         for (let prod of data) {
-          if (prod.tag == this.tagString) {
+          if (prod.tag == this.tagString && prod.gender == "Female") {
             tempArray.push(prod);
           }
         }
@@ -87,6 +81,11 @@ export class WomenProductsComponent implements OnInit{
           tempNumberArray.sort((n1,n2) => n1-n2);
           for (let size of tempNumberArray) {
             tempSizeArray.push(size.toString());
+          }
+          if (tempSizeArray[0] == "0" && tempSizeArray[1] == "00") {
+            let temp = tempSizeArray[0];
+            tempSizeArray[0] = tempSizeArray[1];
+            tempSizeArray[1] = temp;
           }
 
           this.sizeArray = tempSizeArray;
@@ -153,52 +152,7 @@ export class WomenProductsComponent implements OnInit{
   }
 
 
-  //changeProductListByColor(filter: string) {
-
-  //  console.log("Filtering products for color: " + filter);
-  //  this.actualProductList = this.fullProductList.filter(function (Product) {
-  //    return Product.colors.includes(filter);
-  //  })
-  //}
-
-  //changeProductListBySize(filter: string) {
-
-  //  console.log("Filtering products for size: " + filter);
-  //  this.actualProductList = this.fullProductList.filter(function (Product) {
-  //    return Product.size.includes(filter);
-  //  })
-  //}
-
-  //changeProductListByLength(filter: string) {
-
-  //  let tempArray: Array <Product> = [];
-  //  for (let product of this.fullProductList) {
-  //    for (let size of product.size) {
-  //      if (size.split('x')[0] == filter) {
-  //        tempArray.push(product);
-  //        break;
-  //      }
-  //    }
-  //  }
-  //  this.actualProductList = Object.assign([], tempArray);
-  //}
-
-
-  //changeProductListByWaist(filter: string) {
-  //  let tempArray: Array<Product> = [];
-
-  //  for (let product of this.actualProductList) {
-  //    for (let sizes of product.size) {
-  //      if (sizes.split('x')[1] == filter) {
-  //        tempArray.push(product);
-  //        break;
-  //      }
-  //    }
-  //  }
-
-  //  this.actualProductList = Object.assign([], tempArray);
-  //}
-
+ 
 
   //clicking product to open pop up
   onClickProduct(index: number) {
@@ -236,7 +190,7 @@ export class WomenProductsComponent implements OnInit{
     if (this.currentSortOption == "None") {
 
       console.log("Resetting all sort filters...")
-      this.actualProductList = this.fullProductList;
+      this.actualProductList = this.actualProductList;
       return;
     }
 

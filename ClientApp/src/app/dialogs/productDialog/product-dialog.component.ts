@@ -1,7 +1,6 @@
 import { Component, Inject, OnInit } from '@angular/core';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { Product } from '../../model/product.model';
-import { ShoppingCartService } from '../../services/shoppingCart-service';
 import { ProductOrder } from '../../model/product.order.model';
 import { MatSnackBar } from '@angular/material/snack-bar';
 
@@ -18,15 +17,12 @@ export class ProductDialog implements OnInit {
   selectedColor: string;
   selectedSize: string;
 
-  constructor(private dialogRef: MatDialogRef<ProductDialog>, private snackBar: MatSnackBar, private shoppingCartService: ShoppingCartService,
+  constructor(private dialogRef: MatDialogRef<ProductDialog>, private snackBar: MatSnackBar,
     @Inject(MAT_DIALOG_DATA) private data: Product) {
   }
 
   ngOnInit() {
-    this.shoppingCartService.currentShoppingCart.subscribe(
-      data => {
-        this.shoppingCart = data;
-      })
+    this.shoppingCart = JSON.parse(sessionStorage.getItem("currentShoppingCart"));
   }
 
   onAddToCart() {
@@ -47,7 +43,8 @@ export class ProductDialog implements OnInit {
     }
 
     this.shoppingCart.push(prod);
-    this.shoppingCartService.updateShoppingCart(this.shoppingCart);
+    //this.shoppingCartService.updateShoppingCart(this.shoppingCart);
+    sessionStorage.setItem("currentShoppingCart", JSON.stringify(this.shoppingCart));
 
     this.dialogRef.close();
     this.snackBar.open("Item has been added to shopping cart!", null, {

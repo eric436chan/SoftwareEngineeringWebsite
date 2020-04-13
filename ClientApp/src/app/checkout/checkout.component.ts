@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { ShoppingCartService } from '../services/shoppingCart-service';
 import { ProductOrder } from '../model/product.order.model';
 import { OrderService } from '../services/order-service';
 import { MatSnackBar } from '@angular/material/snack-bar';
@@ -31,16 +30,13 @@ export class CheckoutComponent implements OnInit {
   private creditCardExp: string;
 
 
-  constructor(private shoppingCartService: ShoppingCartService, private orderService: OrderService,
+  constructor(private orderService: OrderService,
     private snackBar: MatSnackBar, private router: Router) {
 
   }
 
   ngOnInit() {
-    this.shoppingCartService.currentShoppingCart.subscribe(
-      data => {
-        this.shoppingCart = data;
-      })
+    this.shoppingCart = JSON.parse(sessionStorage.getItem("currentShoppingCart"));
   }
 
 
@@ -115,7 +111,8 @@ export class CheckoutComponent implements OnInit {
     }
 
     this.orderService.addOrder(order);
-    this.shoppingCartService.updateShoppingCart([]);
+    this.shoppingCart = [];
+    sessionStorage.setItem("currentShoppingCart", JSON.stringify(this.shoppingCart));
     this.orderService.updateOrder(order);
     this.router.navigate(['./confirmation']);
    
