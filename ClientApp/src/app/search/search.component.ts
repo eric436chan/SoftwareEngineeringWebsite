@@ -1,6 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { SearchingService } from '../services/searching-service';
-import { ShoppingCartService } from '../services/shoppingCart-service';
 import { ProductOrder } from '../model/product.order.model';
 import { Product } from '../model/product.model';
 import { ProductService } from '../services/product-service';
@@ -26,18 +24,13 @@ export class SearchComponent implements OnInit {
   relatedProductList: Array<Product> = [];
   
 
-  constructor(private searchingService: SearchingService, private shoppingCartService: ShoppingCartService,
-    private productService: ProductService, private dialog: MatDialog) {
+  constructor(private productService: ProductService, private dialog: MatDialog) {
 
   }
 
   ngOnInit() {
 
-    this.searchingService.currentSearchString.subscribe(
-      data => {
-        this.searchString = data;
-        console.log(this.searchString);
-      })
+    this.searchString = sessionStorage.getItem("searchString");
 
     this.productService.getAllProducts().subscribe(
       data => {
@@ -68,11 +61,7 @@ export class SearchComponent implements OnInit {
         console.log(this.relatedProductList);
         
       });
-    this.shoppingCartService.currentShoppingCart.subscribe(
-      shoppingCart => {
-        this.shoppingCart = shoppingCart;
-        console.log(this.shoppingCart);
-      })
+    this.shoppingCart = JSON.parse(sessionStorage.getItem("currentShoppingCart"));
 
    
   }

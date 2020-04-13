@@ -3,7 +3,6 @@ import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { ProductOrder } from '../../model/product.order.model';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { Router } from '@angular/router';
-import { ShoppingCartService } from '../../services/shoppingCart-service';
 
 @Component({
   selector: 'shopping-cart-dialog',
@@ -13,13 +12,18 @@ import { ShoppingCartService } from '../../services/shoppingCart-service';
 
 export class ShoppingCartDialog {
 
+  private shoppingCart;
+
 
   constructor(private snackBar: MatSnackBar, private shoppingCartDialog: MatDialogRef<ShoppingCartDialog>, private router: Router,
-    @Inject(MAT_DIALOG_DATA) public data: Array<ProductOrder>, private shoppingCartService: ShoppingCartService) {
+    @Inject(MAT_DIALOG_DATA) public data: Array<ProductOrder>) {
+
+    this.shoppingCart = JSON.parse(sessionStorage.getItem("currentShoppingCart"));
+
   }
 
   onCheckout() {
-    if (this.data.length != 0) {
+    if (this.shoppingCart.length != 0) {
       console.log("moving over to checkout");
       this.shoppingCartDialog.close();
       this.router.navigate(['./checkout']);
@@ -31,9 +35,9 @@ export class ShoppingCartDialog {
   onRemove(index: number) {
 
     console.log("Item being removed from shopping cart...");
-    this.data.splice(index, 1);
+    this.shoppingCart.splice(index, 1);
     console.log("Item has been removed from shopping cart.");
-    this.shoppingCartService.updateShoppingCart(this.data);
+    sessionStorage.setItem("currentShoppingCart", JSON.stringify(this.shoppingCart));
 
   }
 

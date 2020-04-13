@@ -1,11 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { BrowsingService } from '../../services/browsing-service';
-import { ShoppingCartService } from '../../services/shoppingCart-service';
 import { ProductOrder } from '../../model/product.order.model';
 import { ProductService } from '../../services/product-service';
 import { Product } from '../../model/product.model';
 import { MatDialog } from '@angular/material/dialog';
 import { ProductDialog } from '../../dialogs/productDialog/product-dialog.component';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'men-prod',
@@ -32,26 +31,21 @@ export class MenProductsComponent implements OnInit {
   fullProductList: Array<Product>;
   actualProductList: Array<Product>;
 
-  constructor(private browsingService: BrowsingService, private shoppingCartService: ShoppingCartService,
-    private productService: ProductService, private dialog: MatDialog) {
+  constructor(private productService: ProductService, private dialog: MatDialog, private router: Router) {
 
   }
 
   ngOnInit() {
 
     //get current shopping cart
-    this.shoppingCartService.currentShoppingCart.subscribe(
-      shoppingCart => {
-        this.shoppingCart = shoppingCart;
-        console.log(this.shoppingCart);
-      });
+    this.shoppingCart = JSON.parse(sessionStorage.getItem("currentShoppingCart"));
 
     //get current browsing tag
-    this.browsingService.currentTag.subscribe(
-      data => {
-        this.tagString = data;
-        console.log(this.tagString);
-      })
+    this.tagString = sessionStorage.getItem("currentManTag");
+    if (this.tagString == undefined || this.tagString == null) {
+      this.router.navigate(['./']);
+    }
+    console.log(this.tagString);
 
     //get products based on the tag
     this.productService.getAllProducts().subscribe(

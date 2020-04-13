@@ -1,192 +1,459 @@
 [
 
   {
-    "name": "Twill Jogger Shorts",
-    "description": [ "Elasticized waistband, with adjustable drawstring.", "Flaux Fly.", "Diagonal on-seam pockets in front, single welt pocket at back right.", "Soft-washed cotton twill." ],
-    "colors": [ "Black", "Print", "Chrome Gray" ],
-    "size": [ "X-Small", "Small", "Medium", "Large", "X-Large" ],
-    "tag": "Shorts",
-    "price": 25.00,
-    "img": "https://jack-apparel-software-engineering-website.s3.amazonaws.com/men's+product+images/4A.jpg",
-    "gender": "Male"
-  },
-
-
-
-  {
-    "name": "Cargo Shorts",
-    "description": [ "Hollywood waistband, with button closure and belt loops.", "Button closure and zip fly.", "Diagnol on-seam pockets and covered snap-flap cargo pockets in fromt; covered snap-flap welt pockets in back", "Soft-washed cotton twill has a broken-in look and feel." ],
-    "colors": [ "Camo", "Brown", "Navy" ],
-    "size": [ "Small", "Medium", "Large" ],
-    "tag": "Shorts",
-    "price": 18.00,
-    "img": "https://jack-apparel-software-engineering-website.s3.amazonaws.com/men's+product+images/1B+(Brown).jpg",
-    "gender": "Male"
-  },
-
-  {
-    "name": "Khaki Shorts",
-    "description": [ "Contoured Hollywood waistband with belt loops.", "Button-closure and zip fly.", "Flat front.", "Diagonal on-seam pockets in front; welt pockets in back.", "Soft-washed, brushed cotton twill has a broken-in look and feel." ],
-    "colors": [ "Panther", "Early Gray", "Doe a Deer", "Olive" ],
-    "size": [ "X-Small", "Medium", "X-Large" ],
-    "tag": "Shorts",
-    "price": 23.00,
-    "img": "https://jack-apparel-software-engineering-website.s3.amazonaws.com/men's+product+images/2A+(Panther).jpg",
-    "gender": "Male"
-  },
-
-  {
-    "name": "Tech Shorts",
-    "description": [ "Interior elastic comfort waistband, with exterior belt loops.", "Rubberized metal button closure and zip fly.", "Diagonal on-seam pockets in front; welt pockets in back.", "Hidden side-zip pocket at left hip.", "Soft phone-screen cleaning pocket lining", "Soft twill is pre-washed with silicone softener for the ultimate in softness." ],
-    "colors": [ "Black", "Gray", "Light Khaki" ],
-    "size": [ "Small", "Medium", "Large", "X-Large" ],
-    "tag": "Shorts",
-    "price": 21.00,
-    "img": "https://jack-apparel-software-engineering-website.s3.amazonaws.com/men's+product+images/3A-Black.jpg",
-    "gender": "Male"
-  },
-
-  {
-    "name": "Drawstring Performance Shorts",
-    "description": [ "Elasticized waistband, with functional drawstring.", "Diagonal front pockets; single patch pocket at back right.", "Soft-washed heathered fleece, with mechanical stretch for ease of movement." ],
-    "colors": [ "Heather Gray" ],
-    "size": [ "Medium", "Large", "X-Large" ],
-    "tag": "Shorts",
-    "price": 18.00,
-    "img": "https://jack-apparel-software-engineering-website.s3.amazonaws.com/men's+product+images/5A-Black.jpg",
-    "gender": "Male"
-  },
-
-  {
-    "name": "Hooded Rain Jacket",
-    "description": [ "Built-in hood, with standing collar and adjustable drawcord.", "Long sleeves, with elasticized cuffs.", "Full-length zipper from hem to chin, with bungee-cord zipper pull and storm-guard tab", "Diagonal zippered pockets in front, with light-reflecting trim and breathable mesh pocket lining.", "Smooth, lightweight shell, with laminated printed interior." ],
-    "colors": [ "Hunter Green", "Black" ],
+    "name": "Raglan T-Shirt",
+    "description": [ "Classic fit", "Crewneck", "Three-quarter length raglan sleeves", "Cotton/polyester" ],
+    "colors": [ "Gray", "Bright White", "Tobacco" ],
     "size": [ "X-Small", "Small", "Medium" ],
+    "tag": "T-Shirt",
+    "price": 15.00,
+    "img": "https://jack-apparel-software-engineering-website.s3.amazonaws.com/men's+product+images/raglan.jpeg",
+    "gender": "Male"
+  },
+
+  {
+    "name": "Solid Stretch Anchor T-Shirt",
+    "description": [ "Short-sleeved; light weight; crew neck", "Cotton/elastane", "Machine washable" ],
+    "colors": [ "Red", "Navy", "Gray" ],
+    "size": [ "Small", "Large", "X-Large" ],
+    "tag": "T-Shirt",
+    "price": 17.00,
+    "img": "https://jack-apparel-software-engineering-website.s3.amazonaws.com/men's+product+images/anchor.jpeg",
+    "gender": "Male"
+  },
+
+  {
+    "name": "Leith Striped Long Sleeve T-Shirt",
+    "description": [ "Regular fit", "Crewneck", "Tommy Hilfiger flag logo above cuff on left sleeve", "All cotton" ],
+    "colors": [ "Limelight", "Crimson" ],
+    "size": [ "Small", "Medium", "X-Large" ],
+    "tag": "T-Shirt",
+    "price": 12.00,
+    "img": "https://jack-apparel-software-engineering-website.s3.amazonaws.com/men's+product+images/striped.jpeg",
+    "gender": "Male"
+  },
+
+
+
+  {
+    "name": "Eureka Flag Logo T-Shirt",
+    "description": [ "Regular fit", "Crewneck", "All cotton", "Machine washable" ],
+    "colors": [ "White" ],
+    "size": [ "X-Small", "Medium", "X-Large" ],
+    "tag": "T-Shirt",
+    "price": 17.00,
+    "img": "https://jack-apparel-software-engineering-website.s3.amazonaws.com/men's+product+images/eureka.jpeg",
+    "gender": "Male"
+  },
+
+  {
+    "name": "Aberdeen Stripe T-Shirt",
+    "description": [ "Classic fit", "Crewneck", "All-over stripe detail", "All cotton" ],
+    "colors": [ "Marshmallow" ],
+    "size": [ "Medium", "Large", "X-Large" ],
+    "tag": "T-Shirt",
+    "price": 20.00,
+    "img": "https://jack-apparel-software-engineering-website.s3.amazonaws.com/men's+product+images/aberdeen.jpeg",
+    "gender": "Male"
+  },
+
+  {
+    "name": "Tri-Color T-Shirt",
+    "description": [ "Signature pique cotton fabric", "Rib crew neck makes it easy to layer, open hem makes it easy to move", "Polyester" ],
+    "colors": [ "Ocean", "Dessert" ],
+    "size": [ "Large", "X-Large" ],
+    "tag": "T-Shirt",
+    "price": 30.00,
+    "img": "https://jack-apparel-software-engineering-website.s3.amazonaws.com/men's+product+images/tri-color.jpg",
+    "gender": "Male"
+  },
+
+  {
+    "name": "Polaroid Graphic T-Shirt",
+    "description": [ "Classic fit", "Crewneck", "Graphic at front", "All cotton" ],
+    "colors": [ "black" ],
+    "size": [ "Small", "Medium", "Large" ],
+    "tag": "T-Shirt",
+    "price": 15.00,
+    "img": "https://jack-apparel-software-engineering-website.s3.amazonaws.com/men's+product+images/polaroid.jpeg",
+    "gender": "Male"
+  },
+
+  {
+    "name": "Classic-Fit Logo T-Shirt",
+    "description": [ "Cut for a lower armhole and a fuller sleeve that falls closer to the elbow", "Crewneck", "Long sleeves", "Left chest patch pocket" ],
+    "colors": [ "Heather Gray" ],
+    "size": [ "X-Small", "Large", "X-Large" ],
+    "tag": "T-Shirt",
+    "price": 30.00,
+    "img": "https://jack-apparel-software-engineering-website.s3.amazonaws.com/men's+product+images/classic-fit+log.jpeg",
+    "gender": "Male"
+  },
+
+  {
+    "name": "Tea Date Stripe T-Shirt",
+    "description": [ "Classic fit", "Crewneck", "Cotton/polyester", "Machine washable" ],
+    "colors": [ "White" ],
+    "size": [ "X-Small", "Small", "X-Large" ],
+    "tag": "T-Shirt",
+    "price": 25.00,
+    "img": "https://jack-apparel-software-engineering-website.s3.amazonaws.com/men's+product+images/tea+date.jpeg",
+    "gender": "Male"
+  },
+
+  {
+    "name": "Long Weekend Graphic T-Shirt",
+    "description": [ "Regular fit", "Crewneck", "Graphic-print logos at left chest and center back; tagless design; enzyme washed for softness", "100% cotton" ],
+    "colors": [ "Gray" ],
+    "size": [ "Small", "Medium", "Large", "X-Large" ],
+    "tag": "T-Shirt",
+    "price": 20.00,
+    "img": "https://jack-apparel-software-engineering-website.s3.amazonaws.com/men's+product+images/long+weekend.jpeg",
+    "gender": "Male"
+  },
+
+  {
+    "name": "Classic Fit Striped T-Shirt",
+    "description": [ "Cut for a lower armhole and a fuller sleeve that falls closer to the elbow", "Crewneck", "Short sleeves" ],
+    "colors": [ "Andover", "Green" ],
+    "size": [ "X-Small", "Medium", "Large", "X-Large" ],
+    "tag": "T-Shirt",
+    "price": 25.00,
+    "img": "https://jack-apparel-software-engineering-website.s3.amazonaws.com/men's+product+images/classic+fit+striped.jpeg",
+    "gender": "Male"
+  },
+
+  {
+    "name": "The Mandalorian The Child Jacket Portrait Short Sleeve T-Shirt",
+    "description": [ "100% Ring-spun cotton", "Printed with Eco-friendly ink" ],
+    "colors": [ "Black" ],
+    "size": [ "X-SMall", "Small", "X-Large" ],
+    "tag": "T-Shirt",
+    "price": 25.00,
+    "img": "https://jack-apparel-software-engineering-website.s3.amazonaws.com/men's+product+images/mandalorian.jpeg",
+    "gender": "Male"
+  },
+
+  {
+    "name": "Beatles Abbey Road Graphic T-Shirt",
+    "description": [ "Classic fit", "Crewneck", "All cotton", "Graphic in front" ],
+    "colors": [ "Black" ],
+    "size": [ "X-Small", "Small", "Medium", "Large", "X-Large" ],
+    "tag": "T-Shirt",
+    "price": 30.00,
+    "img": "https://jack-apparel-software-engineering-website.s3.amazonaws.com/men's+product+images/beatles+abbey.jpeg",
+    "gender": "Male"
+  },
+
+  {
+    "name": "Classic/Regular Performance Pinpoint Dress Shirt",
+    "description": [ "Wrinkle Resistant", "Comfort Collar", "All cotton", "Pocket at left chest" ],
+    "colors": [ "White", "Light Blue" ],
+    "size": [ "X-Small", "Small", "Medium", "Large", "X-Large" ],
+    "tag": "Dress Shirt",
+    "price": 55.00,
+    "img": "https://jack-apparel-software-engineering-website.s3.amazonaws.com/men's+product+images/classic+regular+performance.jpeg",
+    "gender": "Male"
+  },
+  {
+    "name": "Slim-Fit Non-Iron Stretch Check Dress Shirt",
+    "description": [ "Non-iron", "Cutaway collar", "Machine washable" ],
+    "colors": [ "Checkered Blue" ],
+    "size": [ "Small", "Medium", "Large" ],
+    "tag": "Dress Shirt",
+    "price": 60.00,
+    "img": "https://jack-apparel-software-engineering-website.s3.amazonaws.com/men's+product+images/slim+fit+non+iron.jpeg",
+    "gender": "Male"
+  },
+
+  {
+    "name": "Jason Slim-Fit Evening Shirt",
+    "description": [ "Slim-fit", "Spread collar", "Squared cuffs", "100% cotton" ],
+    "colors": [ "Pastel Blue" ],
+    "size": [ "Medium", "Large", "X-Large" ],
+    "tag": "Dress Shirt",
+    "price": 60.00,
+    "img": "https://jack-apparel-software-engineering-website.s3.amazonaws.com/men's+product+images/jason+slim+fit.jpeg",
+    "gender": "Male"
+  },
+
+  {
+    "name": "Slim-Fit Stretch Collar Check Dress Shirt",
+    "description": [ "Stretch fabric for a full range of movement", "Point Flex Collar", "Cotton/polyester/elastane" ],
+    "colors": [ "Pink" ],
+    "size": [ "Small", "Medium", "Large" ],
+    "tag": "Dress Shirt",
+    "price": 70.00,
+    "img": "https://jack-apparel-software-engineering-website.s3.amazonaws.com/men's+product+images/slim+fit+stretch.jpeg",
+    "gender": "Male"
+  },
+
+  {
+    "name": "Regent Slim-Fit Non-Iron Performance Stretch Check Dress Shirt",
+    "description": [ "Ainsley spread collar", "Barrel button cuffs", "Specially treated to remain virtually wrinkle-free; stretch performance" ],
+    "colors": [ "Open Blue" ],
+    "size": [ "X-Small", "Small", "Large", "X-Large" ],
+    "tag": "Dress Shirt",
+    "price": 67.00,
+    "img": "https://jack-apparel-software-engineering-website.s3.amazonaws.com/men's+product+images/regent+slim+fit.jpeg",
+    "gender": "Male"
+  },
+
+  {
+    "name": "Classic/Regular Fit Performance Stretch Pinpoint Solid Dress Shirt",
+    "description": [ "Wrinkle-resistant fabric requires little ironing", "Pocket at left chest", "Cotton", "Button-down comfort collar" ],
+    "colors": [ "Deep Ocean" ],
+    "size": [ "X-Small", "Medium", "X-Large" ],
+    "tag": "Dress Shirt",
+    "price": 55.00,
+    "img": "https://jack-apparel-software-engineering-website.s3.amazonaws.com/men's+product+images/classic+regular+fit.jpeg",
+    "gender": "Male"
+  },
+
+  {
+    "name": "Slim-Fit Performance Stretch Blue/Black Paisley-Print Chambray Dress Shirt",
+    "description": [ "Spread collar", "Button cuffs", "Stretch performance; wrinkle-free fabric", "Paisley-print pattern; contrast interior cuffs and collar trim" ],
+    "colors": [ "Blue-Print" ],
+    "size": [ "Small", "Medium", "Large", "X-Large" ],
+    "tag": "Dress Shirt",
+    "price": 67.00,
+    "img": "https://jack-apparel-software-engineering-website.s3.amazonaws.com/men's+product+images/slim+fit+performance.jpeg",
+    "gender": "Male"
+  },
+
+  {
+    "name": "Dot Print Dress Shirt",
+    "description": [ "Button-front placket", "Long sleeves with button cuffs", "Long sleeves with button cuffs", "Cotton" ],
+    "colors": [ "Black-Print" ],
+    "size": [ "X-Small", "Small", "Medium", "Large" ],
+    "tag": "Dress Shirt",
+    "price": 70.00,
+    "img": "https://jack-apparel-software-engineering-website.s3.amazonaws.com/men's+product+images/dot+print.jpeg",
+    "gender": "Male"
+  },
+
+  {
+    "name": "Non-Iron Sustainable Slim Fit Performance Dress Shirt",
+    "description": [ "Performance Stretch: Fabric stretches and moves with you for extra comfort", "Recycled Nylon/ Recycled Poly/Viscose from Bamboo/Spandex Blend", "Regular Cuff: A traditional Barrel cuff fastened by a single button closure" ],
+    "colors": [ "Iris" ],
+    "size": [ "X-Small", "Large", "X-Large" ],
+    "tag": "Dress Shirt",
+    "price": 80.00,
+    "img": "https://jack-apparel-software-engineering-website.s3.amazonaws.com/men's+product+images/non+iron+sustainbale.jpeg",
+    "gender": "Male"
+  },
+
+  {
+    "name": "Stretch Black Stripes & Dots Print Dress Shirt",
+    "description": [ "Spread collar", "Polyester/cotton", "Moisture-wicking fabric; Stretch fabric for a full range of movement" ],
+    "colors": [ "Gray" ],
+    "size": [ "X-Small", "Small", "Medium" ],
+    "tag": "Dress Shirt",
+    "price": 50.00,
+    "img": "https://jack-apparel-software-engineering-website.s3.amazonaws.com/men's+product+images/stretch+black+stripes.jpeg",
+    "gender": "Male"
+  },
+
+  {
+    "name": "Slim-Fit Performance Stretch Solid Dress Shirt",
+    "description": [ "Spread collar", "Four-way stretch fabric for a full range of movement", "Moisture Wicking, Non-Iron", "Polyester/spandex" ],
+    "colors": [ "White", "Burgandy" ],
+    "size": [ "Medium", "Large", "X-Large" ],
+    "tag": "Dress Shirt",
+    "price": 60.00,
+    "img": "https://jack-apparel-software-engineering-website.s3.amazonaws.com/men's+product+images/slim+fit+performance+stretch.jpeg",
+    "gender": "Male"
+  },
+
+  {
+    "name": "Slim-Fit Geo-Print Dress Shirt",
+    "description": [ "Spread collar", "Spread collar", "Wrinkle-resistant, moisture-wicking fabric", "Polyester/spandex" ],
+    "colors": [ "White", "Blue" ],
+    "size": [ "Small", "Medium", "Large" ],
+    "tag": "Dress Shirt",
+    "price": 50.00,
+    "img": "https://jack-apparel-software-engineering-website.s3.amazonaws.com/men's+product+images/slim+fit+geo.jpeg",
+    "gender": "Male"
+  },
+
+  {
+    "name": "Navy/Lavender/White Diamond Dot-Print Dress Shirt",
+    "description": [ "Spread collar", "Button cuffs", "Diamond dot-print pattern", "Stretch performance; wicking fabric helps evaporate moisture; wrinkle-free fabric" ],
+    "colors": [ "Navy" ],
+    "size": [ "X-Small", "X-Large" ],
+    "tag": "Dress Shirt",
+    "price": 50.00,
+    "img": "https://jack-apparel-software-engineering-website.s3.amazonaws.com/men's+product+images/diamond.jpg",
+    "gender": "Male"
+  },
+
+  {
+    "name": "Slim-Fit Performance Stretch Solid Dress Shirt",
+    "description": [ "Spread collar", "Four-way stretch fabric for a full range of movement", "Moisture Wicking, Non-Iron", "Polyester/spandex" ],
+    "colors": [ "Black", "Navy" ],
+    "size": [ "Medium", "Large", "X-Large" ],
+    "tag": "Dress Shirt",
+    "price": 60.00,
+    "img": "https://jack-apparel-software-engineering-website.s3.amazonaws.com/men's+product+images/performance+stretch.jpg",
+    "gender": "Male"
+  },
+
+  {
+    "name": "Perforated Faux Leather Hipster Jacket",
+    "description": [ "Lightweight", "Zip-through stand collar; full front-zip closure", "Two zip chest pockets; two hand pockets; one inner pocket" ],
+    "colors": [ "Black", "bone" ],
+    "size": [ "Small", "Medium", "Large", "X-Large" ],
+    "tag": "Jackets",
+    "price": 70.00,
+    "img": "https://jack-apparel-software-engineering-website.s3.amazonaws.com/men's+product+images/perforated+faux.jpeg",
+    "gender": "Male"
+  },
+
+  {
+    "name": "Field Jacket",
+    "description": [ "Lightweight", "Stand collar with snaps; Full-zip and snap closure", "Fully lined; water-resistant; adjustable snap cuffs" ],
+    "colors": [ "Navy", "Dark Olive" ],
+    "size": [ "X-Small", "Medium", "X-Large" ],
+    "tag": "Jackets",
+    "price": 75.00,
+    "img": "https://jack-apparel-software-engineering-website.s3.amazonaws.com/men's+product+images/field+jacket.jpeg",
+    "gender": "Male"
+  },
+
+  {
+    "name": "Apex Elevation Water-Repellent Jacket",
+    "description": [ "Stand collar with attached hood; full-zip front closure", "Shell: polyester/elastane; lining: nylon; insulation: polyester/nylon" ],
+    "colors": [ "Urban Navy" ],
+    "size": [ "Medium", "Large", "X-Large" ],
+    "tag": "Jackets",
+    "price": 60.00,
+    "img": "https://jack-apparel-software-engineering-website.s3.amazonaws.com/men's+product+images/apex+elevation.jpg",
+    "gender": "Male"
+  },
+
+  {
+    "name": "Denim Trucker Jacket",
+    "description": [ "Regular Fit; Button front closure and button cuffs.", "Two side welt pockets; two flap chest pockets", "All cotton" ],
+    "colors": [ "Harv Gold" ],
+    "size": [ "X-Small", "Small", "Large", "X-Large" ],
     "tag": "Jackets",
     "price": 50.00,
-    "img": "https://jack-apparel-software-engineering-website.s3.amazonaws.com/men's+product+images/hooded-rain.jpg",
+    "img": "https://jack-apparel-software-engineering-website.s3.amazonaws.com/men's+product+images/denim+trucker.jpeg",
     "gender": "Male"
   },
 
-
   {
-    "name": "Hooded Zip Jacket",
-    "description": [ "Built-in textured knit hood, with standing collar and contrasting trim along hood opening.", "Long sleeves, with elasticized banded trim at sleeve openings.", "Zippered on-seam welt pockets in front.", "Full-length zipper from hem to chin, with zipper-guard tab.", "Lightweight, quick-drying shell at main body, with smooth taffeta lining and light, insulated fill for added warmth.", "" ],
-    "colors": [ "Black", "White" ],
-    "size": [ "X-Small", "Medium", "Large", "X-Large" ],
+    "name": "Light Weight Hooded Bomber",
+    "description": [ "Waterproof", "Full-zip closure", "Drawstring hood", "Polyester" ],
+    "colors": [ "Sand", "Red" ],
+    "size": [ "X-Small", "Small", "Medium" ],
     "tag": "Jackets",
-    "price": 40.00,
-    "img": "https://jack-apparel-software-engineering-website.s3.amazonaws.com/men's+product+images/hooded-zip.jpg",
-    "gender": "Male"
-  },
-  {
-    "name": "Jersey-Lined Hooded Jacket",
-    "description": [ "Built-in hood, with standing collar, adjustable drawstring and soft jersey hood lining.", "Long sleeves, with adjustable snap-button tabs at each sleeve opening.", "Covered placket, with adhesive, secure-close tabs and full-length zipper underneath from hem to chin.", "Diagonal zippered welt pocket at left side of chest.", "Spacious covered snap-flap patch pockets in front, with hand-warming side openings.", "Interior welt pocket for wallet or phone.", "Water-resistant fabric helps keep rain off your parade." ],
-    "colors": [ "Light Brown", "Black" ],
-    "size": [ "Small", "Medium", "X-Large" ],
-    "tag": "Jackets",
-    "price": 43.00,
-    "img": "https://jack-apparel-software-engineering-website.s3.amazonaws.com/men's+product+images/lined-hooded.jpg",
+    "price": 80.00,
+    "img": "https://jack-apparel-software-engineering-website.s3.amazonaws.com/men's+product+images/light+weight+hooded+bomber.jpeg",
     "gender": "Male"
   },
 
   {
-    "name": "Bomber Jacket",
-    "description": [ "Standing rib-knit collar.", "Long sleeves, with rib-knit cuffs.", "Full-length zipper from hem to neck.", "Diagonal welt pockets in front.", "Rib-knit hem.", "Interior welt pocket for phone or wallet.", "Water-resistant fabric helps keep rain off your parade." ],
-    "colors": [ "Gray" ],
-    "size": [ "X-Small", "Small", "Large" ],
+    "name": "Giovanni Colorblock Puffer Jacket",
+    "description": [ "Heavyweight", "Zip-up front and press stud closure; Attached hood", "Dual side pockets with press stud closure", "Embroidered Fila logo branding on left sleeve" ],
+    "colors": [ "Sunset" ],
+    "size": [ "X-Small", "Large", "X-Large" ],
     "tag": "Jackets",
-    "price": 36.00,
-    "img": "https://jack-apparel-software-engineering-website.s3.amazonaws.com/men's+product+images/bomber.jpg",
+    "price": 100.00,
+    "img": "https://jack-apparel-software-engineering-website.s3.amazonaws.com/men's+product+images/giovanni.jpeg",
     "gender": "Male"
   },
 
   {
-    "name": "Soft-Shell Jacket",
-    "description": [ "Built-in hood, with standing collar and adjustable drawstring.", "Long sleeves, with contrasting banded trim.", "Full-length zipper from hem to chin, with bungee-cord zipper pull.", "Zippered welt pocket at left side of chest, with light-reflecting trim.", "Light-reflecting detail across center front lets you shine.", "Go-H20 water-repellent fabric." ],
-    "colors": [ "Navy" ],
+    "name": "Colorblock Stretch Sweatshorts",
+    "description": [ "Sits at waist", "Drawstring elastic waistband", "Two hand pockets; one pocket at back right", "Stretch fabric" ],
+    "colors": [ "Multi" ],
+    "size": [ "X-Small", "Large", "X-Large" ],
+    "tag": "Shorts",
+    "price": 27.00,
+    "img": "https://jack-apparel-software-engineering-website.s3.amazonaws.com/men's+product+images/colorblock.jpeg",
+    "gender": "Male"
+  },
+
+  {
+    "name": "Double-Knit Active Shorts",
+    "description": [ "Banded elastic drawstring waistband", "Sewn fly", "Two front angled pockets" ],
+    "colors": [ "Black" ],
     "size": [ "Small", "Medium", "Large" ],
-    "tag": "Jackets",
+    "tag": "Shorts",
+    "price": 22.00,
+    "img": "https://jack-apparel-software-engineering-website.s3.amazonaws.com/men's+product+images/double+knit+active.jpeg",
+    "gender": "Male"
+  },
+
+  {
+    "name": "Cotton Blend Tech Fleece Shorts",
+    "description": [ "Elasticized waistband with a drawstring for comfort", "Double stitched hem", "Slim fit", "Cotton, Polyester" ],
+    "colors": [ "Gray", "Dark Gray" ],
+    "size": [ "X-Small", "Medium", "Large", "X-Large" ],
+    "tag": "Shorts",
+    "price": 23.00,
+    "img": "https://jack-apparel-software-engineering-website.s3.amazonaws.com/men's+product+images/cotton+blend.jpg",
+    "gender": "Male"
+  },
+
+  {
+    "name": "Howan Cargo Shorts",
+    "description": [ "Regular fit", "Zip fly with button closure; belt loops", "All cotton" ],
+    "colors": [ "Mirage", "Olive" ],
+    "size": [ "Medium", "X-Large" ],
+    "tag": "Shorts",
+    "price": 21.00,
+    "img": "https://jack-apparel-software-engineering-website.s3.amazonaws.com/men's+product+images/howan.jpeg",
+    "gender": "Male"
+  },
+
+  {
+    "name": "Challenger Running Shorts",
+    "description": [ "Standard fit", "Elastic waist with drawstring", "On-seam pockets at sides; phone pocket at back" ],
+    "colors": [ "Mystic Navy" ],
+    "size": [ "X-Small", "Small", "Medium", "Large", "X-Large" ],
+    "tag": "Shorts",
     "price": 30.00,
-    "img": "https://jack-apparel-software-engineering-website.s3.amazonaws.com/men's+product+images/soft-shell.jpg",
-    "gender": "Male"
-  },
-
-
-  {
-    "name": "Hooded Puffer Jacket",
-    "description": [ "Built-in hood, with standing collar and adjustable drawcord.", "Long sleeves, with adjustable snap-button tabs to help keep in warmth.", "Six snap-button placket, with full-length zipper underneath.", "Hidden secure-close chest pocket at left underneath placket.", "Covered snap-flap patch pockets in front, with warm Performance Fleece side openings.", "Water-resistant fabric helps keep rain (and snow) off your parade." ],
-    "colors": [ "Yellow" ],
-    "size": [ "Medium", "Large", "X-Large" ],
-    "tag": "Jackets",
-    "price": 28.00,
-    "img": "https://jack-apparel-software-engineering-website.s3.amazonaws.com/men's+product+images/hooded-puffer.jpg",
+    "img": "https://jack-apparel-software-engineering-website.s3.amazonaws.com/men's+product+images/challenger.jpeg",
     "gender": "Male"
   },
 
   {
-    "name": "Packable Quilted Jacket",
-    "description": [ "Standing mock-neck collar.", "Full-length zip front from hem to chin, with light-reflecting zipper pull and zipper-guard tab.", "Side welt pockets, with banded trim.", "Banded trim at hem.", "Banded trim at hem.", "Water-resistant fabric helps keep rain off your parade." ],
-    "colors": [ "Black" ],
-    "size": [ "X-Small", "Small", "Medium", "Large" ],
-    "tag": "Jackets",
-    "price": 44.00,
-    "img": "https://jack-apparel-software-engineering-website.s3.amazonaws.com/men's+product+images/packable-quilted.jpg",
-    "gender": "Male"
-  },
-
-  {
-    "name": "Five-Pocket Twill Pants",
-    "description": [ "Button-closure and zip fly.", "Riveted scoop pockets and riveted coin pocket in front; patch pockets in back.", "Soft, durable cotton twill.", "Tag-free label inside back waist for added comfort." ],
-    "colors": [ "Khaki" ],
-    "size": [ "28x30", "30x30", "30x32", "32x32" ],
+    "name": "Fit Ash-X Stretch Jeans",
+    "description": [ "Slim fit", "Zip fly with button closure; belt loops", "Classic five-pocket styling", "Cotton/elastane" ],
+    "colors": [ "Charcoal" ],
+    "size": [ "28x30", "30x32", "31x31", "28x32" ],
     "tag": "Jeans",
-    "price": 25.00,
-    "img": "https://jack-apparel-software-engineering-website.s3.amazonaws.com/men's+product+images/twill.jpg",
+    "price": 70.00,
+    "img": "https://jack-apparel-software-engineering-website.s3.amazonaws.com/men's+product+images/fit+ash.jpeg",
     "gender": "Male"
   },
 
   {
-    "name": "Built-In Flex Carpenter Pants",
-    "description": [ "Button closure and zip fly.", "Diagonal on-seam pockets in front; utility-style patch pockets in back.", "Double-compartment side tool pocket at right leg; hammer loop at left leg.", "Engineered with innovative Built-In Flex stretch technology. Equal parts comfort & movement. Flexin' on 'em." ],
-    "colors": [ "Olive", "White" ],
-    "size": [ "30x30", "30x32", "32x32", "28x30" ],
+    "name": "Athletic Fit Jeans",
+    "description": [ "Zip fly with button closure; belt loops; 5-pocket style", "Cotton/elastane", "Machine washable" ],
+    "colors": [ "Barite" ],
+    "size": [ "30x30", "30x32", "32x32" ],
     "tag": "Jeans",
-    "price": 20.00,
-    "img": "https://jack-apparel-software-engineering-website.s3.amazonaws.com/men's+product+images/carpenter.jpg",
+    "price": 60.00,
+    "img": "https://jack-apparel-software-engineering-website.s3.amazonaws.com/men's+product+images/athletic+fit.jpeg",
     "gender": "Male"
   },
 
   {
-    "name": "Built-In Flex Jeans",
-    "description": [ "Button closure and zip fly.", "Riveted scoop pockets and riveted coin pocket in front; patch pockets in back.", "Whiskering, fading and bleached details create a lived-in look.", "Built-In Tough fabric has 2x the strength and tear resistance of regular denim. Basically indestructible. Work hard, play hard." ],
-    "colors": [ "Medium Wash", "Dark Blue" ],
-    "size": [ "28x28", "28x30", "30x32", "32x30", "32x32" ],
+    "name": "Flight Slim-Straight Jeans",
+    "description": [ "Straight fit", "Zip fly with button closure; belt loops", "Cotton/polyester/spandex" ],
+    "colors": [ "Camo" ],
+    "size": [ "32x32", "28x28", "30,30" ],
     "tag": "Jeans",
-    "price": 35.00,
-    "img": "https://jack-apparel-software-engineering-website.s3.amazonaws.com/men's+product+images/flex.jpg",
-    "gender": "Male"
-  },
-
-  {
-    "name": "Built-In Flex Max Never-Fade Jeans",
-    "description": [ "Button-closure and zip fly.", "Riveted scoop pockets and riveted coin pocket in front; patch pockets in back.", "Built-In Flex Max is engineered with double the innovative stretch technology for maximum comfort & movement.", "Color may rub off onto lighter surfaces." ],
-    "colors": [ "Black" ],
-    "size": [ "30x30", "30x32", "32x30", "32x32" ],
-    "tag": "Jeans",
-    "price": 30.00,
-    "img": "https://jack-apparel-software-engineering-website.s3.amazonaws.com/men's+product+images/never-fade.jpg",
-    "gender": "Male"
-  },
-
-  {
-    "name": "Built-In Flex Distressed Jeans",
-    "description": [ "Button closure and zip fly.", "Riveted scoop pockets and riveted coin pocket in front; patch pockets in back.", "Frayed rips, abrasions, and rip-and-repair details create a lived-in look.", "Soft, medium-wash denim with contrast topstitching." ],
-    "colors": [ "Medium Wash", "Gray" ],
-    "size": [ "28x28", "28x30", "32x30", "32x32" ],
-    "tag": "Jeans",
-    "price": 40.00,
-    "img": "https://jack-apparel-software-engineering-website.s3.amazonaws.com/men's+product+images/distressed.jpg",
+    "price": 72.00,
+    "img": "https://jack-apparel-software-engineering-website.s3.amazonaws.com/men's+product+images/flight+slim.jpeg",
     "gender": "Male"
   }
+
+
+
+
+
 ]
