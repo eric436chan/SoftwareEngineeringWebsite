@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { ShoppingCartService } from '../services/shoppingCart-service';
 import { ProductOrder } from '../model/product.order.model';
 import { OrderService } from '../services/order-service';
 import { Order } from '../model/order.model';
@@ -19,16 +18,12 @@ export class OrderComponent implements OnInit {
   orderReceived: boolean = false;
   orderChecked: boolean = false
 
-  constructor(private orderService: OrderService, private shoppingCartService: ShoppingCartService) {
+  constructor(private orderService: OrderService) {
    
   }
 
   ngOnInit() {
-    this.shoppingCartService.currentShoppingCart.subscribe(
-      shoppingCart => {
-        this.shoppingCart = shoppingCart;
-        console.log(this.shoppingCart);
-      })
+    this.shoppingCart = JSON.parse(sessionStorage.getItem("currentShoppingCart"));
   }
 
   onOrder(orderKey: HTMLInputElement) {

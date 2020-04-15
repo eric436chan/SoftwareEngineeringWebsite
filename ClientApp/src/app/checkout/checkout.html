@@ -8,10 +8,16 @@
         These are the contents of your current shopping cart. <br />
         Click next to proceed with checkout
       </p>
-      <div *ngFor="let prod of shoppingCart">
-        {{prod.name}}
+      <div *ngFor="let prod of shoppingCart" class="prodDisplay">
+        <b>{{prod.name}}</b><br />
+        <img src="{{prod.img}}" /><br />
+        <b>Color: </b>{{prod.color}}<br />
+        <b>Size: </b>{{prod.size}}<br />
+        <b>Price: </b>{{prod.price}}<br />
       </div>
-      <button mat-raised-button (click)="onClickNext()">Next</button>
+      <div class="mt-1">
+        <button mat-raised-button (click)="onClickNext()">Next</button>
+      </div>
     </mat-tab>
 
     <!-- This is for the user information tab -->
@@ -70,9 +76,11 @@
         <mat-error>This field is required!</mat-error>
       </mat-form-field>
       <br />
+      <div class="mt-1">
+        <button mat-raised-button (click)="onClickBack()">Back</button>
 
-      <button mat-raised-button (click)="onClickBack()">Back</button>
-      <button mat-raised-button (click)="onClickNextUser()">Next</button>
+        <button mat-raised-button (click)="onClickNextUser()" class="nextButton">Next</button>
+       </div>
     </mat-tab>
 
     <!-- This is for the shipping tab -->
@@ -114,9 +122,10 @@
       </mat-form-field>
 
       <br />
-
-      <button mat-raised-button (click)="onClickBack()">Back</button>
-      <button mat-raised-button (click)="onClickNextShipping()">Next</button>
+      <div class="mt-1">
+        <button mat-raised-button (click)="onClickBack()">Back</button>
+        <button mat-raised-button (click)="onClickNextShipping()" class="nextButton">Next</button>
+      </div>
     </mat-tab>
 
     <!-- This is for the confirmation tab -->
@@ -126,8 +135,10 @@
         This page is the final confirmation page. Once you click confirm, your order will be finalized!
         If you want to make any changes, please click back.
       </p>
-      <button mat-raised-button (click)="onClickBack()">Back</button>
-      <button mat-raised-button (click)="onClickConfirm()">Confirm</button>
+      <div class="mt-1">
+        <button mat-raised-button (click)="onClickBack()">Back</button>
+        <button mat-raised-button (click)="onClickConfirm()" class="nextButton">Confirm</button>
+      </div>
     </mat-tab>
   </mat-tab-group>
 </body>

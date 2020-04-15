@@ -1,1 +1,52 @@
-{{searchString}}
+<body>
+  <div>
+    You searched for {{searchString}}.
+  </div>
+  <div *ngIf="exactProductList === []; else elseBlock">
+    Sorry! We could not find any exact product!
+  </div>
+
+
+  <ng-template #elseBlock>
+    <mat-card *ngFor="let product of exactProductList; index as i" (click)="onClickExactProduct(i)" class="prodDisplay">
+
+      <mat-card-header>
+        <mat-card-title>
+          {{product.name}}
+        </mat-card-title>
+      </mat-card-header>
+
+      <img mat-card-img src="{{product.img}}" />
+      <mat-card-footer>
+        Price: ${{product.price}}
+      </mat-card-footer>
+    </mat-card>
+  </ng-template>
+
+  <br />
+
+
+  Here are some related products!
+
+  <br />
+  <div class="relatedProd">
+
+
+
+
+    <mat-card *ngFor="let product of relatedProductList; index as i" (click)="onClickRelatedProduct(i)" class="prodDisplay">
+
+      <mat-card-header>
+        <mat-card-title>
+          {{product.name}}
+        </mat-card-title>
+      </mat-card-header>
+
+      <img mat-card-img src="{{product.img}}" />
+      <mat-card-footer>
+        Price: ${{product.price}}
+      </mat-card-footer>
+    </mat-card>
+
+  </div>
+</body>

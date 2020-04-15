@@ -2,7 +2,7 @@
 
   <h2>Thank you for shopping at Jack's Apparel!</h2>
   <p>
-    Dear {{currentOrder.client.firstName}} {{currentOrder.client.lastName}},
+    Dear {{currentOrder.client.firstName}}  {{currentOrder.client.lastName}},
     <br /><br />
     Thank you for shopping with us. Below will your order id as well as your order.
     <br />
@@ -13,7 +13,7 @@
   <div>
 
     <p>
-      This is your order id: {{currentOrder.orderId}}.
+      This is your order id: <b>{{currentOrder.orderId}}</b>.
     </p>
 
     <mat-card *ngFor="let prod of currentOrder.orderList">
@@ -24,8 +24,11 @@
       </mat-card-header>
 
       <img mat-card-img src="{{prod.img}}" />
-      <mat-card-footer>
-        Price: {{prod.price}}
+      <mat-card-footer class="footer">
+
+        <b>Color:</b> {{prod.color}} <br />
+        <b>Size:</b> {{prod.size}} <br />
+        <b>Price:</b> {{prod.price}}
       </mat-card-footer>
     </mat-card>
   </div>

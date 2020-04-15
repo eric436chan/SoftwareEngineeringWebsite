@@ -25,6 +25,7 @@
     "@angular/platform-server": "8.0.0",
     "@angular/router": "8.0.0",
     "@nguniversal/module-map-ngfactory-loader": "8.0.0-rc.1",
+    "angular-webstorage-service": "^1.0.2",
     "aspnet-prerendering": "^3.0.1",
     "body-parser": "^1.19.0",
     "bootstrap": "^4.3.1",
