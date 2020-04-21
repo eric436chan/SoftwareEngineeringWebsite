@@ -326,8 +326,21 @@ export class MenProductsComponent implements OnInit {
     if (this.currentSortOption == "None") {
 
       console.log("Resetting all sort filters...")
-      this.actualProductList = this.actualProductList;
-      return;
+      let currentIndex = this.actualProductList.length - 1;
+
+      while (0 !== currentIndex) {
+
+        // Pick a remaining element...
+        let randomIndex = Math.floor(Math.random() * currentIndex);
+        currentIndex -= 1;
+
+        // And swap it with the current element.
+        let temporaryValue = this.actualProductList[currentIndex];
+        this.actualProductList[currentIndex] = this.actualProductList[randomIndex];
+        this.actualProductList[randomIndex] = temporaryValue;
+      }
+
+        return;
     }
 
     if (this.currentSortOption == "High to Low") {
