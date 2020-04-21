@@ -29,3 +29,7 @@ body {
 li{
     list-style-type:none;
 }
+
+selection{
+    margin-right:1em;
+}

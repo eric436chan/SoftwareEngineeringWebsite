@@ -44,6 +44,7 @@ import { ProductDialog } from './dialogs/productDialog/product-dialog.component'
 import { CheckoutComponent } from './checkout/checkout.component';
 import { ConfirmationComponent } from './confirmation/confirmation.component';
 import { OrderService } from './services/order-service';
+import { SizingComponent } from './sizing/sizing';
 
 
 
@@ -65,7 +66,8 @@ import { OrderService } from './services/order-service';
     CheckoutComponent,
     ShoppingCartDialog,
     ProductDialog,
-    ConfirmationComponent
+    ConfirmationComponent,
+    SizingComponent
 
   ],
   imports: [
@@ -82,7 +84,8 @@ import { OrderService } from './services/order-service';
       { path: 'mens/prod', component: MenProductsComponent },
       { path: 'search', component: SearchComponent },
       { path: 'checkout', component: CheckoutComponent },
-      {path: 'confirmation', component: ConfirmationComponent}
+      { path: 'confirmation', component: ConfirmationComponent },
+      { path: 'sizing', component: SizingComponent }
     ]),
     BrowserAnimationsModule,
     MatToolbarModule,

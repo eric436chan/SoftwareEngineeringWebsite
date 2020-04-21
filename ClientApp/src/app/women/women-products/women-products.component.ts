@@ -3,7 +3,6 @@ import { ProductService } from '../../services/product-service';
 import { ProductOrder } from '../../model/product.order.model';
 import { Product } from '../../model/product.model';
 import { MatDialog } from '@angular/material/dialog';
-import { PageEvent, MatPaginator } from '@angular/material/paginator';
 import { ProductDialog } from '../../dialogs/productDialog/product-dialog.component';
 import { Router } from '@angular/router';
 
@@ -38,6 +37,7 @@ export class WomenProductsComponent implements OnInit{
 
     //get current shopping cart
     this.shoppingCart = JSON.parse(sessionStorage.getItem("currentShoppingCart"));
+    
 
     //get current browsing tag
     this.tagString = sessionStorage.getItem("currentWomanTag");
@@ -190,7 +190,20 @@ export class WomenProductsComponent implements OnInit{
     if (this.currentSortOption == "None") {
 
       console.log("Resetting all sort filters...")
-      this.actualProductList = this.actualProductList;
+      let currentIndex = this.actualProductList.length - 1;
+
+      while (0 !== currentIndex) {
+
+        // Pick a remaining element...
+        let randomIndex = Math.floor(Math.random() * currentIndex);
+        currentIndex -= 1;
+
+        // And swap it with the current element.
+        let temporaryValue = this.actualProductList[currentIndex];
+        this.actualProductList[currentIndex] = this.actualProductList[randomIndex];
+        this.actualProductList[randomIndex] = temporaryValue;
+      }
+
       return;
     }
 

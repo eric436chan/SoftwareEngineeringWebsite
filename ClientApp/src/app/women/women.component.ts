@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -8,5 +9,15 @@ import { Component } from '@angular/core';
 })
 
 export class WomenComponent {
+
+  constructor(private router: Router) {
+
+  }
+
+  onBrowseWomen(tag: string) {
+    sessionStorage.setItem("currentWomanTag", tag);
+    console.log("moving to women's products");
+    this.router.navigate(['./womens/prod']);
+  }
 
 }
