@@ -1,2 +1,28 @@
-﻿body {
+﻿h2 {
+  text-align: center;
+}
+.item-container {
+  justify-content: center;
+  display: flex;
+}
+
+.item {
+  margin-left: 10px;
+  padding: 10px;
+}
+
+  .item > a > p {
+    text-align: center;
+    text-decoration: none;
+    color: black;
+  }
+
+    .item > a > p:hover {
+      text-decoration: none;
+    }
+
+.circle-image {
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
 }
