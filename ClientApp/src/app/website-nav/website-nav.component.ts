@@ -14,7 +14,7 @@ import { Product } from '../model/product.model';
   styleUrls: ['./website-nav.css']
 })
 
-export class WebsiteNavComponent{
+export class WebsiteNavComponent implements OnInit{
 
 
   shoppingCart: Array<ProductOrder> = [];
@@ -22,6 +22,15 @@ export class WebsiteNavComponent{
   constructor(private iconRegistry: MatIconRegistry, private sanitizer: DomSanitizer, private router: Router, private dialog: MatDialog, private productService: ProductService) {
     iconRegistry.addSvgIcon('search', sanitizer.bypassSecurityTrustResourceUrl('assets/img/search-24px.svg'));
     iconRegistry.addSvgIcon('shopping-cart', sanitizer.bypassSecurityTrustResourceUrl('assets/img/shopping_cart-24px.svg'));
+
+  }
+
+  ngOnInit() {
+
+    if (JSON.parse(sessionStorage.getItem("currentShoppingCart")) == null) {
+      sessionStorage.setItem("currentShoppingCart", JSON.stringify(this.shoppingCart));
+    }
+    
 
   }
 

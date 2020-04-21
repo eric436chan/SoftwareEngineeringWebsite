@@ -14,7 +14,7 @@
         <mat-label>
           Color:
         </mat-label>
-        <mat-select [(ngModel)]="selectedColor" required>
+        <mat-select [(ngModel)]="selectedColor" required class="selection">
           <mat-option *ngFor="let color of data.colors" value="{{color}}">
             {{color}}
           </mat-option>
@@ -25,7 +25,7 @@
         <mat-label>
           Size:
         </mat-label>
-        <mat-select [(ngModel)]="selectedSize" required>
+        <mat-select [(ngModel)]="selectedSize" required class="selection">
           <mat-option *ngFor="let size of data.size" value="{{size}}">
             {{size}}
           </mat-option>

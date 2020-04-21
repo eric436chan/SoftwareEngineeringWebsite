@@ -13,7 +13,7 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 
 export class ProductDialog implements OnInit {
 
-  shoppingCart: Array<ProductOrder>;
+  shoppingCart: Array<ProductOrder> = [];
   selectedColor: string;
   selectedSize: string;
 
@@ -23,6 +23,7 @@ export class ProductDialog implements OnInit {
 
   ngOnInit() {
     this.shoppingCart = JSON.parse(sessionStorage.getItem("currentShoppingCart"));
+    console.log(this.shoppingCart)
   }
 
   onAddToCart() {
@@ -30,6 +31,9 @@ export class ProductDialog implements OnInit {
     if (this.selectedColor == undefined || this.selectedSize == undefined) {
       return;
     }
+
+    console.log(this.selectedColor)
+    console.log(this.selectedSize)
 
     let prod: ProductOrder = {
       name: this.data.name,
@@ -42,7 +46,9 @@ export class ProductDialog implements OnInit {
       tag: this.data.tag
     }
 
-    this.shoppingCart.push(prod);
+    console.log(prod)
+
+    this.shoppingCart.push(prod)
     //this.shoppingCartService.updateShoppingCart(this.shoppingCart);
     sessionStorage.setItem("currentShoppingCart", JSON.stringify(this.shoppingCart));
 
