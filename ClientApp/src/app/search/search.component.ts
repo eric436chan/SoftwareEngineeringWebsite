@@ -32,6 +32,7 @@ export class SearchComponent implements OnInit {
 
     this.searchString = sessionStorage.getItem("searchString");
 
+
     this.productService.getAllProducts().subscribe(
       data => {
 

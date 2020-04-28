@@ -2,8 +2,9 @@
   <div>
     You searched for {{searchString}}.
   </div>
-  <div *ngIf="exactProductList === []; else elseBlock">
-    Sorry! We could not find any exact product!
+  <br />
+  <div *ngIf="exactProductList.length == 0; else elseBlock">
+    Sorry! We could not find anything for {{searchString}}
   </div>
 
 
