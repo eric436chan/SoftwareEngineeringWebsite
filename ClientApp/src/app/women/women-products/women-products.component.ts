@@ -5,6 +5,7 @@ import { Product } from '../../model/product.model';
 import { MatDialog } from '@angular/material/dialog';
 import { ProductDialog } from '../../dialogs/productDialog/product-dialog.component';
 import { Router } from '@angular/router';
+import { OrderService } from '../../services/order-service';
 
 
 @Component({
@@ -27,14 +28,15 @@ export class WomenProductsComponent implements OnInit{
   currentSortOption: string = "None";
   tagString: string;
 
-  addingProductList: Array<Product> = require('../women-products/products.json')
+ 
 
-  constructor(private productService: ProductService, private dialog: MatDialog, private router: Router) {
+  constructor(private productService: ProductService, private dialog: MatDialog, private router: Router, private orderService: OrderService) {
 
   }
 
   ngOnInit() {
 
+ 
     //get current shopping cart
     this.shoppingCart = JSON.parse(sessionStorage.getItem("currentShoppingCart"));
     

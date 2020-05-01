@@ -10,10 +10,6 @@ import { BehaviorSubject } from "rxjs";
 })
 export class OrderService {
 
-  private order: BehaviorSubject<Order> = new BehaviorSubject(null);
-  currentOrder = this.order.asObservable();
-
-
   constructor(private http: HttpClient) {
 
   }
@@ -37,10 +33,6 @@ export class OrderService {
       data => {
         console.log(data);
       })
-  }
-
-  updateOrder(order: Order) {
-    this.order.next(order);
   }
 
 }
