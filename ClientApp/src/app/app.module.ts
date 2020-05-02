@@ -107,6 +107,7 @@ import { SizingComponent } from './sizing/sizing';
     MatSnackBarModule,
     MatPaginatorModule,
     MatProgressSpinnerModule,
+ 
 
   ],
 
