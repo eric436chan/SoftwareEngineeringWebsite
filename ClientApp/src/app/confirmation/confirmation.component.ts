@@ -17,10 +17,7 @@ export class ConfirmationComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.orderService.currentOrder.subscribe(
-      data => {
-        this.currentOrder = data;
-      })
+    this.currentOrder = JSON.parse(sessionStorage.getItem("currentOrder"));
   }
 
 

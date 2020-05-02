@@ -1,0 +1,63 @@
+<body class="container">
+  <div class="sizingBody">
+    <mat-label>Select your gender.</mat-label>
+    <mat-radio-group [(ngModel)]="currentGender" required class="genderRadioGroup">
+      <mat-radio-button value="Male" class="genderRadioButton">
+        Male
+      </mat-radio-button>
+      <mat-radio-button value="Female" class="genderRadioButton">
+        Female
+      </mat-radio-button>
+    </mat-radio-group>
+
+    <mat-form-field>
+      <mat-label>
+        Height. Enter as feet dot inches.
+      </mat-label>
+      <input [(ngModel)]="height" matInput type="number" required placeholder="5.6" />
+    </mat-form-field>
+    <br />
+    <mat-form-field>
+      <mat-label>
+        Chest Size. Enter in inches.
+      </mat-label>
+      <input [(ngModel)]="chestSize" matInput type="number" required placeholder="0" />
+    </mat-form-field>
+    <br />
+    <mat-form-field>
+      <mat-label>
+        Arm Length. Enter in inches.
+      </mat-label>
+      <input [(ngModel)]="armLength" matInput type="number" required placeholder="0" />
+    </mat-form-field>
+    <br />
+    <mat-form-field>
+      <mat-label>
+        Waist Width. Enter in inches.
+      </mat-label>
+      <input [(ngModel)]="waistWidth" matInput type="number" required placeholder="0" />
+    </mat-form-field>
+    <br />
+    <mat-form-field>
+      <mat-label>
+        Inseam Length. Enter in inches.
+      </mat-label>
+      <input [(ngModel)]="inseamLength" matInput type="number" required placeholder="0" />
+    </mat-form-field>
+    <br />
+    <button mat-button (click)="computeBestFitSize()">Compute</button>
+  </div>
+  <div *ngIf="computed" class="displayBody">
+    Best Fit Sizes are:
+    <br />
+    <br />
+    <span *ngFor="let val of currentSizeMap | keyvalue">
+      {{val.key}} --> {{val.value}}
+      <br />
+      <br />
+    </span>
+  </div>
+    
+    
+  
+</body>

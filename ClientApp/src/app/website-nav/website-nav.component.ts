@@ -14,10 +14,10 @@ import { Product } from '../model/product.model';
   styleUrls: ['./website-nav.css']
 })
 
-export class WebsiteNavComponent implements OnInit{
+export class WebsiteNavComponent{
 
 
-  shoppingCart: Array<ProductOrder> = [];
+  
 
   constructor(private iconRegistry: MatIconRegistry, private sanitizer: DomSanitizer, private router: Router, private dialog: MatDialog, private productService: ProductService) {
     iconRegistry.addSvgIcon('search', sanitizer.bypassSecurityTrustResourceUrl('assets/img/search-24px.svg'));
@@ -25,14 +25,6 @@ export class WebsiteNavComponent implements OnInit{
 
   }
 
-  ngOnInit() {
-
-    if (JSON.parse(sessionStorage.getItem("currentShoppingCart")) == null) {
-      sessionStorage.setItem("currentShoppingCart", JSON.stringify(this.shoppingCart));
-    }
-    
-
-  }
 
   onSearch(searchInput: HTMLInputElement) {
 
@@ -65,7 +57,7 @@ export class WebsiteNavComponent implements OnInit{
   openShoppingCartDialog() {
 
     const shoppingCartDialog = this.dialog.open(ShoppingCartDialog, {
-      data: this.shoppingCart
+      data: JSON.parse(sessionStorage.getItem("currentShoppingCart"))
     });
   }
 }

@@ -33,6 +33,7 @@ export class OrderComponent implements OnInit {
         for (let order of data) {
           if (order.orderId == orderKey.value) {
             this.order = order;
+            console.log(order)
             this.orderReceived = true;
             console.log("Order received.");
           }

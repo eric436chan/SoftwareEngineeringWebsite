@@ -1,0 +1,25 @@
+.genderRadioGroup{
+    display: flex;
+    flex-direction:column;
+    margin: 1em;
+}
+
+.genderRadioButton{
+    margin: 5px;
+}
+
+.sizingBody{
+    float:left;
+    margin-top:1em;
+    width:50%;
+    padding: 1em;
+}
+
+.displayBody{
+    float:right;
+    width:50%;
+    margin-top:1em;
+    padding: 1em;
+}
+
+

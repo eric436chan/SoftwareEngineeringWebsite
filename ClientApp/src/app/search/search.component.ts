@@ -32,6 +32,7 @@ export class SearchComponent implements OnInit {
 
     this.searchString = sessionStorage.getItem("searchString");
 
+
     this.productService.getAllProducts().subscribe(
       data => {
 
@@ -74,6 +75,7 @@ export class SearchComponent implements OnInit {
     let color: string;
     let size: string;
 
+    //get values for tag color and size
     for (let checkSize of this.sizeList) {
       if (searchString.toLowerCase().includes(checkSize.toLowerCase())) {
         size = checkSize
@@ -98,7 +100,7 @@ export class SearchComponent implements OnInit {
     //if all are defined
     if (size != undefined && tag != undefined && color != undefined) {
       for (let prod of prodList) {
-        if (prod.size.includes(size) && prod.tag == tag && prod.colors.includes(color)) {
+        if (prod.size.includes(size) && tag.toLowerCase().includes(prod.tag.toLowerCase()) && prod.colors.includes(color)) {
           this.exactProductList.push(prod)
         }
       }
@@ -108,7 +110,7 @@ export class SearchComponent implements OnInit {
     //if color is undefined
     if (size != undefined && tag != undefined) {
       for (let prod of prodList) {
-        if (prod.size.includes(size) && prod.tag == tag) {
+        if (prod.size.includes(size) && tag.toLowerCase().includes(prod.tag.toLowerCase())) {
           this.exactProductList.push(prod)
         }
       }
@@ -128,7 +130,7 @@ export class SearchComponent implements OnInit {
     //if size is undefined
     if (color != undefined && tag != undefined) {
       for (let prod of prodList) {
-        if (prod.colors.includes(color) && prod.tag == tag) {
+        if (prod.colors.includes(color) && tag.toLowerCase().includes(prod.tag.toLowerCase())) {
           this.exactProductList.push(prod)
         }
       }
@@ -158,7 +160,7 @@ export class SearchComponent implements OnInit {
     //if only tag is defined
     if (tag != undefined) {
       for (let prod of prodList) {
-        if (prod.tag == tag) {
+        if (tag.toLowerCase().includes(prod.tag.toLowerCase())) {
           this.exactProductList.push(prod)
         }
       }
@@ -170,32 +172,71 @@ export class SearchComponent implements OnInit {
 
   searchRelatedProducts(searchString: string, prodList: Array<Product>) {
 
-    let tempList: Array<Product> = [];
+    let tag: string
+    let color: string
+    let size: string
 
-    for (let prod of prodList) {
-      if (searchString.toLowerCase().includes(prod.tag.toLowerCase())) {
-        tempList.push(prod)
 
+    for (let checkTag of this.tagList) {
+      if (searchString.toLowerCase().includes(checkTag.toLowerCase())) {
+        tag = checkTag
+        break;
       }
     }
 
-    console.log(tempList)
+    //just for tagging ignore everything else
+    if (tag != null) {
+      for (let prod of prodList) {
+        if (tag.toLowerCase().includes(prod.tag.toLowerCase()) && !this.relatedProductList.includes(prod) && !this.exactProductList.includes(prod)) {
+          this.relatedProductList.push(prod)
+        }
+      }
+      console.log(this.relatedProductList)
+      return;
+    }
 
-    for (let prod of tempList) {
-      if (!this.exactProductList.includes(prod) && !this.relatedProductList.includes(prod)) {
-        this.relatedProductList.push(prod)
+    for (let checkColor of this.colorList) {
+      if (searchString.toLowerCase().includes(checkColor.toLowerCase())) {
+        color = checkColor
+        break;
       }
     }
 
-    console.log(this.relatedProductList)
 
-    
-    
-   
+    //just for color ignore everything else
+    if (color != null) {
+      for (let prod of prodList) {
+        for (let prodColor of prod.colors) {
+          if (color.toLowerCase() == prodColor.toLowerCase() && !this.relatedProductList.includes(prod) && !this.exactProductList.includes(prod)) {
+            this.relatedProductList.push(prod)
+          }
+        }
+      }
+      console.log(this.relatedProductList)
+      return;
+    }
 
-    //  //this.actualProductList = this.fullProductList;
 
-    
+    for (let checkSize of this.sizeList) {
+      if (searchString.toLowerCase().includes(checkSize.toLowerCase())) {
+        size = checkSize
+        break;
+      }
+    }
+
+    //just for size ignore everything else
+    if (size != null) {
+      for (let prod of prodList) {
+        for (let prodSize of prod.size) {
+          if (size.toLowerCase() == prodSize.toLowerCase() && !this.relatedProductList.includes(prod) && !this.exactProductList.includes(prod)) {
+            this.relatedProductList.push(prod)
+          }
+        }
+      }
+      console.log(this.relatedProductList)
+      return;
+    }
+
   }
 
   onClickRelatedProduct(index: number) {

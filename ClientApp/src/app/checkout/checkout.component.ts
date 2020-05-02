@@ -113,7 +113,7 @@ export class CheckoutComponent implements OnInit {
     this.orderService.addOrder(order);
     this.shoppingCart = [];
     sessionStorage.setItem("currentShoppingCart", JSON.stringify(this.shoppingCart));
-    this.orderService.updateOrder(order);
+    sessionStorage.setItem("currentOrder", JSON.stringify(order));
     this.router.navigate(['./confirmation']);
    
   }
