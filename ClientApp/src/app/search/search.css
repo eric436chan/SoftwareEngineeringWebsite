@@ -16,3 +16,7 @@ ng-template{
     flex-direction:row;
     overflow-x:auto
 }
+
+.searchContainer{
+    margin-left:1em;
+}
