@@ -1,0 +1,13 @@
+{
+  /* Visit https://firebase.google.com/docs/database/security to learn more about security rules. */
+  "rules": {
+<<<<<<< HEAD
+    "/products": {
+      ".indexOn":  ".value"
+    },
+=======
+>>>>>>> f5707ef55cb99d6c99a99d06c385a5d694e892a0
+    ".read": true,
+    ".write": true
+  }
+}

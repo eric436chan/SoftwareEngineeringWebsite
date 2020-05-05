@@ -1,0 +1,44 @@
+<body>
+
+  <div class="left">AD1</div>
+  <div class="right">AD2</div>
+  <div class="center">
+    <p>
+      Want to check what you ordered? Put in your order key and check it out for yourself!
+    </p>
+    <mat-form-field>
+      <mat-label>Order Key</mat-label>
+      <input matInput placeholder="Key..." type="text" name="orderKey" #orderInput/>
+    </mat-form-field>
+    <br />
+
+    <button mat-raised-button (click)="onOrder(orderInput)">Submit</button>
+
+    <div *ngIf="orderReceived; else elseBlock">
+      <p class="mt-2">
+        Welcome back {{order.client.firstName}} {{order.client.lastName}}! Here is what you ordered.
+      </p>
+
+      <div>
+        <div *ngFor="let prod of order.orderList" class="prodDisplay">
+          <b>{{prod.name}}</b><br />
+          <img src="{{prod.img}}" /><br />
+          <b>Color: </b>{{prod.color}}<br />
+          <b>Size: </b>{{prod.size}}<br />
+          <b>Price: </b>{{prod.price}}<br />
+        </div>
+        
+        <b>Total Price:</b> {{order.totalPrice}}
+      </div>
+
+      
+
+    </div>
+    <ng-template #elseBlock >
+
+      <p *ngIf="orderChecked" class="mt-2">
+        Sorry! There is no order with that order key!
+      </p>
+    </ng-template>
+  </div>
+</body>

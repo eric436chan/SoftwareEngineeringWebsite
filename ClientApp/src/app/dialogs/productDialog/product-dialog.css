@@ -1,0 +1,35 @@
+body {
+    max-width:500px;
+}
+
+.left-side{
+    float:left;
+    width:50%;
+}
+
+.right-side{
+    float:right;
+    width:50%;
+}
+
+.onCartBtn{
+    margin-left:auto;
+}
+
+.contentBody{
+    display:flex;
+}
+
+.footer{
+    margin-top:1em;
+    display:flex;
+    justify-content:center;
+}
+
+li{
+    list-style-type:none;
+}
+
+selection{
+    margin-right:1em;
+}

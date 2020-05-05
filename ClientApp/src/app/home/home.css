@@ -1,0 +1,10 @@
+using System;
+namespace SoftwareEngineeringWebsite.ClientApp.src.app.home
+{
+ public class home
+ {
+     public home()
+     {
+     }
+ }
+}
