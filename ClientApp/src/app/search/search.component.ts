@@ -114,6 +114,11 @@ export class SearchComponent implements OnInit {
           this.exactProductList.push(prod)
         }
       }
+
+      let tempArray = this.includeNameSearch(searchString, size, color, tag, this.exactProductList);
+      if (tempArray.length != 0) {
+        this.exactProductList = tempArray
+      }
       return
     }
 
@@ -123,6 +128,10 @@ export class SearchComponent implements OnInit {
         if (prod.size.includes(size) && prod.colors.includes(color)) {
           this.exactProductList.push(prod)
         }
+      }
+      let tempArray = this.includeNameSearch(searchString, size, color, tag, this.exactProductList);
+      if (tempArray.length != 0) {
+        this.exactProductList = tempArray
       }
       return
     }
@@ -134,6 +143,10 @@ export class SearchComponent implements OnInit {
           this.exactProductList.push(prod)
         }
       }
+      let tempArray = this.includeNameSearch(searchString, size, color, tag, this.exactProductList);
+      if (tempArray.length != 0) {
+        this.exactProductList = tempArray
+      }
       return
     }
 
@@ -143,6 +156,10 @@ export class SearchComponent implements OnInit {
         if (prod.size.includes(size)) {
           this.exactProductList.push(prod)
         }
+      }
+      let tempArray = this.includeNameSearch(searchString, size, color, tag, this.exactProductList);
+      if (tempArray.length != 0) {
+        this.exactProductList = tempArray
       }
       return
     }
@@ -154,6 +171,10 @@ export class SearchComponent implements OnInit {
           this.exactProductList.push(prod)
         }
       }
+      let tempArray = this.includeNameSearch(searchString, size, color, tag, this.exactProductList);
+      if (tempArray.length != 0) {
+        this.exactProductList = tempArray
+      }
       return
     }
 
@@ -162,6 +183,22 @@ export class SearchComponent implements OnInit {
       for (let prod of prodList) {
         if (tag.toLowerCase().includes(prod.tag.toLowerCase())) {
           this.exactProductList.push(prod)
+        }
+      }
+      let tempArray = this.includeNameSearch(searchString, size, color, tag, this.exactProductList);
+      if (tempArray.length != 0) {
+        this.exactProductList = tempArray
+      }
+      return
+    }
+
+    //if everything is undefined
+    if (color == undefined && tag == undefined && size == undefined) {
+      for (let word of this.searchString.split(" ")) {
+        for (let prod of prodList) {
+          if (prod.name.toLowerCase().includes(word.toLowerCase()) && !this.exactProductList.includes(prod)) {
+            this.exactProductList.push(prod);
+          }
         }
       }
       return
@@ -236,6 +273,27 @@ export class SearchComponent implements OnInit {
       console.log(this.relatedProductList)
       return;
     }
+
+
+
+  }
+
+  includeNameSearch(searchString: string, size: string, color: string, tag: string, productList: Array<Product>) {
+
+    let tempArray: Array<Product> = [];
+
+    for (let word of searchString.split(" ")) {
+      for (let prod of productList) {
+        if (word != size && word != color && word != tag && prod.name.toLowerCase().includes(word.toLowerCase()) && !tempArray.includes(prod)) {
+          tempArray.push(prod)
+        }
+      }
+     
+
+    }
+
+    return tempArray;
+
 
   }
 

@@ -16,7 +16,7 @@
 
     <div *ngIf="orderReceived; else elseBlock">
       <p class="mt-2">
-        Here is your order!
+        Welcome back {{order.client.firstName}} {{order.client.lastName}}! Here is what you ordered.
       </p>
 
       <div>
@@ -27,8 +27,11 @@
           <b>Size: </b>{{prod.size}}<br />
           <b>Price: </b>{{prod.price}}<br />
         </div>
+        
+        <b>Total Price:</b> {{order.totalPrice}}
       </div>
 
+      
 
     </div>
     <ng-template #elseBlock >
